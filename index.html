@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6.28: Dùng AI thế nào để học chủ động hơn?</title>
+    <!-- Use Roboto and Inter fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Main Presentation Area -->
+        <div id="presentation-frame">
+            <div id="slide-content">
+                <!-- Slide content will be injected here via JS -->
+            </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div id="toolbar">
+            <div class="toolbar-group">
+                <button id="btn-prev" title="Slide trước"><i class="fas fa-chevron-left"></i></button>
+                <div class="slide-indicator">
+                    <span id="current-slide">1</span> / <span id="total-slides">41</span>
+                </div>
+                <button id="btn-next" title="Slide tiếp"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="toolbar-group">
+                <label for="slide-selector">Tới slide:</label>
+                <select id="slide-selector">
+                    <!-- Options injected via JS -->
+                </select>
+            </div>
+
+            <div class="toolbar-group">
+                <button id="btn-edit-mode" class="mode-btn"><i class="fas fa-edit"></i> Chỉnh sửa</button>
+                <button id="btn-save" class="hidden" title="Lưu thay đổi"><i class="fas fa-save"></i> Lưu</button>
+                <button id="btn-present-mode" class="mode-btn"><i class="fas fa-expand"></i> Trình chiếu</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="slides.js?v=2"></script>
+    <script src="app.js?v=2"></script>
+</body>
+</html>
