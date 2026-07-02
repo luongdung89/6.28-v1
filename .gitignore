@@ -1,0 +1,4 @@
+caddy.exe
+*.log
+.vscode/
+node_modules/
