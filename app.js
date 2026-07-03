@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    window.onerror = function(msg, url, lineNo, columnNo, error) {
-        alert("Lỗi JS: " + msg + "\nDòng: " + lineNo);
-        return false;
-    };
-    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_v2';
+    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v3';
     let slideData = [];
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
@@ -13,18 +9,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load data from localStorage or use default
     const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (savedData) {
-        slideData = JSON.parse(savedData);
-        // If the number of slides changed in default data, merge it
-        if (slideData.length !== slides.length) {
-            slideData = [...slides];
+        try {
+            let parsed = JSON.parse(savedData);
+            if (parsed && parsed.length === totalSlides) {
+                slideData = parsed;
+            } else {
+                slideData = JSON.parse(JSON.stringify(slides));
+                saveData();
+            }
+        } catch(e) {
+            slideData = JSON.parse(JSON.stringify(slides));
             saveData();
         }
     } else {
-        slideData = [...slides];
+        slideData = JSON.parse(JSON.stringify(slides));
     }
 
     // DOM Elements
     const slideContentEl = document.getElementById('slide-content');
+    const presentationFrame = document.getElementById('presentation-frame');
+
+    // Initialization
     const currentSlideEl = document.getElementById('current-slide');
     const totalSlidesEl = document.getElementById('total-slides');
     const slideSelectorEl = document.getElementById('slide-selector');
@@ -48,420 +53,431 @@ document.addEventListener('DOMContentLoaded', () => {
     function goToSlide(index) {
         if (index < 0 || index >= totalSlides) return;
         
-        // Save current slide edits if in edit mode
+        // Save current slide data if in edit mode before leaving
         if (isEditMode) {
-            saveCurrentSlideDOM();
+            updateCurrentSlideData();
         }
 
         currentSlideIndex = index;
+        renderSlide();
+        
+        // Update UI
         currentSlideEl.textContent = currentSlideIndex + 1;
         slideSelectorEl.value = currentSlideIndex;
         
-        renderSlide();
+        btnPrev.disabled = currentSlideIndex === 0;
+        btnNext.disabled = currentSlideIndex === totalSlides - 1;
     }
 
-    btnPrev.addEventListener('click', () => goToSlide(currentSlideIndex - 1));
-    btnNext.addEventListener('click', () => goToSlide(currentSlideIndex + 1));
-    slideSelectorEl.addEventListener('change', (e) => goToSlide(parseInt(e.target.value)));
+    // Timer variables
+    let currentTimerInterval = null;
 
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (!isEditMode) {
-            if (e.key === 'ArrowRight' || e.key === ' ') goToSlide(currentSlideIndex + 1);
-            if (e.key === 'ArrowLeft') goToSlide(currentSlideIndex - 1);
-        }
-    });
-
-    // Render Slide
     function renderSlide() {
-        // Clear current
-        slideContentEl.innerHTML = '';
+        // Clear previous timers if any
+        if (currentTimerInterval) {
+            clearInterval(currentTimerInterval);
+            currentTimerInterval = null;
+        }
+
+        const slide = slideData[currentSlideIndex];
+        slideContentEl.innerHTML = slide.content;
+
+        const draggables = slideContentEl.querySelectorAll('.draggable');
+        draggables.forEach(el => {
+            el.style.cursor = 'move';
+            el.addEventListener('mousedown', dragStart);
+        });
+
+        // Apply edit mode if active
+        if (isEditMode) {
+            enableEditModeOnElements();
+        } else {
+            disableEditModeOnElements();
+        }
+
+        // --- SPECIFIC SLIDE INTERACTIONS ---
         
-        // Create slide container
-        const slideDiv = document.createElement('div');
-        slideDiv.className = 'slide active';
-        slideDiv.innerHTML = slideData[currentSlideIndex].content;
-        slideContentEl.appendChild(slideDiv);
-
-        setupInteractions(slideDiv);
-        updateEditModeUI();
-    }
-
-    // Interaction setups (Timers, Scratch masks, Checkboxes, Nav targets)
-    function setupInteractions(container) {
-        // Nav targets
-        container.querySelectorAll('.nav-target').forEach(el => {
-            el.addEventListener('click', () => {
-                if (!isEditMode) goToSlide(parseInt(el.getAttribute('data-target')) - 1);
-            });
-        });
-
-        // Timers
-        container.querySelectorAll('.timer').forEach(el => {
-            let time = parseInt(el.getAttribute('data-time'));
-            let initialTime = time;
-            let interval = null;
-            let isRunning = false;
-            
-            const updateDisplay = () => {
-                let m = Math.floor(time / 60).toString().padStart(2, '0');
-                let s = (time % 60).toString().padStart(2, '0');
-                el.textContent = `${m}:${s}`;
-            };
-            // Initial display (in case it got saved in middle)
-            if(!el.textContent.includes(':')) updateDisplay();
-
-            el.addEventListener('click', () => {
-                if (isEditMode) return;
-                if (isRunning) {
-                    clearInterval(interval);
-                    isRunning = false;
-                } else {
-                    isRunning = true;
-                    interval = setInterval(() => {
-                        time--;
-                        if (time <= 0) {
-                            time = 0;
-                            clearInterval(interval);
-                            isRunning = false;
-                            el.style.color = '#ff0000';
-                            el.style.textShadow = '0 0 30px #ff0000';
-                            // Alert sound or blink
-                            let blink = 0;
-                            let blinkInterval = setInterval(() => {
-                                el.style.opacity = blink % 2 === 0 ? 0 : 1;
-                                blink++;
-                                if (blink > 5) clearInterval(blinkInterval);
-                            }, 300);
-                        }
-                        updateDisplay();
-                    }, 1000);
-                }
-            });
-        });
-
-        // Checkboxes in Slide 40
-        container.querySelectorAll('.checklist-item').forEach(el => {
-            el.addEventListener('click', () => {
-                if (isEditMode) return;
-                const icon = el.querySelector('i');
-                if (icon.classList.contains('fa-square')) {
-                    icon.classList.remove('fa-square', 'far');
-                    icon.classList.add('fa-check-square', 'fas');
-                    icon.style.color = 'var(--primary-blue)';
-                } else {
-                    icon.classList.remove('fa-check-square', 'fas');
-                    icon.classList.add('fa-square', 'far');
-                    icon.style.color = 'inherit';
-                }
-            });
-        });
-
-        // Cycle colors on click
-        container.querySelectorAll('.interactive-cycle').forEach(el => {
-            el.addEventListener('click', () => {
-                if (isEditMode) return;
-                const state = parseInt(el.getAttribute('data-state') || '0');
-                const nextState = (state + 1) % 3; // 0: neutral, 1: green, 2: red
-                el.setAttribute('data-state', nextState);
-                if (nextState === 0) {
-                    el.style.backgroundColor = 'rgba(0,210,255,0.2)';
-                    el.style.borderColor = 'var(--primary-blue)';
-                    el.style.color = 'inherit';
-                } else if (nextState === 1) {
-                    el.style.backgroundColor = 'rgba(0,255,0,0.2)';
-                    el.style.borderColor = '#00ff00';
-                    el.style.color = '#00ff00';
-                } else if (nextState === 2) {
-                    el.style.backgroundColor = 'rgba(255,50,50,0.2)';
-                    el.style.borderColor = '#ff3333';
-                    el.style.color = '#ff3333';
-                }
-            });
-        });
-
-        // Reveal answers on click
-        container.querySelectorAll('.interactive-reveal').forEach(el => {
-            el.addEventListener('click', () => {
-                if (isEditMode) return;
-                el.style.opacity = '1';
-                el.style.color = '#00ff00';
-                el.innerHTML = el.getAttribute('data-answer') || 'Đã mở';
-                el.style.cursor = 'default';
-            });
-        });
-        container.querySelectorAll('.scratch-overlay').forEach(el => {
-            el.addEventListener('mousemove', (e) => {
-                if (isEditMode) return;
-                // Simple hover scratch effect
-                if (e.buttons === 1 || e.type === 'mouseenter') {
-                    el.style.opacity -= 0.1;
-                    if (el.style.opacity <= 0) {
-                        el.classList.add('revealed');
+        // Slide 1: Typewriter effect
+        if (currentSlideIndex === 0 && !isEditMode) {
+            const twElements = slideContentEl.querySelectorAll('.typewriter-effect');
+            twElements.forEach(el => {
+                const text = el.textContent || '';
+                el.textContent = '';
+                let i = 0;
+                function type() {
+                    if (i < text.length) {
+                        el.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, 50);
                     }
                 }
+                setTimeout(type, 300); // slight delay before typing starts
             });
-            el.addEventListener('click', () => {
-                if (!isEditMode) el.classList.add('revealed');
-            });
-        });
+        }
 
-        // Checkboxes in Slide 40
-        container.querySelectorAll('.checklist-item').forEach(el => {
-            el.addEventListener('click', () => {
-                if (isEditMode) return;
-                const icon = el.querySelector('i');
-                if (icon.classList.contains('fa-square')) {
-                    icon.classList.remove('fa-square', 'far');
-                    icon.classList.add('fa-check-square', 'fas');
-                    icon.style.color = 'var(--primary-blue)';
-                } else {
-                    icon.classList.remove('fa-check-square', 'fas');
-                    icon.classList.add('fa-square', 'far');
-                    icon.style.color = 'inherit';
+        // Slide 5: Flash Warning Animation
+        if (slide.isWarningSlide && !isEditMode) {
+            const warningBox = slideContentEl.querySelector('.warning-box');
+            let flashes = 0;
+            const flashInterval = setInterval(() => {
+                if(warningBox) {
+                    warningBox.style.background = flashes % 2 === 0 ? 'rgba(255, 0, 0, 0.8)' : 'rgba(255, 0, 0, 0.2)';
+                    flashes++;
+                    if(flashes >= 6) {
+                        clearInterval(flashInterval);
+                        warningBox.style.background = 'rgba(255, 0, 0, 0.2)';
+                    }
                 }
-            });
-        });
-
-        // Slide 38 fade in items
-        let fadeIndex = 0;
-        const fadeItems = container.querySelectorAll('.fade-in-item');
-        if (fadeItems.length > 0 && currentSlideIndex === 37) {
-            container.addEventListener('click', (e) => {
-                if (isEditMode || e.target.closest('.toolbar')) return;
-                if (fadeIndex < fadeItems.length) {
-                    fadeItems[fadeIndex].style.opacity = 1;
-                    fadeIndex++;
-                }
-            });
+            }, 500);
         }
 
-        // Slide 39 Unlock
-        const unlockTrigger = container.querySelector('#unlock-trigger');
-        const answerBlock = container.querySelector('#answer-block');
-        if (unlockTrigger && answerBlock) {
-            unlockTrigger.addEventListener('click', () => {
-                if (isEditMode) return;
-                unlockTrigger.innerHTML = '<i class="fas fa-lock-open"></i>';
-                unlockTrigger.style.transform = 'scale(1.5) rotate(10deg)';
-                unlockTrigger.style.color = '#00ff00';
-                
-                setTimeout(() => {
-                    unlockTrigger.style.opacity = 0;
-                    answerBlock.style.opacity = 1;
-                    answerBlock.style.transform = 'translateY(0)';
-                    answerBlock.style.pointerEvents = 'auto';
-                }, 500);
-            });
+        // Slide 12: Modal Popup
+        if (currentSlideIndex === 11) { // Slide 12
+            const btnShowTask = slideContentEl.querySelector('#btn-show-task');
+            const taskModal = slideContentEl.querySelector('#task-modal');
+            const btnCloseTask = slideContentEl.querySelector('#btn-close-task');
+            
+            if (btnShowTask && taskModal && btnCloseTask) {
+                btnShowTask.addEventListener('click', () => {
+                    taskModal.classList.remove('hidden');
+                    taskModal.style.opacity = '1';
+                    taskModal.style.pointerEvents = 'auto';
+                });
+                btnCloseTask.addEventListener('click', () => {
+                    taskModal.style.opacity = '0';
+                    taskModal.style.pointerEvents = 'none';
+                    setTimeout(() => taskModal.classList.add('hidden'), 300);
+                });
+            }
         }
 
-        // Slide 40 Commit Button
-        const commitBtn = container.querySelector('#commit-btn');
-        const commitStamp = container.querySelector('#commit-stamp');
-        if (commitBtn && commitStamp) {
-            commitBtn.addEventListener('click', () => {
-                if (isEditMode) return;
-                commitStamp.style.opacity = 1;
-                commitStamp.style.transform = 'translate(-50%, -50%) scale(1) rotate(-15deg)';
-                // Play sound logic here if needed
-            });
+        // Slide 36: Checkbox & Stamp
+        if (currentSlideIndex === 35) { // Slide 36
+            const btnCommit = slideContentEl.querySelector('#btn-commit');
+            const stampContainer = slideContentEl.querySelector('#stamp-container');
+            const classNameInput = slideContentEl.querySelector('#class-name-input');
+            
+            if (btnCommit && stampContainer && classNameInput) {
+                btnCommit.addEventListener('click', () => {
+                    if (classNameInput.value.trim() === '') {
+                        alert("Vui lòng nhập tên lớp trước khi cam kết!");
+                        return;
+                    }
+                    stampContainer.style.opacity = '1';
+                    stampContainer.style.transform = 'scale(1) rotate(-20deg)';
+                });
+            }
         }
 
-        // Slide 41 Finish Confetti
-        const finishBtn = container.querySelector('#finish-btn');
-        const confettiContainer = container.querySelector('#confetti-container');
-        if (finishBtn && confettiContainer) {
-            finishBtn.addEventListener('click', () => {
-                if (isEditMode) return;
-                for (let i = 0; i < 100; i++) {
-                    const confetti = document.createElement('div');
-                    confetti.style.position = 'absolute';
-                    confetti.style.width = '10px';
-                    confetti.style.height = '10px';
-                    confetti.style.backgroundColor = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#00ffff', '#ff00ff'][Math.floor(Math.random() * 6)];
-                    confetti.style.left = Math.random() * 100 + '%';
-                    confetti.style.top = '-10px';
-                    confetti.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
-                    confettiContainer.appendChild(confetti);
+        // Slide 38: Confetti
+        if (currentSlideIndex === 37) { // Slide 38
+            const btnFinish = slideContentEl.querySelector('#btn-finish');
+            const teamNameInput = slideContentEl.querySelector('#team-name-input');
+            
+            if (btnFinish) {
+                btnFinish.addEventListener('click', () => {
+                    if (window.confetti) {
+                        var duration = 3 * 1000;
+                        var animationEnd = Date.now() + duration;
+                        var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
 
-                    // Animate falling
-                    let top = -10;
-                    let speed = Math.random() * 5 + 2;
-                    let inter = setInterval(() => {
-                        top += speed;
-                        confetti.style.top = top + 'px';
-                        if (top > window.innerHeight) {
-                            clearInterval(inter);
-                            confetti.remove();
+                        var interval = setInterval(function() {
+                            var timeLeft = animationEnd - Date.now();
+                            if (timeLeft <= 0) {
+                                return clearInterval(interval);
+                            }
+                            var particleCount = 50 * (timeLeft / duration);
+                            window.confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random(), y: Math.random() - 0.2 } }));
+                        }, 250);
+                    }
+                });
+
+                // allow enter key on input to trigger button
+                if(teamNameInput) {
+                    teamNameInput.addEventListener('keypress', function(e) {
+                        if (e.key === 'Enter') {
+                            btnFinish.click();
                         }
-                    }, 20);
+                    });
                 }
-            });
+            }
+        }
+
+        // Timers Logic (Slides 9, 16, 21, 26, 31, 34)
+        const timerContainer = slideContentEl.querySelector('.timer-container');
+        if (timerContainer) {
+            const timerDisplay = timerContainer.querySelector('.timer-display');
+            const btnStart = timerContainer.querySelector('.start-btn');
+            const btnPause = timerContainer.querySelector('.pause-btn');
+            const btnReset = timerContainer.querySelector('.reset-btn');
+            
+            if (timerDisplay && btnStart && btnPause && btnReset) {
+                const totalTime = parseInt(timerDisplay.getAttribute('data-time'), 10);
+                let timeRemaining = totalTime;
+                let isRunning = false;
+
+                function updateDisplay() {
+                    let m = Math.floor(timeRemaining / 60).toString().padStart(2, '0');
+                    let s = (timeRemaining % 60).toString().padStart(2, '0');
+                    timerDisplay.textContent = m + ':' + s;
+                    
+                    if (timeRemaining <= 10) {
+                        timerDisplay.style.color = '#ff3333';
+                    } else {
+                        timerDisplay.style.color = 'var(--primary-blue)';
+                    }
+                }
+
+                function tick() {
+                    if (timeRemaining > 0) {
+                        timeRemaining--;
+                        updateDisplay();
+                    } else {
+                        clearInterval(currentTimerInterval);
+                        isRunning = false;
+                        // Time's up effect
+                        let flashes = 0;
+                        const alarmInterval = setInterval(() => {
+                            slideContentEl.style.backgroundColor = flashes % 2 === 0 ? 'rgba(255,0,0,0.4)' : 'transparent';
+                            flashes++;
+                            if (flashes >= 6) {
+                                clearInterval(alarmInterval);
+                                slideContentEl.style.backgroundColor = 'transparent';
+                            }
+                        }, 300);
+                    }
+                }
+
+                btnStart.addEventListener('click', () => {
+                    if (!isRunning && timeRemaining > 0) {
+                        isRunning = true;
+                        currentTimerInterval = setInterval(tick, 1000);
+                    }
+                });
+
+                btnPause.addEventListener('click', () => {
+                    if (isRunning) {
+                        clearInterval(currentTimerInterval);
+                        isRunning = false;
+                    }
+                });
+
+                btnReset.addEventListener('click', () => {
+                    clearInterval(currentTimerInterval);
+                    isRunning = false;
+                    timeRemaining = totalTime;
+                    updateDisplay();
+                });
+
+                // Init display
+                updateDisplay();
+            }
         }
     }
 
-    // Edit Mode Logic
-    btnEditMode.addEventListener('click', () => {
-        isEditMode = !isEditMode;
-        if (isEditMode) {
-            document.body.classList.add('edit-mode');
-            btnEditMode.classList.add('active');
-            btnSave.classList.remove('hidden');
-        } else {
-            document.body.classList.remove('edit-mode');
-            btnEditMode.classList.remove('active');
-            btnSave.classList.add('hidden');
-            saveCurrentSlideDOM();
+    // Event Listeners for Navigation
+    btnPrev.addEventListener('click', () => goToSlide(currentSlideIndex - 1));
+    btnNext.addEventListener('click', () => goToSlide(currentSlideIndex + 1));
+    slideSelectorEl.addEventListener('change', (e) => {
+        goToSlide(parseInt(e.target.value, 10));
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        // Only if not editing text
+        if (e.target.isContentEditable || e.target.tagName === 'INPUT') return;
+        
+        if (e.key === 'ArrowRight' || e.key === 'Space' || e.key === 'Enter') {
+            goToSlide(currentSlideIndex + 1);
+        } else if (e.key === 'ArrowLeft') {
+            goToSlide(currentSlideIndex - 1);
         }
-        updateEditModeUI();
     });
 
-    function updateEditModeUI() {
-        const editables = document.querySelectorAll('.editable');
-        const draggables = document.querySelectorAll('.draggable, .abs-element');
+    // --- EDIT MODE LOGIC ---
+    let draggedElement = null;
+    let offsetX = 0, offsetY = 0;
 
+    function enableEditModeOnElements() {
+        const editables = slideContentEl.querySelectorAll('.editable');
         editables.forEach(el => {
-            if (isEditMode) {
-                el.setAttribute('contenteditable', 'true');
-                // Prevent clicking links or causing triggers while editing
-                el.addEventListener('click', stopPropagationInEdit);
-            } else {
-                el.removeAttribute('contenteditable');
-                el.removeEventListener('click', stopPropagationInEdit);
-            }
+            el.contentEditable = true;
+            el.classList.add('editing-active');
         });
 
+        const draggables = slideContentEl.querySelectorAll('.draggable');
         draggables.forEach(el => {
-            if (isEditMode) {
-                makeDraggable(el);
-            } else {
-                removeDraggable(el);
-            }
+            el.style.cursor = 'move';
+            el.addEventListener('mousedown', dragStart);
         });
     }
 
-    function stopPropagationInEdit(e) {
-        if (isEditMode) e.stopPropagation();
-    }
-
-    // Dragging Logic
-    let activeDragEl = null;
-    let initialX, initialY, currentX, currentY, xOffset = 0, yOffset = 0;
-
-    function makeDraggable(el) {
-        el.onmousedown = dragStart;
-    }
-    
-    function removeDraggable(el) {
-        el.onmousedown = null;
+    function disableEditModeOnElements() {
+        const editables = slideContentEl.querySelectorAll('.editable');
+        editables.forEach(el => {
+            el.contentEditable = false;
+            el.classList.remove('editing-active');
+        });
     }
 
     function dragStart(e) {
-        if (!isEditMode || e.target.getAttribute('contenteditable') === 'true') return; // Don't drag if clicking text to edit
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON') return;
         
-        activeDragEl = e.currentTarget;
+        // Only allow dragging if it has draggable class, or if in edit mode
+        if (!isEditMode && !e.target.classList.contains('draggable')) return;
         
-        // Use current inline transform or top/left
-        const style = window.getComputedStyle(activeDragEl);
-        if (activeDragEl.style.transform) {
-            const matrix = new WebKitCSSMatrix(style.transform);
-            xOffset = matrix.m41;
-            yOffset = matrix.m42;
-        } else {
-            xOffset = 0;
-            yOffset = 0;
+        // Find nearest draggable
+        let target = e.target;
+        while (target && !target.classList.contains('draggable')) {
+            if (target === slideContentEl) return; // Didn't find
+            target = target.parentElement;
         }
 
-        initialX = e.clientX - xOffset;
-        initialY = e.clientY - yOffset;
+        if (target) {
+            draggedElement = target;
+            const rect = draggedElement.getBoundingClientRect();
+            const parentRect = slideContentEl.getBoundingClientRect();
+            
+            // If it's not absolute, make it absolute relative to slideContentEl
+            if (window.getComputedStyle(draggedElement).position !== 'absolute') {
+                // Calculate current position relative to slideContentEl in percentages
+                const leftPercent = ((rect.left - parentRect.left) / parentRect.width) * 100;
+                const topPercent = ((rect.top - parentRect.top) / parentRect.height) * 100;
+                
+                // Append to slideContentEl so it isn't clipped by parent
+                slideContentEl.appendChild(draggedElement);
+                
+                draggedElement.style.position = 'absolute';
+                draggedElement.style.left = leftPercent + '%';
+                draggedElement.style.top = topPercent + '%';
+                draggedElement.style.margin = '0';
+            }
 
-        document.onmouseup = dragEnd;
-        document.onmousemove = drag;
+            // Recalculate rect after potential DOM changes
+            const newRect = draggedElement.getBoundingClientRect();
+            offsetX = e.clientX - newRect.left;
+            offsetY = e.clientY - newRect.top;
+            
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', dragEnd);
+        }
     }
 
     function drag(e) {
-        if (!activeDragEl) return;
+        if (!draggedElement) return;
         e.preventDefault();
         
-        currentX = e.clientX - initialX;
-        currentY = e.clientY - initialY;
+        const parentRect = slideContentEl.getBoundingClientRect();
         
-        // Instead of transform, let's update top/left if it's abs-element, else use transform
-        if (activeDragEl.classList.contains('abs-element')) {
-            // Calculate percentage based on parent
-            const parentRect = document.getElementById('slide-content').getBoundingClientRect();
-            // Need to handle scaling correctly, but for simplicity we just adjust top/left px or %
-            // If it's absolute, just offset it by pixels
-            let currentTop = parseFloat(activeDragEl.style.top) || 0;
-            let currentLeft = parseFloat(activeDragEl.style.left) || 0;
-            
-            // Simpler drag for absolute elements without dealing with transform matrix complexity
-            // Just applying transform:
-            activeDragEl.style.transform = `translate(${currentX}px, ${currentY}px)`;
+        let newX = e.clientX - parentRect.left - offsetX;
+        let newY = e.clientY - parentRect.top - offsetY;
+
+        // Convert to percentages for responsiveness
+        const leftPercent = (newX / parentRect.width) * 100;
+        const topPercent = (newY / parentRect.height) * 100;
+
+        draggedElement.style.left = leftPercent + '%';
+        draggedElement.style.top = topPercent + '%';
+        draggedElement.style.transform = 'none'; // Clear any centering transforms if dragged
+    }
+
+    function dragEnd(e) {
+        if (!draggedElement) return;
+
+        // Snapping logic for drop zones
+        const dropZones = document.querySelectorAll('.drop-zone');
+        
+        dropZones.forEach(zone => {
+            const rect = zone.getBoundingClientRect();
+            // Check if mouse is over this drop zone
+            if (e.clientX >= rect.left && e.clientX <= rect.right &&
+                e.clientY >= rect.top && e.clientY <= rect.bottom) {
+                
+                const parentRect = slideContentEl.getBoundingClientRect();
+                const zoneCenterX = rect.left + rect.width / 2;
+                const zoneCenterY = rect.top + rect.height / 2;
+                
+                const draggedRect = draggedElement.getBoundingClientRect();
+                
+                const newX = zoneCenterX - parentRect.left - (draggedRect.width / 2);
+                const newY = zoneCenterY - parentRect.top - (draggedRect.height / 2);
+                
+                const leftPercent = (newX / parentRect.width) * 100;
+                const topPercent = (newY / parentRect.height) * 100;
+                
+                draggedElement.style.left = leftPercent + '%';
+                draggedElement.style.top = topPercent + '%';
+            }
+        });
+
+        draggedElement = null;
+        document.removeEventListener('mousemove', drag);
+        document.removeEventListener('mouseup', dragEnd);
+    }
+
+    btnEditMode.addEventListener('click', () => {
+        isEditMode = !isEditMode;
+        if (isEditMode) {
+            btnEditMode.classList.add('active');
+            btnSave.classList.remove('hidden');
+            enableEditModeOnElements();
         } else {
-            activeDragEl.style.transform = `translate(${currentX}px, ${currentY}px)`;
+            btnEditMode.classList.remove('active');
+            btnSave.classList.add('hidden');
+            disableEditModeOnElements();
         }
-    }
-
-    function dragEnd() {
-        initialX = currentX;
-        initialY = currentY;
-        activeDragEl = null;
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-
-    // Saving data
-    btnSave.addEventListener('click', () => {
-        saveCurrentSlideDOM();
-        saveData();
-        alert('Đã lưu thay đổi!');
     });
 
-    function saveCurrentSlideDOM() {
-        const slideHtml = slideContentEl.querySelector('.slide').innerHTML;
-        slideData[currentSlideIndex].content = slideHtml;
+    btnSave.addEventListener('click', () => {
+        updateCurrentSlideData();
+        saveData();
+        alert("Đã lưu thiết kế slide!");
+    });
+
+    function updateCurrentSlideData() {
+        // Clean up classes before saving
+        const clone = slideContentEl.cloneNode(true);
+        const editables = clone.querySelectorAll('.editable');
+        editables.forEach(el => {
+            el.contentEditable = false;
+            el.classList.remove('editing-active');
+        });
+        
+        // If typewriter was used, we need to save the final text, which is what is currently there.
+        // But we shouldn't save the interval state. cloneNode captures the innerHTML which is good.
+        
+        slideData[currentSlideIndex].content = clone.innerHTML;
     }
 
     function saveData() {
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(slideData));
     }
 
-    // Fullscreen Mode
-    btnPresentMode.addEventListener('click', () => {
-        isFullscreen = !isFullscreen;
-        if (isFullscreen) {
-            document.body.classList.add('fullscreen-mode');
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            }
+    // --- FULLSCREEN LOGIC ---
+    btnPresentMode.addEventListener('click', toggleFullScreen);
+
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            appContainer.requestFullscreen().catch(err => {
+                alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            });
         } else {
-            document.body.classList.remove('fullscreen-mode');
             if (document.exitFullscreen) {
                 document.exitFullscreen();
             }
         }
-    });
+    }
 
     document.addEventListener('fullscreenchange', () => {
         if (!document.fullscreenElement) {
-            document.body.classList.remove('fullscreen-mode');
             isFullscreen = false;
+            document.body.classList.remove('presentation-mode');
+        } else {
+            isFullscreen = true;
+            document.body.classList.add('presentation-mode');
         }
     });
 
-    // Resize window handling to maintain 16:9 inner scale if necessary
-    function resizeFrame() {
-        const frame = document.getElementById('presentation-frame');
-        const content = document.getElementById('slide-content');
-        
-        // Remove scale transform since CSS percentages handle responsiveness
-        content.style.transform = 'none';
-    }
-    
-    window.addEventListener('resize', resizeFrame);
-    
-    // Init
-    renderSlide();
-    resizeFrame();
+    // Initial render
+    goToSlide(0);
 });

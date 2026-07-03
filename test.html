@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        window.onerror = function(m, u, l, c, e) {
+            document.title = "ERROR:" + m + " line:" + l;
+        };
+    </script>
+    <script src="slides.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <div id="presentation-frame"><div id="slide-content"></div></div>
+        <span id="current-slide"></span><span id="total-slides"></span>
+        <select id="slide-selector"></select>
+        <button id="btn-prev"></button><button id="btn-next"></button>
+        <button id="btn-edit-mode"></button><button id="btn-save"></button><button id="btn-present-mode"></button>
+    </div>
+    <script>
+        setTimeout(function() {
+            if(document.title.indexOf("ERROR") === -1) document.title = "SUCCESS";
+        }, 1000);
+    </script>
+</body>
+</html>
