@@ -178,7 +178,7 @@ const slides = [
     {
         id: 10,
         content: `
-        <div class="center-layout abs-element" style="width: 100%;">
+        <div class="top-center-layout abs-element" style="top: 10%; width: 100%;">
             <div class="title editable draggable">ĐÁP ÁN</div>
         </div>
         <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: left; border-color: #00ffcc;">
@@ -859,7 +859,7 @@ const slides = [
             <div class="title editable draggable">BẢN CAM KẾT HÀNH ĐỘNG</div>
             <div class="subtitle editable draggable" style="font-size: 16pt; margin-top: 5px; color: #ffeb3b;">KÍCH HOẠT CAM KẾT - Hệ thống học tập chủ động với AI đã hoàn thành. Để kích hoạt hệ thống, mỗi chuyên gia cần đưa ra cam kết sử dụng AI đúng cách.</div>
         </div>
-        <div class="center-layout abs-element dashboard-card" style="width: 70%; height: 75%; text-align: left; position: relative;">
+        <div class="abs-element dashboard-card" style="top: 25%; left: 15%; width: 70%; text-align: left; position: relative;">
             <div class="body-text editable draggable" style="font-size: 20pt;">
                 <p style="color: var(--primary-blue); font-weight: bold; margin-bottom: 15px;">Trong tuần tới em sẽ:</p>
                 <div class="checkbox-group" style="margin-left: 20px; line-height: 1.8;">
@@ -915,7 +915,7 @@ const slides = [
             <div class="title editable draggable" style="color: #ffeb3b; font-size: 40pt;"><i class="fas fa-award"></i> CHỨNG NHẬN HOÀN THÀNH NHIỆM VỤ</div>
             <div class="subtitle editable draggable" style="font-size: 20pt; margin-top: 15px; max-width: 80%; margin-left: auto; margin-right: auto;">Chúc mừng các chuyên gia công nghệ đã xuất sắc kích hoạt thành công hệ thuật toán học tập chủ động cùng AI.</div>
         </div>
-        <div class="center-layout abs-element" style="z-index: 2; width: 60%; text-align: center;">
+        <div class="abs-element" style="top: 45%; left: 50%; transform: translateX(-50%); z-index: 2; width: 60%; text-align: center;">
             <div style="background: rgba(0, 0, 0, 0.6); padding: 40px; border: 3px solid #ffeb3b; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 235, 59, 0.4);">
                 <input type="text" id="team-name-input" placeholder="Nhập tên nhóm..." style="width: 80%; padding: 20px; font-size: 30pt; background: transparent; border: none; border-bottom: 3px dashed #00d2ff; color: #fff; text-align: center; outline: none; margin-bottom: 30px;">
                 <br>
