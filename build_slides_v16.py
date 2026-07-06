@@ -83,7 +83,7 @@ slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 1</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Mở khoá nhiệm vụ</div>
-            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Phân tích tình huống của bạn B để tìm nguyên nhân bị giáo viên phê bình.</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Phân tích tình huống của bạn Bách để tìm nguyên nhân bị giáo viên phê bình.</div>
         </div>
 """)
 
@@ -133,19 +133,19 @@ slides.append("""
 slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 44pt;">Điều tra sự cố AI</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Quan sát tình huống, thảo luận và tìm nguyên nhân.</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Quan sát tình huống, thảo luận và tìm nguyên nhân.</div>
         </div>
-        <div class="center-layout abs-element dashboard-card chat-box" style="width: 80%; height: auto; padding: 30px; text-align: left; position: relative;">
+        <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 10%; width: 80%; height: auto; padding: 30px; text-align: left; position: absolute;">
             <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6;">
-                Bạn B được giao viết bài văn kể về một trải nghiệm đáng nhớ.<br>
-                Vì sắp đến giờ nộp bài nên B nhờ AI viết hộ.<br>
+                Bạn Bách được giao viết bài văn kể về một trải nghiệm đáng nhớ.<br>
+                Vì sắp đến giờ nộp bài nên Bách nhờ AI viết hộ.<br>
                 AI viết một bài văn rất hay kể về chuyến đi trượt tuyết ở Sa Pa.<br>
-                Tuy nhiên, giáo viên lại cho B điểm không tốt và phê bình B trước lớp.
+                Tuy nhiên, giáo viên lại cho Bách điểm không tốt và phê bình Bách trước lớp.
                 <hr style="border-color: rgba(0, 210, 255, 0.3); margin: 20px 0;">
                 <p style="color: #ffeb3b;"><strong>Câu hỏi:</strong></p>
                 <ol style="margin-left: 30px; font-size: 24pt; line-height: 1.5;">
-                    <li>Vì sao giáo viên cho B điểm không tốt và phê bình B?</li>
-                    <li>Vì sao giáo viên phát hiện bài văn của B là do AI viết hộ?</li>
+                    <li>Vì sao giáo viên cho Bách điểm không tốt và phê bình Bách?</li>
+                    <li>Vì sao giáo viên phát hiện bài văn của Bách là do AI viết hộ?</li>
                 </ol>
             </div>
         </div>
@@ -179,18 +179,17 @@ slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 2</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Nhận yêu cầu từ khách hàng</div>
-            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Tiếp nhận yêu cầu từ khách hàng để xác định vấn đề cần giải quyết.</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Tiếp nhận yêu cầu từ khách hàng<br>để xác định vấn đề cần giải quyết.</div>
         </div>
 """)
 
 # SLIDE 12
 slides.append("""
-        <div class="abs-element slide-bg" style="background-image: url('assets/slide12_bg.png'); z-index: -1;"></div>
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 26pt;">NHIỆM VỤ CHI TIẾT</div>
         </div>
-        <div class="abs-element dashboard-card" style="top: 25%; left: 10%; width: 80%; text-align: center;">
-            <div class="body-text editable draggable" style="font-size: 18pt;">
+        <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: center; position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 18pt; text-align: center; display: flex; justify-content: center; width: 100%;">
                 <button onclick="document.getElementById('task-modal').style.display='flex'" class="interactive-btn" style="font-size: 20pt; padding: 15px 30px; background: rgba(0, 255, 204, 0.2); border: 2px solid #00ffcc; color: #00ffcc; cursor: pointer; border-radius: 8px;"><i class="fas fa-folder-open"></i> XEM CHI TIẾT</button>
             </div>
         </div>
@@ -270,25 +269,25 @@ slides.append("""
             <div class="title editable draggable" style="font-size: 44pt;">Rà soát dữ liệu AI</div>
             <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Đọc các thẻ và phân loại vào đúng nhóm.</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 25%; left: 5%; width: 90%; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6;">
-                <p style="color: #ffeb3b; font-weight: bold; text-align: center;">Hãy đọc các thẻ thông tin dưới đây và phân loại vào đúng hai nhóm:</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 30px;">
-                    <div class="alg-block draggable" style="z-index: 10; padding: 10px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px;">AI giúp giải thích bài</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 10px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px;">Viết hộ bài văn</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 10px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px;">Kiểm tra đáp án</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 10px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px;">Cho mình dàn ý</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 10px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px;">Làm luôn bài tập</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 10px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px;">Gợi ý từ vựng</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 10px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px;">Đặt câu hỏi để mình tự trả lời</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 10px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px;">Kể hộ trải nghiệm</div>
+        <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 5%; width: 90%; height: 460px; text-align: left; position: absolute; padding: 25px 35px; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.3;">
+                <p style="color: #ffeb3b; font-weight: bold; text-align: center; margin-bottom: 15px; font-size: 20pt;">Hãy đọc các thẻ thông tin dưới đây và phân loại vào đúng hai nhóm:</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 20px;">
+                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">AI giúp giải thích bài</div>
+                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Viết hộ bài văn</div>
+                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Kiểm tra đáp án</div>
+                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Cho mình dàn ý</div>
+                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Làm luôn bài tập</div>
+                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Gợi ý từ vựng</div>
+                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Đặt câu hỏi để mình tự trả lời</div>
+                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Kể hộ trải nghiệm</div>
                 </div>
-                <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-                    <div class="drop-zone" style="width: 45%; min-height: 150px; border: 3px dashed #00ffcc; border-radius: 10px; padding: 15px; position: relative;">
-                        <span style="position: absolute; top: -20px; left: 10px; background: var(--bg-dark); color: #00ffcc; font-weight: bold; padding: 0 10px;">AI NÊN HỖ TRỢ</span>
+                <div style="display: flex; justify-content: space-around; margin-top: 15px;">
+                    <div class="drop-zone" style="width: 45%; min-height: 160px; border: 3px dashed #00ffcc; border-radius: 10px; padding: 15px; position: relative;">
+                        <span style="position: absolute; top: -18px; left: 10px; background: var(--bg-dark); color: #00ffcc; font-weight: bold; padding: 0 10px; font-size: 15pt;">AI NÊN HỖ TRỢ</span>
                     </div>
-                    <div class="drop-zone" style="width: 45%; min-height: 150px; border: 3px dashed #ff3333; border-radius: 10px; padding: 15px; position: relative;">
-                        <span style="position: absolute; top: -20px; left: 10px; background: var(--bg-dark); color: #ff3333; font-weight: bold; padding: 0 10px;">KHÔNG NÊN YÊU CẦU AI</span>
+                    <div class="drop-zone" style="width: 45%; min-height: 160px; border: 3px dashed #ff3333; border-radius: 10px; padding: 15px; position: relative;">
+                        <span style="position: absolute; top: -18px; left: 10px; background: var(--bg-dark); color: #ff3333; font-weight: bold; padding: 0 10px; font-size: 15pt;">KHÔNG NÊN YÊU CẦU AI</span>
                     </div>
                 </div>
             </div>
@@ -373,16 +372,32 @@ slides.append("""
 slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 44pt;">Sửa mã lệnh AI</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Chỉnh sửa các câu lệnh để AI hỗ trợ việc học.</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Chỉnh sửa các câu lệnh để AI hỗ trợ việc học.</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 25%; left: 10%; width: 80%; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
-                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 20px;">Đề bài: Hãy biến các câu lệnh "làm hộ" thành câu lệnh "giúp học".</p>
-                <div style="display: flex; flex-direction: column; gap: 15px;">
-                    <div>1. Viết hộ mình bài văn. <br>↓ <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
-                    <div>2. Làm hết bài tập Toán. <br>↓ <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
-                    <div>3. Cho đáp án luôn. <br>↓ <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
-                    <div>4. Trả lời hết câu hỏi. <br>↓ <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
+        <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 5%; width: 90%; height: 450px; text-align: left; position: absolute; padding: 25px 30px; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 22pt; line-height: 1.4; width: 100%;">
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 20px; text-align: center; font-size: 24pt;">Đề bài: Hãy biến các câu lệnh "làm hộ" thành câu lệnh "giúp học".</p>
+                <div style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
+                    <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                        <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0;">1. Viết hộ bài văn</span>
+                        <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 30px; flex-shrink: 0;"></i>
+                        <input type="text" placeholder="Nhập câu lệnh giúp em tự học..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                    </div>
+                    <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                        <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0;">2. Làm hết bài tập</span>
+                        <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 30px; flex-shrink: 0;"></i>
+                        <input type="text" placeholder="Nhập câu lệnh giúp em tự học..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                    </div>
+                    <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                        <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0;">3. Cho đáp án luôn</span>
+                        <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 30px; flex-shrink: 0;"></i>
+                        <input type="text" placeholder="Nhập câu lệnh giúp em tự học..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                    </div>
+                    <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                        <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0;">4. Trả lời hết câu hỏi</span>
+                        <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 30px; flex-shrink: 0;"></i>
+                        <input type="text" placeholder="Nhập câu lệnh giúp em tự học..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -499,20 +514,37 @@ slides.append("""
 # SLIDE 27
 slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 44pt;">Lắp ráp quy trình học chủ động</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Hoàn thiện sơ đồ quy trình học chủ động cùng AI.</div>
+            <div class="title editable draggable" style="font-size: 40pt;">Lắp ráp quy trình học chủ động</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Sắp xếp các mảnh ghép thuật toán học tập chủ động với AI theo đúng trình tự:</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 25%; left: 10%; width: 80%; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6;">
-                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 20px; text-align: center;">Điền tên các bước còn thiếu vào sơ đồ:</p>
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                    <div>Bước 1: <input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 300px; text-align: center; outline: none;"></div>
-                    <i class="fas fa-arrow-down" style="color: #00ffcc;"></i>
-                    <div>Bước 2: <input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 300px; text-align: center; outline: none;"></div>
-                    <i class="fas fa-arrow-down" style="color: #00ffcc;"></i>
-                    <div>Bước 3: <input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 300px; text-align: center; outline: none;"></div>
-                    <i class="fas fa-arrow-down" style="color: #00ffcc;"></i>
-                    <div>Bước 4: <input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 300px; text-align: center; outline: none;"></div>
+        <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 10%; width: 80%; height: 420px; text-align: left; position: absolute; padding: 20px 25px; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.3;">
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 25px;">
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Nêu điều mình chưa hiểu</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Nhờ AI giải thích</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Tự làm</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Nhờ AI góp ý</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Chép nguyên bài AI</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Nộp bài ngay</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Không cần đọc lại</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Bỏ qua bước tự làm</div>
+                </div>
+                <div style="display: flex; justify-content: space-around; align-items: stretch; margin-top: 10px;">
+                    <div class="drop-zone" style="flex: 1; min-height: 160px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 8px; font-size: 18pt; width: 100%;">Bước 1</h4>
+                    </div>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 24pt; display: flex; align-items: center;"></i>
+                    <div class="drop-zone" style="flex: 1; min-height: 160px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 8px; font-size: 18pt; width: 100%;">Bước 2</h4>
+                    </div>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 24pt; display: flex; align-items: center;"></i>
+                    <div class="drop-zone" style="flex: 1; min-height: 160px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 8px; font-size: 18pt; width: 100%;">Bước 3</h4>
+                    </div>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 24pt; display: flex; align-items: center;"></i>
+                    <div class="drop-zone" style="flex: 1; min-height: 160px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 8px; font-size: 18pt; width: 100%;">Bước 4</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -595,18 +627,30 @@ slides.append("""
 # SLIDE 32
 slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 44pt;">Thử nghiệm quy trình học chủ động</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Áp dụng quy trình 4 bước vào tình huống được giao.</div>
+            <div class="title editable draggable" style="font-size: 44pt;">Thử nghiệm quy trình<br>học chủ động</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Áp dụng quy trình 4 bước vào tình huống được giao.</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 25%; left: 10%; width: 80%; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6;">
-                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 20px;">Tình huống: Em sắp viết bài văn: "Kể về người bạn thân."</p>
-                <p style="margin-bottom: 15px;">Hãy hoàn thành quy trình:</p>
-                <ul style="list-style-type: none; padding: 0;">
-                    <li style="margin-bottom: 15px;">• Bước 1: Nêu điều em chưa hiểu.<br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></li>
-                    <li style="margin-bottom: 15px;">• Bước 2: Viết câu hỏi hoặc yêu cầu gửi AI.<br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></li>
-                    <li style="margin-bottom: 15px;">• Bước 3: Em sẽ tự thực hiện điều gì?<br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></li>
-                    <li style="margin-bottom: 15px;">• Bước 4: Em sẽ nhờ AI góp ý như thế nào?<br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></li>
+        <div class="abs-element dashboard-card chat-box" style="top: 230px; left: 10%; width: 80%; height: 450px; text-align: left; position: absolute; padding: 30px 40px; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 22pt; line-height: 1.4; width: 100%;">
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 15px; font-size: 24pt;">Tình huống: Em sắp viết bài văn: "Kể về người bạn thân."</p>
+                <p style="margin-bottom: 15px; font-size: 22pt;">Hãy hoàn thành quy trình:</p>
+                <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: column; gap: 15px; width: 100%;">
+                    <li style="display: flex; align-items: center; width: 100%;">
+                        <span style="font-weight: bold; white-space: nowrap; font-size: 20pt; width: 480px; flex-shrink: 0;">• Bước 1: Nêu điều chưa hiểu:</span>
+                        <input type="text" placeholder="Nhập câu trả lời..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none; margin-left: 15px;">
+                    </li>
+                    <li style="display: flex; align-items: center; width: 100%;">
+                        <span style="font-weight: bold; white-space: nowrap; font-size: 20pt; width: 480px; flex-shrink: 0;">• Bước 2: Câu hỏi gửi AI:</span>
+                        <input type="text" placeholder="Nhập câu trả lời..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none; margin-left: 15px;">
+                    </li>
+                    <li style="display: flex; align-items: center; width: 100%;">
+                        <span style="font-weight: bold; white-space: nowrap; font-size: 20pt; width: 480px; flex-shrink: 0;">• Bước 3: Em tự thực hiện:</span>
+                        <input type="text" placeholder="Nhập câu trả lời..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none; margin-left: 15px;">
+                    </li>
+                    <li style="display: flex; align-items: center; width: 100%;">
+                        <span style="font-weight: bold; white-space: nowrap; font-size: 20pt; width: 480px; flex-shrink: 0;">• Bước 4: Nhờ AI góp ý:</span>
+                        <input type="text" placeholder="Nhập câu trả lời..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none; margin-left: 15px;">
+                    </li>
                 </ul>
             </div>
         </div>
@@ -651,16 +695,24 @@ slides.append("""
 slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 44pt;">Hoàn thành Nhật kí chuyên gia</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Hoàn thành Nhật kí chuyên gia sau khi kết thúc các nhiệm vụ.</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Hoàn thành Nhật kí chuyên gia sau khi kết thúc các nhiệm vụ.</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 25%; left: 10%; width: 80%; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
-                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 20px;">Nhật kí chuyên gia</p>
-                <p style="margin-bottom: 15px;">Hoàn thành nhật kí:</p>
-                <ul style="list-style-type: none; padding: 0;">
-                    <li style="margin-bottom: 15px;">• Điều em học được hôm nay là...<br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></li>
-                    <li style="margin-bottom: 15px;">• Từ nay em sẽ thay đổi cách dùng AI như thế nào?<br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></li>
-                    <li style="margin-bottom: 15px;">• Điều em còn băn khoăn là...<br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></li>
+        <div class="abs-element dashboard-card chat-box" style="top: 230px; left: 10%; width: 80%; height: 450px; text-align: left; position: absolute; padding: 30px 40px; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 22pt; line-height: 1.4; width: 100%;">
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 25px; font-size: 24pt;">Nhật kí chuyên gia</p>
+                <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: column; gap: 20px; width: 100%;">
+                    <li style="display: flex; align-items: center; width: 100%;">
+                        <span style="font-weight: bold; white-space: nowrap; font-size: 20pt; width: 480px; flex-shrink: 0;">• Điều em học được hôm nay:</span>
+                        <input type="text" placeholder="Nhập câu trả lời..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none; margin-left: 15px;">
+                    </li>
+                    <li style="display: flex; align-items: center; width: 100%;">
+                        <span style="font-weight: bold; white-space: nowrap; font-size: 20pt; width: 480px; flex-shrink: 0;">• Thay đổi cách dùng AI:</span>
+                        <input type="text" placeholder="Nhập câu trả lời..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none; margin-left: 15px;">
+                    </li>
+                    <li style="display: flex; align-items: center; width: 100%;">
+                        <span style="font-weight: bold; white-space: nowrap; font-size: 20pt; width: 480px; flex-shrink: 0;">• Điều em còn băn khoăn:</span>
+                        <input type="text" placeholder="Nhập câu trả lời..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none; margin-left: 15px;">
+                    </li>
                 </ul>
             </div>
         </div>
@@ -687,27 +739,19 @@ slides.append("""
 slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 44pt;">THỬ THÁCH</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Hãy vận hành hệ thống học chủ động cùng AI bằng cách lập kế hoạch áp dụng vào một môn học trong tuần tới.</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Hãy vận hành hệ thống học chủ động cùng AI bằng cách áp dụng vào một môn học trong tuần tới.</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 25%; left: 10%; width: 80%; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6;">
-                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 20px;">Thử thách "Học chủ động cùng AI"</p>
-                <p style="margin-bottom: 15px;">Trong tuần này, hãy chọn một môn học (Toán, Khoa học, Tiếng Anh, Lịch sử, Địa lí,...) và lập kế hoạch áp dụng quy trình học chủ động cùng AI.</p>
-                <p style="margin-bottom: 15px;">Thực hiện đầy đủ 4 bước:</p>
-                <ul style="list-style-type: disc; margin-left: 30px; font-size: 22pt;">
-                    <li style="margin-bottom: 10px;">Nêu điều em chưa hiểu.</li>
-                    <li style="margin-bottom: 10px;">Nhờ AI giải thích hoặc gợi ý.</li>
-                    <li style="margin-bottom: 10px;">Tự hoàn thành bài.</li>
+        <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 10%; width: 80%; height: 420px; text-align: left; position: absolute; padding: 30px 40px; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.4;">
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 10px;">Thử thách "Học chủ động cùng AI"</p>
+                <p style="margin-bottom: 8px;">Trong tuần này, hãy chọn một môn học (Toán, Khoa học, Tiếng Anh, Lịch sử, Địa lí,...) và áp dụng quy trình học chủ động cùng AI.</p>
+                <p style="margin-bottom: 8px;">Thực hiện đầy đủ 4 bước:</p>
+                <ul style="list-style-type: disc; margin-left: 30px; font-size: 18pt;">
+                    <li style="margin-bottom: 5px;">Nêu điều em chưa hiểu.</li>
+                    <li style="margin-bottom: 5px;">Nhờ AI giải thích hoặc gợi ý.</li>
+                    <li style="margin-bottom: 5px;">Tự hoàn thành bài.</li>
                     <li>Nhờ AI góp ý.</li>
                 </ul>
-            </div>
-        </div>
-        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center;">
-            <div class="timer-display" data-time="300" style="font-family: monospace; font-size: 50pt;">05:00</div>
-            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
-                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
-                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
-                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
             </div>
         </div>
 """)
@@ -739,24 +783,26 @@ slides.append("""
 slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 44pt;">BẢN CAM KẾT HÀNH ĐỘNG</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 5px; color: #ffeb3b;">Hãy đưa hệ thống học chủ động cùng AI vào thực tế và cam kết sử dụng AI đúng cách trong học tập.</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 5px; color: #ffeb3b;">Hãy đưa hệ thống học chủ động cùng AI vào thực tế và cam kết sử dụng AI đúng cách trong học tập.</div>
         </div>
-        <div class="abs-element dashboard-card" style="top: 25%; left: 10%; width: 80%; padding-bottom: 120px; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt;">
-                <p style="color: #00ffcc; font-weight: bold; margin-bottom: 20px;">Em cam kết:</p>
-                <div class="checkbox-group" style="margin-left: 20px; line-height: 1.8;">
-                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span> Chỉ sử dụng AI để hỗ trợ học tập, không nhờ AI làm thay bài tập.</label><br>
-                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span> Hỏi AI để hiểu kiến thức, không hỏi để chép đáp án.</label><br>
-                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span> Tự hoàn thành bài học bằng khả năng của mình trước khi nhờ AI góp ý.</label><br>
-                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span> Sử dụng AI trung thực, có trách nhiệm và đúng mục đích học tập.</label>
+        <div class="abs-element dashboard-card" style="top: 260px; left: 10%; width: 80%; padding: 30px; text-align: left; position: absolute;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 30px;">
+                <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.4; width: 62%;">
+                    <p style="color: #00ffcc; font-weight: bold; margin-bottom: 15px;">Em cam kết:</p>
+                    <div class="checkbox-group" style="margin-left: 10px; line-height: 1.5;">
+                        <label class="custom-checkbox" style="font-size: 16pt; margin-bottom: 10px; display: block;"><input type="checkbox"><span class="checkmark"></span> Chỉ sử dụng AI để hỗ trợ học tập, không nhờ AI làm thay bài tập.</label>
+                        <label class="custom-checkbox" style="font-size: 16pt; margin-bottom: 10px; display: block;"><input type="checkbox"><span class="checkmark"></span> Hỏi AI để hiểu kiến thức, không hỏi để chép đáp án.</label>
+                        <label class="custom-checkbox" style="font-size: 16pt; margin-bottom: 10px; display: block;"><input type="checkbox"><span class="checkmark"></span> Tự hoàn thành bài học bằng khả năng của mình trước khi nhờ AI góp ý.</label>
+                        <label class="custom-checkbox" style="font-size: 16pt; margin-bottom: 10px; display: block;"><input type="checkbox"><span class="checkmark"></span> Sử dụng AI trung thực, có trách nhiệm và đúng mục đích học tập.</label>
+                    </div>
                 </div>
-            </div>
-            
-            <div style="position: absolute; bottom: 30px; right: 30px; text-align: center;">
-                <div style="margin-bottom: 10px;">
-                    <input type="text" id="class-name-input" placeholder="Nhập tên lớp..." style="padding: 10px; font-size: 18pt; background: rgba(0,0,0,0.5); border: 1px solid var(--primary-blue); color: #fff; border-radius: 5px; width: 250px; text-align: center;">
+                
+                <div style="width: 35%; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 15px; background: rgba(0,0,0,0.3); padding: 25px 20px; border-radius: 10px; border: 1px dashed var(--primary-blue); box-sizing: border-box;">
+                    <div style="margin-bottom: 5px; width: 100%;">
+                        <input type="text" id="class-name-input" placeholder="Nhập tên lớp..." style="padding: 10px; font-size: 16pt; background: rgba(0,0,0,0.5); border: 1px solid var(--primary-blue); color: #fff; border-radius: 5px; width: 100%; text-align: center; box-sizing: border-box;">
+                    </div>
+                    <button id="btn-commit" class="interactive-btn" style="font-size: 18pt; padding: 12px 24px; background: rgba(0, 255, 204, 0.2); border: 2px solid #00ffcc; color: #00ffcc; cursor: pointer; border-radius: 8px; width: 100%; display: flex; align-items: center; justify-content: center; text-align: center;">CAM KẾT</button>
                 </div>
-                <button id="btn-commit" class="interactive-btn" style="font-size: 20pt; padding: 15px 30px; background: rgba(0, 255, 204, 0.2); border: 2px solid #00ffcc; color: #00ffcc; cursor: pointer; border-radius: 8px;">CAM KẾT</button>
             </div>
             <!-- Container for stamp -->
             <div id="stamp-container" style="position: absolute; bottom: 80px; right: 40px; pointer-events: none; opacity: 0; transform: scale(3) rotate(-20deg); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
@@ -768,22 +814,23 @@ slides.append("""
 # SLIDE 40
 slides.append("""
         <div class="abs-element" style="background: rgba(0,0,0,0.8); width: 100%; height: 100%; z-index: -1;"></div>
-        <div class="top-center-layout abs-element" style="top: 10%; width: 100%; z-index: 2;">
-            <div class="title editable draggable" style="color: #ffeb3b; font-size: 44pt;"><i class="fas fa-award"></i> CHỨNG NHẬN HOÀN THÀNH NHIỆM VỤ</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 15px; max-width: 80%; margin-left: auto; margin-right: auto;">Chúc mừng các Chuyên gia Công nghệ AI đã hoàn thành xuất sắc nhiệm vụ và sẵn sàng vận hành hệ thống học chủ động cùng AI.</div>
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%; z-index: 2;">
+            <div class="title editable draggable" style="color: #ffeb3b; font-size: 36pt;"><i class="fas fa-award"></i> CHỨNG NHẬN HOÀN THÀNH NHIỆM VỤ</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; margin-top: 10px; max-width: 80%; margin-left: auto; margin-right: auto; line-height: 1.4;">Chúc mừng các Chuyên gia Công nghệ AI đã hoàn thành xuất sắc nhiệm vụ và sẵn sàng vận hành hệ thống học chủ động cùng AI.</div>
         </div>
-        <div class="abs-element" style="top: 45%; left: 50%; transform: translateX(-50%); z-index: 2; width: 60%; text-align: center;">
-            <div style="background: rgba(0, 0, 0, 0.6); padding: 40px; border: 3px solid #ffeb3b; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 235, 59, 0.4);">
-                <div style="font-size: 44pt; color: #fff; margin-bottom: 20px;">Trao chứng nhận cho</div>
-                <div style="display: flex; align-items: center; justify-content: center; font-size: 36pt; color: #fff;">
-                    Nhóm: <input type="text" id="team-name-input" style="width: 60%; margin-left: 10px; padding: 10px; font-size: 36pt; background: transparent; border: none; border-bottom: 3px dashed #00d2ff; color: #fff; text-align: center; outline: none; font-family: 'Inter', sans-serif;">
-                </div>
-                <br><br>
-                <button id="btn-finish" class="interactive-btn" style="font-size: 25pt; padding: 15px 40px; background: #ffeb3b; color: #000; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; box-shadow: 0 0 20px rgba(255, 235, 59, 0.6);">HOÀN THÀNH</button>
+        <div class="abs-element dashboard-card" style="top: 260px; left: 50%; transform: translateX(-50%); z-index: 2; width: 60%; text-align: center; padding: 25px 30px; box-sizing: border-box; border: 2px solid #ffeb3b;">
+            <div style="font-size: 24pt; color: #fff; margin-bottom: 15px; font-weight: bold;">Trao chứng nhận cho</div>
+            <div style="display: flex; align-items: center; justify-content: center; font-size: 22pt; color: #fff; gap: 10px;">
+                <span>Nhóm:</span>
+                <input type="text" id="team-name-input" placeholder="Nhập tên nhóm..." style="width: 250px; padding: 5px 10px; font-size: 22pt; background: transparent; border: none; border-bottom: 2px dashed #00d2ff; color: #fff; text-align: center; outline: none; font-family: 'Inter', sans-serif;">
+            </div>
+            <div style="margin-top: 25px; display: flex; justify-content: center; width: 100%;">
+                <button id="btn-finish" class="interactive-btn" style="font-size: 20pt; padding: 12px 36px; background: #ffeb3b; color: #000; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 0 15px rgba(255, 235, 59, 0.5); display: flex; align-items: center; justify-content: center; text-align: center;">HOÀN THÀNH</button>
             </div>
         </div>
-        <div class="abs-element" style="bottom: 20px; right: 30px; font-size: 50pt; color: #ff3333; opacity: 0.8; z-index: 1;">
-            <i class="fas fa-stamp"></i> Viện nghiên cứu công nghệ Novastars
+        <div class="abs-element" style="bottom: 40px; right: 40px; transform: rotate(-15deg); border: 4px solid #ff3333; color: #ff3333; font-size: 16pt; font-weight: bold; padding: 8px 12px; border-radius: 8px; text-align: center; background: rgba(255, 255, 255, 0.05); z-index: 5; font-family: 'Inter', sans-serif;">
+            <div>VIỆN NGHIÊN CỨU</div>
+            <div style="font-size: 13pt; border-top: 2px solid #ff3333; margin-top: 4px; padding-top: 4px;">NOVASTARS</div>
         </div>
 """)
 

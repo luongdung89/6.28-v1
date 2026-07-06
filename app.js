@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v3';
+    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v12';
     let slideData = [];
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const slide = slideData[currentSlideIndex];
         slideContentEl.innerHTML = slide.content;
+        slideContentEl.setAttribute('data-slide-id', slide.id);
 
         const draggables = slideContentEl.querySelectorAll('.draggable');
         draggables.forEach(el => {
@@ -296,6 +297,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateDisplay();
             }
         }
+        
+        // Run slide layout QA check
+        auditSlideLayout();
+    }
+
+    function auditSlideLayout() {
+        // Wait a small delay to let styling and font scaling settle
+        setTimeout(() => {
+            const slide = slideData[currentSlideIndex];
+            if (!slide) return;
+            const title = slideContentEl.querySelector('.title');
+            const subtitle = slideContentEl.querySelector('.subtitle');
+            const cards = slideContentEl.querySelectorAll('.dashboard-card');
+            
+            if (title && subtitle) {
+                const titleRect = title.getBoundingClientRect();
+                const subRect = subtitle.getBoundingClientRect();
+                
+                // 1. Check title and subtitle overlap
+                if (titleRect.bottom > subRect.top + 2) {
+                    console.warn(`%c[QA Agent] Slide ${currentSlideIndex + 1} (ID: ${slide.id}) - Cảnh báo: Tiêu đề đè lên Phụ đề!`, "color: #ffaa00; font-weight: bold;");
+                }
+                
+                // 2. Check subtitle and cards overlap
+                cards.forEach((card, idx) => {
+                    const cardRect = card.getBoundingClientRect();
+                    if (subRect.bottom > cardRect.top + 2) {
+                        console.warn(`%c[QA Agent] Slide ${currentSlideIndex + 1} (ID: ${slide.id}) - Cảnh báo: Phụ đề đè lên Khung nội dung!`, "color: #ff3333; font-weight: bold;");
+                    }
+                });
+            }
+        }, 400);
     }
 
     // Event Listeners for Navigation
@@ -455,6 +488,16 @@ document.addEventListener('DOMContentLoaded', () => {
         saveData();
         alert("Đã lưu thiết kế slide!");
     });
+
+    const btnResetCache = document.getElementById('btn-reset-cache');
+    if (btnResetCache) {
+        btnResetCache.addEventListener('click', () => {
+            if (confirm("Bạn có muốn khôi phục slides về phiên bản gốc không? (Tất cả chỉnh sửa đã lưu trước đây của bạn sẽ bị xóa)")) {
+                localStorage.removeItem(LOCAL_STORAGE_KEY);
+                location.reload();
+            }
+        });
+    }
 
     function updateCurrentSlideData() {
         // Clean up classes before saving

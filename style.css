@@ -126,8 +126,9 @@ body.presentation-mode #toolbar {
     transform: translate(-50%, -50%);
 }
 .top-center-layout {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 80% !important;
     text-align: center;
 }
 .split-layout {
@@ -176,30 +177,49 @@ body.presentation-mode #toolbar {
 
 /* Timer UI */
 .timer-container {
-    background: rgba(0, 0, 0, 0.5);
-    border: 2px solid var(--primary-blue);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
-    width: 20% !important;
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: auto !important;
+    min-width: 140px !important;
+    max-width: 180px !important;
+    background: rgba(10, 10, 20, 0.85) !important;
+    border: 2px solid var(--primary-blue) !important;
+    border-radius: 12px !important;
+    padding: 6px 12px !important;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4) !important;
+    z-index: 1000 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 .timer-display {
-    font-size: 35pt;
+    font-size: 22pt !important;
     font-weight: bold;
     color: #ffeb3b;
-    margin-bottom: 10px;
+    margin-bottom: 5px !important;
     font-family: 'Courier New', Courier, monospace;
+}
+.timer-controls {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: 100% !important;
 }
 .btn-timer {
     background: var(--bg-dark);
     color: var(--text-main);
     border: 1px solid var(--primary-blue);
-    padding: 8px 12px;
-    margin: 3px;
-    border-radius: 5px;
+    padding: 4px 8px !important;
+    margin: 2px !important;
+    border-radius: 4px !important;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    font-size: 14pt;
+    font-size: 10pt !important;
     font-weight: bold;
     transition: all 0.3s;
 }
@@ -334,4 +354,336 @@ select {
 /* Utility classes */
 .interactive-btn:hover {
     transform: scale(1.05);
+}
+
+/* Fallback/Correction for Slide 9 content from localStorage */
+.center-layout.chat-box {
+    top: 220px !important;
+    transform: translate(-50%, 0) !important;
+}
+
+/* Fallback/Correction for Slide 37 content from localStorage */
+#slide-content[data-slide-id="37"] .subtitle {
+    font-size: 24pt !important;
+}
+#slide-content[data-slide-id="37"] .chat-box {
+    top: 260px !important;
+    position: absolute !important;
+    transform: none !important;
+    left: 10% !important;
+    width: 80% !important;
+}
+
+/* Fallback/Correction for Slide 12 */
+#slide-content[data-slide-id="12"] .dashboard-card {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 80% !important;
+    position: absolute !important;
+}
+#slide-content[data-slide-id="12"] .body-text {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+/* Fallback/Correction for Slide 21 */
+#slide-content[data-slide-id="21"] .subtitle {
+    font-size: 24pt !important;
+}
+#slide-content[data-slide-id="21"] .dashboard-card {
+    top: 220px !important;
+    position: absolute !important;
+    left: 5% !important;
+    width: 90% !important;
+    height: 450px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    padding: 25px 30px !important;
+}
+#slide-content[data-slide-id="21"] .body-text {
+    font-size: 22pt !important;
+    line-height: 1.4 !important;
+    width: 100% !important;
+}
+#slide-content[data-slide-id="21"] .body-text p {
+    margin-bottom: 20px !important;
+    font-size: 24pt !important;
+}
+#slide-content[data-slide-id="21"] .body-text div[style*="flex-direction: column"] {
+    gap: 15px !important;
+    width: 100% !important;
+}
+#slide-content[data-slide-id="21"] .body-text div[style*="background"] {
+    padding: 12px 25px !important;
+    display: flex !important;
+    align-items: center !important;
+    border: 1px solid rgba(0, 210, 255, 0.2) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+#slide-content[data-slide-id="21"] .body-text span {
+    font-size: 20pt !important;
+    white-space: nowrap !important;
+    font-weight: bold !important;
+    width: 480px !important;
+    flex-shrink: 0 !important;
+}
+#slide-content[data-slide-id="21"] .body-text i {
+    color: #00ffcc !important;
+    font-size: 20pt !important;
+    margin: 0 30px !important;
+    flex-shrink: 0 !important;
+}
+#slide-content[data-slide-id="21"] .body-text i.fa-arrow-down {
+    display: none !important;
+}
+#slide-content[data-slide-id="21"] input[type="text"] {
+    font-size: 20pt !important;
+    flex-grow: 1 !important;
+    width: auto !important;
+    margin-top: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px dashed #00ffcc !important;
+    color: #00ffcc !important;
+    outline: none !important;
+}
+
+/* Fallback/Correction for Slide 32 */
+#slide-content[data-slide-id="32"] .subtitle {
+    font-size: 24pt !important;
+}
+#slide-content[data-slide-id="32"] .dashboard-card {
+    top: 230px !important;
+    position: absolute !important;
+    left: 10% !important;
+    width: 80% !important;
+    height: 450px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    padding: 30px 40px !important;
+}
+#slide-content[data-slide-id="32"] .body-text {
+    font-size: 22pt !important;
+    line-height: 1.4 !important;
+}
+#slide-content[data-slide-id="32"] .body-text p {
+    margin-bottom: 15px !important;
+}
+#slide-content[data-slide-id="32"] .body-text li {
+    margin-bottom: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+#slide-content[data-slide-id="32"] .body-text li span {
+    width: 480px !important;
+    flex-shrink: 0 !important;
+    font-size: 20pt !important;
+    white-space: nowrap !important;
+    font-weight: bold !important;
+}
+#slide-content[data-slide-id="32"] input[type="text"] {
+    font-size: 20pt !important;
+    flex-grow: 1 !important;
+    width: auto !important;
+    margin-left: 15px !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px dashed #00ffcc !important;
+    color: #00ffcc !important;
+    outline: none !important;
+}
+
+/* Fallback/Correction for Slide 35 */
+#slide-content[data-slide-id="35"] .subtitle {
+    font-size: 24pt !important;
+}
+#slide-content[data-slide-id="35"] .dashboard-card {
+    top: 230px !important;
+    position: absolute !important;
+    left: 10% !important;
+    width: 80% !important;
+    height: 450px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    padding: 30px 40px !important;
+}
+#slide-content[data-slide-id="35"] .body-text {
+    font-size: 22pt !important;
+    line-height: 1.4 !important;
+}
+#slide-content[data-slide-id="35"] .body-text p {
+    margin-bottom: 15px !important;
+}
+#slide-content[data-slide-id="35"] .body-text p[style*="font-weight: bold"] {
+    font-size: 24pt !important;
+}
+#slide-content[data-slide-id="35"] .body-text li {
+    margin-bottom: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+#slide-content[data-slide-id="35"] .body-text li span {
+    width: 480px !important;
+    flex-shrink: 0 !important;
+    font-size: 20pt !important;
+    white-space: nowrap !important;
+    font-weight: bold !important;
+}
+#slide-content[data-slide-id="35"] input[type="text"] {
+    font-size: 20pt !important;
+    flex-grow: 1 !important;
+    width: auto !important;
+    margin-left: 15px !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px dashed #00ffcc !important;
+    color: #00ffcc !important;
+    outline: none !important;
+}
+
+/* Fallback/Correction for Slide 39 */
+#slide-content[data-slide-id="39"] .subtitle {
+    font-size: 24pt !important;
+}
+#slide-content[data-slide-id="39"] .dashboard-card {
+    top: 260px !important;
+    position: absolute !important;
+    left: 10% !important;
+    width: 80% !important;
+    transform: none !important;
+    padding: 30px !important;
+    padding-bottom: 30px !important;
+    box-sizing: border-box !important;
+}
+#slide-content[data-slide-id="39"] .dashboard-card > div[style*="display: flex"] {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 30px !important;
+    width: 100% !important;
+}
+#slide-content[data-slide-id="39"] .body-text {
+    font-size: 20pt !important;
+    line-height: 1.4 !important;
+    width: 62% !important;
+}
+#slide-content[data-slide-id="39"] .custom-checkbox {
+    font-size: 16pt !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+}
+#slide-content[data-slide-id="39"] .dashboard-card > div[style*="display: flex"] > div[style*="width: 35%"] {
+    width: 35% !important;
+    box-sizing: border-box !important;
+}
+#slide-content[data-slide-id="39"] .dashboard-card > div[style*="display: flex"] > div[style*="width: 35%"] input {
+    font-size: 16pt !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+#slide-content[data-slide-id="39"] .dashboard-card > div[style*="display: flex"] > div[style*="width: 35%"] button {
+    font-size: 18pt !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+/* Fallback/Correction for Slide 27 */
+#slide-content[data-slide-id="27"] .subtitle {
+    font-size: 24pt !important;
+}
+#slide-content[data-slide-id="27"] .chat-box {
+    top: 260px !important;
+    left: 10% !important;
+    width: 80% !important;
+    height: 420px !important;
+    box-sizing: border-box !important;
+    padding: 20px 25px !important;
+    position: absolute !important;
+}
+#slide-content[data-slide-id="27"] .drop-zone {
+    min-height: 160px !important;
+}
+
+/* Fallback/Correction for Slide 40 */
+#slide-content[data-slide-id="40"] .title {
+    font-size: 36pt !important;
+}
+#slide-content[data-slide-id="40"] .subtitle {
+    font-size: 20pt !important;
+    line-height: 1.4 !important;
+    margin-top: 10px !important;
+}
+#slide-content[data-slide-id="40"] .dashboard-card {
+    top: 260px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 60% !important;
+    padding: 25px 30px !important;
+    box-sizing: border-box !important;
+    border: 2px solid #ffeb3b !important;
+    position: absolute !important;
+}
+#slide-content[data-slide-id="40"] #btn-finish {
+    font-size: 20pt !important;
+    padding: 12px 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+/* Fallback/Correction for Slide 16 */
+#slide-content[data-slide-id="16"] .chat-box {
+    top: 220px !important;
+    left: 5% !important;
+    width: 90% !important;
+    height: 460px !important;
+    box-sizing: border-box !important;
+    padding: 25px 35px !important;
+    position: absolute !important;
+    transform: none !important;
+}
+#slide-content[data-slide-id="16"] .body-text {
+    font-size: 18pt !important;
+    line-height: 1.3 !important;
+}
+#slide-content[data-slide-id="16"] .body-text p {
+    margin-bottom: 15px !important;
+    font-size: 20pt !important;
+}
+#slide-content[data-slide-id="16"] .alg-block {
+    font-size: 15pt !important;
+    padding: 8px 16px !important;
+}
+#slide-content[data-slide-id="16"] .drop-zone {
+    min-height: 160px !important;
+    padding: 15px !important;
+}
+#slide-content[data-slide-id="16"] .drop-zone span {
+    font-size: 15pt !important;
+    top: -18px !important;
+}
+
+/* Overlap prevention for slides with top-right timers */
+#slide-content[data-slide-id="9"] .top-center-layout,
+#slide-content[data-slide-id="16"] .top-center-layout,
+#slide-content[data-slide-id="21"] .top-center-layout,
+#slide-content[data-slide-id="27"] .top-center-layout,
+#slide-content[data-slide-id="32"] .top-center-layout,
+#slide-content[data-slide-id="35"] .top-center-layout {
+    width: 65% !important;
+}
+
+#slide-content[data-slide-id="32"] .title,
+#slide-content[data-slide-id="35"] .title {
+    font-size: 38pt !important;
 }
