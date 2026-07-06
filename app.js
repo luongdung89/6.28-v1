@@ -174,8 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Slide 36: Checkbox & Stamp
-        if (currentSlideIndex === 35) { // Slide 36
+        // Slide 39: Checkbox & Stamp
+        if (currentSlideIndex === 38) { // Slide 39
             const btnCommit = slideContentEl.querySelector('#btn-commit');
             const stampContainer = slideContentEl.querySelector('#stamp-container');
             const classNameInput = slideContentEl.querySelector('#class-name-input');
@@ -192,8 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Slide 38: Confetti
-        if (currentSlideIndex === 37) { // Slide 38
+        // Slide 40: Confetti
+        if (currentSlideIndex === 39) { // Slide 40
             const btnFinish = slideContentEl.querySelector('#btn-finish');
             const teamNameInput = slideContentEl.querySelector('#team-name-input');
             
@@ -346,10 +346,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function dragStart(e) {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON') return;
         
-        // Only allow dragging if it has draggable class, or if in edit mode
-        if (!isEditMode && !e.target.classList.contains('draggable')) return;
-        
-        // Find nearest draggable
         let target = e.target;
         while (target && !target.classList.contains('draggable')) {
             if (target === slideContentEl) return; // Didn't find
@@ -357,6 +353,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (target) {
+            // Only allow dragging if in edit mode, OR if it's explicitly a game piece (.alg-block)
+            if (!isEditMode && !target.classList.contains('alg-block')) return;
+
             draggedElement = target;
             const rect = draggedElement.getBoundingClientRect();
             const parentRect = slideContentEl.getBoundingClientRect();

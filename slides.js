@@ -84,7 +84,7 @@ const slides = [
         id: 6,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
-            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 1</div>
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">GIAI ĐOẠN 1</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Mở khoá nhiệm vụ</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Phân tích tình huống của bạn B để tìm nguyên nhân bị giáo viên phê bình.</div>
         </div>
@@ -141,15 +141,15 @@ const slides = [
             <div class="title editable draggable" style="font-size: 44pt;">Điều tra sự cố AI</div>
             <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Quan sát tình huống, thảo luận và tìm nguyên nhân.</div>
         </div>
-        <div class="center-layout abs-element dashboard-card chat-box" style="width: 80%; height: auto; padding: 30px; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6;">
+        <div class="center-layout abs-element dashboard-card chat-box" style="width: 80%; height: auto; padding: 15px 30px; text-align: left; position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.3;">
                 Bạn B được giao viết bài văn kể về một trải nghiệm đáng nhớ.<br>
                 Vì sắp đến giờ nộp bài nên B nhờ AI viết hộ.<br>
                 AI viết một bài văn rất hay kể về chuyến đi trượt tuyết ở Sa Pa.<br>
                 Tuy nhiên, giáo viên lại cho B điểm không tốt và phê bình B trước lớp.
-                <hr style="border-color: rgba(0, 210, 255, 0.3); margin: 20px 0;">
-                <p style="color: #ffeb3b;"><strong>Câu hỏi:</strong></p>
-                <ol style="margin-left: 30px; font-size: 24pt; line-height: 1.5;">
+                <hr style="border-color: rgba(0, 210, 255, 0.3); margin: 10px 0;">
+                <p style="color: #ffeb3b; margin-bottom: 5px;"><strong>Câu hỏi:</strong></p>
+                <ol style="margin-left: 30px; font-size: 24pt; line-height: 1.3;">
                     <li>Vì sao giáo viên cho B điểm không tốt và phê bình B?</li>
                     <li>Vì sao giáo viên phát hiện bài văn của B là do AI viết hộ?</li>
                 </ol>
@@ -185,7 +185,7 @@ const slides = [
         id: 11,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
-            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 2</div>
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">GIAI ĐOẠN 2</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Nhận yêu cầu từ khách hàng</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Tiếp nhận yêu cầu từ khách hàng để xác định vấn đề cần giải quyết.</div>
         </div>
@@ -225,7 +225,7 @@ const slides = [
         id: 13,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
-            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 3</div>
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">GIAI ĐOẠN 3</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Thu thập dữ liệu</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Phân loại các cách sử dụng AI để tìm ra những việc AI nên hỗ trợ người học.</div>
         </div>
@@ -336,7 +336,7 @@ const slides = [
         id: 18,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
-            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 4</div>
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">GIAI ĐOẠN 4</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Phân tích thôngư tin</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Phân tích các câu lệnh và chỉnh sửa để AI hỗ trợ học tập thay vì làm thay.</div>
         </div>
@@ -469,7 +469,7 @@ const slides = [
         id: 24,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
-            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 5</div>
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">GIAI ĐOẠN 5</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Đóng gói thuật toán</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Hoàn thiện quy trình học chủ động cùng AI để chuẩn bị đưa vào thử nghiệm.</div>
         </div>
@@ -570,7 +570,7 @@ const slides = [
         id: 29,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
-            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 6</div>
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">GIAI ĐOẠN 6</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Thử nghiệm quy trình</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Áp dụng quy trình học chủ động cùng AI để giải quyết một tình huống học tập.</div>
         </div>
@@ -672,7 +672,7 @@ const slides = [
         id: 34,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
-            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 7</div>
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">GIAI ĐOẠN 7</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Nhật kí chuyên gia</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Tổng kết kết quả sau khi thử nghiệm quy trình và ghi lại những điều đã học được.</div>
         </div>
@@ -710,7 +710,7 @@ const slides = [
         id: 36,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
-            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 8</div>
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">GIAI ĐOẠN 8</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Vận hành hệ thống</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Lập kế hoạch áp dụng quy trình học chủ động cùng AI vào thực tế học tập và đưa hệ thống học chủ động vào vận hành.</div>
         </div>
