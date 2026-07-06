@@ -12,7 +12,7 @@ const slides = [
         id: 2,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable">MỤC TIÊU BÀI HỌC</div>
+            <div class="title editable draggable" style="font-size: 32pt;">MỤC TIÊU BÀI HỌC</div>
         </div>
         <div class="center-layout abs-element" style="width: 90%; display: flex; justify-content: space-between; top: 55%;">
             <div class="dashboard-card" style="width: 31%; height: 400px; border-color: #00ffcc; text-align: left;">
@@ -409,6 +409,24 @@ const slides = [
         id: 22,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">ĐÁP ÁN</div>
+        </div>
+        <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: left; border-color: #00ffcc;">
+            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
+                <ul style="margin-left: 30px; list-style-type: none; padding: 0;">
+                    <li style="margin-bottom: 15px;"><span style="color: #ff3333;">❌ Viết hộ mình bài văn</span> ➔ <span style="color: #00ffcc; font-weight: bold;">Gợi ý dàn ý.</span></li>
+                    <li style="margin-bottom: 15px;"><span style="color: #ff3333;">❌ Làm hết bài tập Toán</span> ➔ <span style="color: #00ffcc; font-weight: bold;">Giải thích cách làm.</span></li>
+                    <li style="margin-bottom: 15px;"><span style="color: #ff3333;">❌ Cho đáp án luôn</span> ➔ <span style="color: #00ffcc; font-weight: bold;">Kiểm tra bài làm.</span></li>
+                    <li style="margin-bottom: 15px;"><span style="color: #ff3333;">❌ Trả lời hết câu hỏi</span> ➔ <span style="color: #00ffcc; font-weight: bold;">Đặt câu hỏi để tự trả lời.</span></li>
+                </ul>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 23,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
         </div>
         <div class="center-layout abs-element" style="width: 70%; text-align: left;">
@@ -421,7 +439,7 @@ const slides = [
         `
     },
     {
-        id: 23,
+        id: 24,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 5</div>
@@ -431,7 +449,7 @@ const slides = [
         `
     },
     {
-        id: 24,
+        id: 25,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
@@ -454,7 +472,7 @@ const slides = [
         `
     },
     {
-        id: 25,
+        id: 26,
         content: `
         <div class="top-center-layout abs-element" style="top: 10%; width: 100%;">
             <div class="title editable draggable" style="font-size: 26pt;">QUY TRÌNH THỰC HIỆN</div>
@@ -475,7 +493,7 @@ const slides = [
         `
     },
     {
-        id: 26,
+        id: 27,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">Lắp ráp quy trình học chủ động</div>
@@ -520,7 +538,7 @@ const slides = [
         `
     },
     {
-        id: 27,
+        id: 28,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
@@ -539,7 +557,7 @@ const slides = [
         `
     },
     {
-        id: 28,
+        id: 29,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 6</div>
@@ -549,7 +567,7 @@ const slides = [
         `
     },
     {
-        id: 29,
+        id: 30,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
@@ -572,7 +590,7 @@ const slides = [
         `
     },
     {
-        id: 30,
+        id: 31,
         content: `
         <div class="top-center-layout abs-element" style="top: 10%; width: 100%;">
             <div class="title editable draggable" style="font-size: 26pt;">QUY TRÌNH THỰC HIỆN</div>
@@ -593,7 +611,7 @@ const slides = [
         `
     },
     {
-        id: 31,
+        id: 32,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">Thử nghiệm quy trình học chủ động</div>
@@ -621,7 +639,7 @@ const slides = [
         `
     },
     {
-        id: 32,
+        id: 33,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">ĐÁP ÁN</div>
@@ -640,7 +658,7 @@ const slides = [
         `
     },
     {
-        id: 33,
+        id: 34,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 7</div>
@@ -650,7 +668,7 @@ const slides = [
         `
     },
     {
-        id: 34,
+        id: 35,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">NHẬT KÍ CHUYÊN GIA</div>
@@ -676,7 +694,7 @@ const slides = [
         `
     },
     {
-        id: 35,
+        id: 36,
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 8</div>
@@ -686,7 +704,7 @@ const slides = [
         `
     },
     {
-        id: 36,
+        id: 37,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">BẢN CAM KẾT HÀNH ĐỘNG</div>
@@ -716,7 +734,7 @@ const slides = [
         `
     },
     {
-        id: 37,
+        id: 38,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
@@ -737,7 +755,7 @@ const slides = [
         `
     },
     {
-        id: 38,
+        id: 39,
         content: `
         <div class="abs-element" style="background: rgba(0,0,0,0.8); width: 100%; height: 100%; z-index: -1;"></div>
         <div class="top-center-layout abs-element" style="top: 10%; width: 100%; z-index: 2;">
