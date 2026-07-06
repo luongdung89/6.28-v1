@@ -1,4 +1,4 @@
-const slideData = [
+const slides = [
     {
         id: 1,
         content: `
