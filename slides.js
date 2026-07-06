@@ -393,14 +393,14 @@ const slides = [
             <div class="title editable draggable" style="font-size: 44pt;">Sửa mã lệnh AI</div>
             <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Chỉnh sửa các câu lệnh để AI hỗ trợ việc học.</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 25%; left: 10%; width: 80%; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
-                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 20px;">Đề bài: Hãy biến các câu lệnh "làm hộ" thành câu lệnh "giúp học".</p>
-                <div style="display: flex; flex-direction: column; gap: 15px;">
-                    <div>1. Viết hộ mình bài văn. <br>↓ <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
-                    <div>2. Làm hết bài tập Toán. <br>↓ <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
-                    <div>3. Cho đáp án luôn. <br>↓ <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
-                    <div>4. Trả lời hết câu hỏi. <br>↓ <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
+        <div class="abs-element dashboard-card chat-box" style="top: 22%; left: 5%; width: 90%; text-align: left; position: relative; padding: 20px;">
+            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6;">
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 15px; text-align: center;">Đề bài: Hãy biến các câu lệnh "làm hộ" thành câu lệnh "giúp học".</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px;">1. Viết hộ mình bài văn. <br><i class="fas fa-arrow-down" style="color: #00ffcc; margin: 5px 0;"></i> <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
+                    <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px;">2. Làm hết bài tập Toán. <br><i class="fas fa-arrow-down" style="color: #00ffcc; margin: 5px 0;"></i> <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
+                    <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px;">3. Cho đáp án luôn. <br><i class="fas fa-arrow-down" style="color: #00ffcc; margin: 5px 0;"></i> <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
+                    <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px;">4. Trả lời hết câu hỏi. <br><i class="fas fa-arrow-down" style="color: #00ffcc; margin: 5px 0;"></i> <br><input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 100%; outline: none;"></div>
                 </div>
             </div>
         </div>

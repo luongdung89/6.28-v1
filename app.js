@@ -499,6 +499,9 @@ document.addEventListener('DOMContentLoaded', () => {
             isFullscreen = true;
             document.body.classList.add('presentation-mode');
         }
+        // Force recalculate scaling after UI changes
+        setTimeout(resizeSlide, 50);
+        setTimeout(resizeSlide, 200);
     });
 
     // Initial render
