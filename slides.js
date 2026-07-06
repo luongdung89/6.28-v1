@@ -4,7 +4,7 @@ const slideData = [
         content: `
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="font-weight: bold; font-size: 16pt; margin-bottom: 20px;">Bài 6.28</div>
-            <div class="title editable draggable typewriter" style="font-size: 44pt;">Dùng AI thế nào để học chủ động hơn?</div>
+            <div class="title editable draggable typewriter-effect" style="font-size: 44pt;">Dùng AI thế nào để học chủ động hơn?</div>
         </div>
         `
     },
@@ -491,19 +491,19 @@ const slideData = [
                     <div class="alg-block draggable" style="z-index: 10; padding: 10px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px;">Nhờ AI góp ý</div>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                    <div class="drop-zone" style="width: 50%; height: 60px; border: 2px dashed #00ffcc; position: relative; display: flex; align-items: center; justify-content: center;">
+                    <div class="drop-zone snap-center" style="width: 50%; height: 60px; border: 2px dashed #00ffcc; position: relative; display: flex; align-items: center; justify-content: center;">
                         <span style="position: absolute; left: -100px; color: #00ffcc;">Bước 1:</span>
                     </div>
                     <i class="fas fa-arrow-down" style="color: #00ffcc;"></i>
-                    <div class="drop-zone" style="width: 50%; height: 60px; border: 2px dashed #00ffcc; position: relative; display: flex; align-items: center; justify-content: center;">
+                    <div class="drop-zone snap-center" style="width: 50%; height: 60px; border: 2px dashed #00ffcc; position: relative; display: flex; align-items: center; justify-content: center;">
                         <span style="position: absolute; left: -100px; color: #00ffcc;">Bước 2:</span>
                     </div>
                     <i class="fas fa-arrow-down" style="color: #00ffcc;"></i>
-                    <div class="drop-zone" style="width: 50%; height: 60px; border: 2px dashed #00ffcc; position: relative; display: flex; align-items: center; justify-content: center;">
+                    <div class="drop-zone snap-center" style="width: 50%; height: 60px; border: 2px dashed #00ffcc; position: relative; display: flex; align-items: center; justify-content: center;">
                         <span style="position: absolute; left: -100px; color: #00ffcc;">Bước 3:</span>
                     </div>
                     <i class="fas fa-arrow-down" style="color: #00ffcc;"></i>
-                    <div class="drop-zone" style="width: 50%; height: 60px; border: 2px dashed #00ffcc; position: relative; display: flex; align-items: center; justify-content: center;">
+                    <div class="drop-zone snap-center" style="width: 50%; height: 60px; border: 2px dashed #00ffcc; position: relative; display: flex; align-items: center; justify-content: center;">
                         <span style="position: absolute; left: -100px; color: #00ffcc;">Bước 4:</span>
                     </div>
                 </div>

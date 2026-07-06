@@ -384,8 +384,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function dragEnd(e) {
         if (!draggedElement) return;
 
-        // Snapping logic for drop zones
-        const dropZones = document.querySelectorAll('.drop-zone');
+        // Snapping logic for specific drop zones
+        const dropZones = document.querySelectorAll('.snap-center');
         
         dropZones.forEach(zone => {
             const rect = zone.getBoundingClientRect();
