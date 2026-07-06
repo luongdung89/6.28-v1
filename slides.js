@@ -98,14 +98,14 @@ const slides = [
         </div>
         <div class="center-layout abs-element" style="width: 80%; display: flex; justify-content: space-between; top: 55%;">
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <h3 style="color: #00ffcc; font-size: 24pt; margin-bottom: 20px;">Dụng cụ</h3>
                 <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
                     <li style="margin-bottom: 10px;">✔ Giấy</li>
                     <li>✔ Bút</li>
                 </ul>
             </div>
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <h3 style="color: #ffeb3b; font-size: 24pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
                 <div style="font-size: 30pt; font-weight: bold; color: #fff;">
                     Nhóm 2
                 </div>
@@ -200,7 +200,7 @@ const slides = [
         </div>
         <div class="abs-element dashboard-card" style="top: 25%; left: 10%; width: 80%; text-align: center;">
             <div class="body-text editable draggable" style="font-size: 18pt;">
-                <button onclick="document.getElementById('task-modal').style.display='flex'" class="interactive-btn" style="font-size: 20pt; padding: 15px 30px; background: rgba(0, 255, 204, 0.2); border: 2px solid #00ffcc; color: #00ffcc; cursor: pointer; border-radius: 8px;"><i class="fas fa-folder-open"></i> XEM CHI TIẾT</button>
+                <button onclick="document.getElementById('task-modal').style.display='flex'" class="interactive-btn" style="font-size: 18pt; padding: 15px 30px; background: rgba(0, 255, 204, 0.2); border: 2px solid #00ffcc; color: #00ffcc; cursor: pointer; border-radius: 8px;"><i class="fas fa-folder-open"></i> XEM CHI TIẾT</button>
             </div>
         </div>
         <div id="task-modal" class="modal-overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 100; align-items: center; justify-content: center;">
@@ -239,7 +239,7 @@ const slides = [
         </div>
         <div class="center-layout abs-element" style="width: 80%; display: flex; justify-content: space-between; top: 55%;">
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <h3 style="color: #00ffcc; font-size: 24pt; margin-bottom: 20px;">Dụng cụ</h3>
                 <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
                     <li style="margin-bottom: 10px;">✔ Bộ thẻ thông tin</li>
                     <li style="margin-bottom: 10px;">✔ Giấy</li>
@@ -247,7 +247,7 @@ const slides = [
                 </ul>
             </div>
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <h3 style="color: #ffeb3b; font-size: 24pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
                 <div style="font-size: 30pt; font-weight: bold; color: #fff;">
                     Nhóm 4
                 </div>
@@ -350,14 +350,14 @@ const slides = [
         </div>
         <div class="center-layout abs-element" style="width: 80%; display: flex; justify-content: space-between; top: 55%;">
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <h3 style="color: #00ffcc; font-size: 24pt; margin-bottom: 20px;">Dụng cụ</h3>
                 <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
                     <li style="margin-bottom: 10px;">✔ Phiếu câu lệnh</li>
                     <li>✔ Bút</li>
                 </ul>
             </div>
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <h3 style="color: #ffeb3b; font-size: 24pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
                 <div style="font-size: 30pt; font-weight: bold; color: #fff;">
                     Nhóm 2
                 </div>
@@ -483,14 +483,14 @@ const slides = [
         </div>
         <div class="center-layout abs-element" style="width: 80%; display: flex; justify-content: space-between; top: 55%;">
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <h3 style="color: #00ffcc; font-size: 24pt; margin-bottom: 20px;">Dụng cụ</h3>
                 <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
                     <li style="margin-bottom: 10px;">✔ Phiếu sơ đồ quy trình</li>
                     <li>✔ Bút</li>
                 </ul>
             </div>
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <h3 style="color: #ffeb3b; font-size: 24pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
                 <div style="font-size: 30pt; font-weight: bold; color: #fff;">
                     Nhóm 4
                 </div>
@@ -584,14 +584,14 @@ const slides = [
         </div>
         <div class="center-layout abs-element" style="width: 80%; display: flex; justify-content: space-between; top: 55%;">
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <h3 style="color: #00ffcc; font-size: 24pt; margin-bottom: 20px;">Dụng cụ</h3>
                 <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
                     <li style="margin-bottom: 10px;">✔ Phiếu tình huống</li>
                     <li>✔ Bút</li>
                 </ul>
             </div>
             <div class="dashboard-card" style="width: 48%; height: 300px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center;">
-                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <h3 style="color: #ffeb3b; font-size: 24pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
                 <div style="font-size: 30pt; font-weight: bold; color: #fff;">
                     Cá nhân
                 </div>

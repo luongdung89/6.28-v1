@@ -49,6 +49,29 @@ document.addEventListener('DOMContentLoaded', () => {
         slideSelectorEl.appendChild(option);
     }
 
+    // Scaling logic for accurate pt rendering like PowerPoint
+    function resizeSlide() {
+        const baseWidth = 1280;
+        const baseHeight = 720;
+        
+        slideContentEl.style.width = baseWidth + 'px';
+        slideContentEl.style.height = baseHeight + 'px';
+        slideContentEl.style.position = 'absolute';
+        slideContentEl.style.left = '50%';
+        slideContentEl.style.top = '50%';
+        slideContentEl.style.transformOrigin = 'center center';
+        
+        const scaleX = presentationFrame.clientWidth / baseWidth;
+        const scaleY = presentationFrame.clientHeight / baseHeight;
+        const scale = Math.min(scaleX, scaleY);
+        
+        slideContentEl.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    }
+
+    window.addEventListener('resize', resizeSlide);
+    // Call once to set initial scale
+    resizeSlide();
+
     // Navigation logic
     function goToSlide(index) {
         if (index < 0 || index >= totalSlides) return;
