@@ -523,20 +523,37 @@ const slides = [
         id: 27,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 44pt;">Lắp ráp quy trình học chủ động</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Hoàn thiện sơ đồ quy trình học chủ động cùng AI.</div>
+            <div class="title editable draggable" style="font-size: 40pt;">Lắp ráp quy trình học chủ động</div>
+            <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Sắp xếp các mảnh ghép thuật toán học tập chủ động với AI theo đúng trình tự:</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 25%; left: 10%; width: 80%; text-align: left; position: relative;">
-            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6;">
-                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 20px; text-align: center;">Điền tên các bước còn thiếu vào sơ đồ:</p>
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                    <div>Bước 1: <input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 300px; text-align: center; outline: none;"></div>
-                    <i class="fas fa-arrow-down" style="color: #00ffcc;"></i>
-                    <div>Bước 2: <input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 300px; text-align: center; outline: none;"></div>
-                    <i class="fas fa-arrow-down" style="color: #00ffcc;"></i>
-                    <div>Bước 3: <input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 300px; text-align: center; outline: none;"></div>
-                    <i class="fas fa-arrow-down" style="color: #00ffcc;"></i>
-                    <div>Bước 4: <input type="text" style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; width: 300px; text-align: center; outline: none;"></div>
+        <div class="abs-element dashboard-card chat-box" style="top: 25%; left: 5%; width: 90%; text-align: left; position: absolute; padding: 15px;">
+            <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.3;">
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 20px;">
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 5px 15px; border-radius: 8px; color: #fff;">Nêu điều mình chưa hiểu.</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 5px 15px; border-radius: 8px; color: #fff;">Nhờ AI giải thích.</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 5px 15px; border-radius: 8px; color: #fff;">Tự làm.</div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 5px 15px; border-radius: 8px; color: #fff;">Nhờ AI góp ý.</div>
+                    <div class="alg-block draggable" style="background: rgba(255, 51, 51, 0.4); border: 2px solid #ff3333; padding: 5px 15px; border-radius: 8px; color: #fff;">Chép nguyên bài AI.</div>
+                    <div class="alg-block draggable" style="background: rgba(255, 51, 51, 0.4); border: 2px solid #ff3333; padding: 5px 15px; border-radius: 8px; color: #fff;">Nộp bài ngay.</div>
+                    <div class="alg-block draggable" style="background: rgba(255, 51, 51, 0.4); border: 2px solid #ff3333; padding: 5px 15px; border-radius: 8px; color: #fff;">Không cần đọc lại.</div>
+                    <div class="alg-block draggable" style="background: rgba(255, 51, 51, 0.4); border: 2px solid #ff3333; padding: 5px 15px; border-radius: 8px; color: #fff;">Bỏ qua bước tự làm.</div>
+                </div>
+                <div style="display: flex; justify-content: space-around; align-items: stretch; margin-top: 10px;">
+                    <div class="drop-zone" style="flex: 1; min-height: 80px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 5px; font-size: 20pt; width: 100%;">Bước 1</h4>
+                    </div>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 24pt; display: flex; align-items: center;"></i>
+                    <div class="drop-zone" style="flex: 1; min-height: 80px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 5px; font-size: 20pt; width: 100%;">Bước 2</h4>
+                    </div>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 24pt; display: flex; align-items: center;"></i>
+                    <div class="drop-zone" style="flex: 1; min-height: 80px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 5px; font-size: 20pt; width: 100%;">Bước 3</h4>
+                    </div>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 24pt; display: flex; align-items: center;"></i>
+                    <div class="drop-zone" style="flex: 1; min-height: 80px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
+                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 5px; font-size: 20pt; width: 100%;">Bước 4</h4>
+                    </div>
                 </div>
             </div>
         </div>
