@@ -1,16 +1,18 @@
-const slideData = [
-    {
-        id: 1,
-        content: `
+import json
+
+slides = []
+
+# ================== GIAI ĐOẠN KHỞI ĐỘNG ==================
+# SLIDE 1
+slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="font-weight: bold; font-size: 16pt; margin-bottom: 20px;">Bài 6.28</div>
             <div class="title editable draggable typewriter" style="font-size: 44pt;">Dùng AI thế nào để học chủ động hơn?</div>
         </div>
-        `
-    },
-    {
-        id: 2,
-        content: `
+""")
+
+# SLIDE 2
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable">MỤC TIÊU BÀI HỌC</div>
         </div>
@@ -37,33 +39,30 @@ const slideData = [
                 </ul>
             </div>
         </div>
-        `
-    },
-    {
-        id: 3,
-        content: `
+""")
+
+# SLIDE 3
+slides.append("""
         <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: center; border-color: var(--primary-purple);">
             <div class="title editable draggable" style="font-size: 36pt; margin-bottom: 20px; color: #ffeb3b;">NHẬP VAI</div>
             <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6;">
                 Chuyên gia Công nghệ AI, điều tra nguyên nhân học sinh phụ thuộc AI và xây dựng quy trình sử dụng AI đúng cách.
             </div>
         </div>
-        `
-    },
-    {
-        id: 4,
-        content: `
+""")
+
+# SLIDE 4
+slides.append("""
         <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: center; border-color: #ffeb3b;">
             <div class="title editable draggable" style="font-size: 26pt; margin-bottom: 20px; color: #00ffcc;">CÂU HỎI LỚN</div>
             <div class="body-text editable draggable" style="font-size: 24pt; font-weight: bold; line-height: 1.6;">
                 Làm thế nào để sử dụng AI để học tốt hơn mà không phụ thuộc vào AI?
             </div>
         </div>
-        `
-    },
-    {
-        id: 5,
-        content: `
+""")
+
+# SLIDE 5
+slides.append("""
         <div class="abs-element slide-bg" style="background-image: url('assets/slide5_bg.png'); z-index: -1;"></div>
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt; color: #ff3333;">CẢNH BÁO KHẨN CẤP</div>
@@ -79,21 +78,20 @@ const slideData = [
         <style>
         @keyframes flash-alert { from { box-shadow: 0 0 10px #ff3333; } to { box-shadow: 0 0 50px #ff3333; } }
         </style>
-        `
-    },
-    {
-        id: 6,
-        content: `
+""")
+
+# ================== GIAI ĐOẠN 1 ==================
+# SLIDE 6
+slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 1</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Mở khoá nhiệm vụ</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Phân tích tình huống của bạn B để tìm nguyên nhân bị giáo viên phê bình.</div>
         </div>
-        `
-    },
-    {
-        id: 7,
-        content: `
+""")
+
+# SLIDE 7
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
         </div>
@@ -112,11 +110,10 @@ const slideData = [
                 </div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 8,
-        content: `
+""")
+
+# SLIDE 8
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 10%; width: 100%;">
             <div class="title editable draggable" style="font-size: 26pt;">QUY TRÌNH THỰC HIỆN</div>
         </div>
@@ -133,11 +130,10 @@ const slideData = [
                 <div class="body-text editable draggable" style="font-size: 18pt;"><strong>Bước 3:</strong><br>Chia sẻ kết quả.</div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 9,
-        content: `
+""")
+
+# SLIDE 9
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">Điều tra sự cố AI</div>
             <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Quan sát tình huống, thảo luận và tìm nguyên nhân.</div>
@@ -163,11 +159,10 @@ const slideData = [
                 <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
             </div>
         </div>
-        `
-    },
-    {
-        id: 10,
-        content: `
+""")
+
+# SLIDE 10
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">ĐÁP ÁN</div>
         </div>
@@ -181,21 +176,20 @@ const slideData = [
                 </ul>
             </div>
         </div>
-        `
-    },
-    {
-        id: 11,
-        content: `
+""")
+
+# ================== GIAI ĐOẠN 2 ==================
+# SLIDE 11
+slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 2</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Nhận yêu cầu từ khách hàng</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Tiếp nhận yêu cầu từ khách hàng để xác định vấn đề cần giải quyết.</div>
         </div>
-        `
-    },
-    {
-        id: 12,
-        content: `
+""")
+
+# SLIDE 12
+slides.append("""
         <div class="abs-element slide-bg" style="background-image: url('assets/slide12_bg.png'); z-index: -1;"></div>
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 26pt;">NHIỆM VỤ CHI TIẾT</div>
@@ -212,21 +206,20 @@ const slideData = [
                 <p style="font-size: 24pt; line-height: 1.6; color: #fff;">Khách hàng cần một giải pháp giúp học sinh sử dụng AI đúng cách trong học tập.<br><br><span style="color: #00ffcc;">Hãy phân tích yêu cầu và xác định mục tiêu mà đội Chuyên gia Công nghệ cần thực hiện.</span></p>
             </div>
         </div>
-        `
-    },
-    {
-        id: 13,
-        content: `
+""")
+
+# ================== GIAI ĐOẠN 3 ==================
+# SLIDE 13
+slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 3</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Thu thập dữ liệu</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Phân loại các cách sử dụng AI để tìm ra những việc AI nên hỗ trợ người học.</div>
         </div>
-        `
-    },
-    {
-        id: 14,
-        content: `
+""")
+
+# SLIDE 14
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
         </div>
@@ -246,11 +239,10 @@ const slideData = [
                 </div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 15,
-        content: `
+""")
+
+# SLIDE 15
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 10%; width: 100%;">
             <div class="title editable draggable" style="font-size: 26pt;">QUY TRÌNH THỰC HIỆN</div>
         </div>
@@ -267,11 +259,10 @@ const slideData = [
                 <div class="body-text editable draggable" style="font-size: 18pt;"><strong>Bước 3:</strong><br>Chia sẻ kết quả.</div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 16,
-        content: `
+""")
+
+# SLIDE 16
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">Rà soát dữ liệu AI</div>
             <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Đọc các thẻ và phân loại vào đúng nhóm.</div>
@@ -306,11 +297,10 @@ const slideData = [
                 <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
             </div>
         </div>
-        `
-    },
-    {
-        id: 17,
-        content: `
+""")
+
+# SLIDE 17
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
         </div>
@@ -321,21 +311,20 @@ const slideData = [
                 </ul>
             </div>
         </div>
-        `
-    },
-    {
-        id: 18,
-        content: `
+""")
+
+# ================== GIAI ĐOẠN 4 ==================
+# SLIDE 18
+slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 4</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Phân tích thông tin</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Phân tích các câu lệnh và chỉnh sửa để AI hỗ trợ học tập thay vì làm thay.</div>
         </div>
-        `
-    },
-    {
-        id: 19,
-        content: `
+""")
+
+# SLIDE 19
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
         </div>
@@ -354,11 +343,10 @@ const slideData = [
                 </div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 20,
-        content: `
+""")
+
+# SLIDE 20
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 10%; width: 100%;">
             <div class="title editable draggable" style="font-size: 26pt;">QUY TRÌNH THỰC HIỆN</div>
         </div>
@@ -375,11 +363,10 @@ const slideData = [
                 <div class="body-text editable draggable" style="font-size: 18pt;"><strong>Bước 3:</strong><br>Chia sẻ và nhận xét.</div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 21,
-        content: `
+""")
+
+# SLIDE 21
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">Sửa mã lệnh AI</div>
             <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Chỉnh sửa các câu lệnh để AI hỗ trợ việc học.</div>
@@ -403,11 +390,10 @@ const slideData = [
                 <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
             </div>
         </div>
-        `
-    },
-    {
-        id: 22,
-        content: `
+""")
+
+# SLIDE 22
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
         </div>
@@ -418,21 +404,20 @@ const slideData = [
                 </ul>
             </div>
         </div>
-        `
-    },
-    {
-        id: 23,
-        content: `
+""")
+
+# ================== GIAI ĐOẠN 5 ==================
+# SLIDE 23
+slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 5</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Đóng gói thuật toán</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Hoàn thiện quy trình học chủ động cùng AI để chuẩn bị đưa vào thử nghiệm.</div>
         </div>
-        `
-    },
-    {
-        id: 24,
-        content: `
+""")
+
+# SLIDE 24
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
         </div>
@@ -451,11 +436,10 @@ const slideData = [
                 </div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 25,
-        content: `
+""")
+
+# SLIDE 25
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 10%; width: 100%;">
             <div class="title editable draggable" style="font-size: 26pt;">QUY TRÌNH THỰC HIỆN</div>
         </div>
@@ -472,11 +456,10 @@ const slideData = [
                 <div class="body-text editable draggable" style="font-size: 18pt;"><strong>Bước 3:</strong><br>Chia sẻ kết quả.</div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 26,
-        content: `
+""")
+
+# SLIDE 26
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">Lắp ráp quy trình học chủ động</div>
             <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Hoàn thiện sơ đồ quy trình học chủ động cùng AI.</div>
@@ -517,11 +500,10 @@ const slideData = [
                 <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
             </div>
         </div>
-        `
-    },
-    {
-        id: 27,
-        content: `
+""")
+
+# SLIDE 27
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
         </div>
@@ -536,21 +518,20 @@ const slideData = [
                 </ul>
             </div>
         </div>
-        `
-    },
-    {
-        id: 28,
-        content: `
+""")
+
+# ================== GIAI ĐOẠN 6 ==================
+# SLIDE 28
+slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 6</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Thử nghiệm quy trình</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Áp dụng quy trình học chủ động cùng AI để giải quyết một tình huống học tập.</div>
         </div>
-        `
-    },
-    {
-        id: 29,
-        content: `
+""")
+
+# SLIDE 29
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
         </div>
@@ -569,11 +550,10 @@ const slideData = [
                 </div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 30,
-        content: `
+""")
+
+# SLIDE 30
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 10%; width: 100%;">
             <div class="title editable draggable" style="font-size: 26pt;">QUY TRÌNH THỰC HIỆN</div>
         </div>
@@ -590,11 +570,10 @@ const slideData = [
                 <div class="body-text editable draggable" style="font-size: 18pt;"><strong>Bước 3:</strong><br>Chia sẻ kết quả.</div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 31,
-        content: `
+""")
+
+# SLIDE 31
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">Thử nghiệm quy trình học chủ động</div>
             <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Áp dụng quy trình 4 bước vào tình huống được giao.</div>
@@ -618,11 +597,10 @@ const slideData = [
                 <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
             </div>
         </div>
-        `
-    },
-    {
-        id: 32,
-        content: `
+""")
+
+# SLIDE 32
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">ĐÁP ÁN</div>
         </div>
@@ -637,21 +615,20 @@ const slideData = [
                 </ul>
             </div>
         </div>
-        `
-    },
-    {
-        id: 33,
-        content: `
+""")
+
+# ================== GIAI ĐOẠN 7 ==================
+# SLIDE 33
+slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 7</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Nhật kí chuyên gia</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Tổng kết kết quả sau khi thử nghiệm quy trình và ghi lại những điều đã học được.</div>
         </div>
-        `
-    },
-    {
-        id: 34,
-        content: `
+""")
+
+# SLIDE 34
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">NHẬT KÍ CHUYÊN GIA</div>
             <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Hoàn thành Nhật kí chuyên gia sau khi kết thúc các nhiệm vụ.</div>
@@ -673,21 +650,20 @@ const slideData = [
                 <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
             </div>
         </div>
-        `
-    },
-    {
-        id: 35,
-        content: `
+""")
+
+# ================== GIAI ĐOẠN 8 ==================
+# SLIDE 35
+slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 8</div>
             <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Vận hành hệ thống</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Áp dụng quy trình học chủ động cùng AI vào thực tế học tập.</div>
         </div>
-        `
-    },
-    {
-        id: 36,
-        content: `
+""")
+
+# SLIDE 36
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 40pt;">BẢN CAM KẾT HÀNH ĐỘNG</div>
             <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 5px; color: #ffeb3b;">Hãy sử dụng AI đúng cách để trở thành người học chủ động mỗi ngày!</div>
@@ -713,11 +689,10 @@ const slideData = [
                 <div style="border: 5px solid #ff3333; color: #ff3333; font-size: 30pt; font-weight: bold; padding: 10px 20px; border-radius: 10px; background: rgba(255, 255, 255, 0.9);">ĐÃ CAM KẾT</div>
             </div>
         </div>
-        `
-    },
-    {
-        id: 37,
-        content: `
+""")
+
+# SLIDE 37
+slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
         </div>
@@ -734,11 +709,10 @@ const slideData = [
                 </ul>
             </div>
         </div>
-        `
-    },
-    {
-        id: 38,
-        content: `
+""")
+
+# SLIDE 38
+slides.append("""
         <div class="abs-element" style="background: rgba(0,0,0,0.8); width: 100%; height: 100%; z-index: -1;"></div>
         <div class="top-center-layout abs-element" style="top: 10%; width: 100%; z-index: 2;">
             <div class="title editable draggable" style="color: #ffeb3b; font-size: 40pt;"><i class="fas fa-award"></i> CHỨNG NHẬN HOÀN THÀNH NHIỆM VỤ</div>
@@ -754,6 +728,18 @@ const slideData = [
         <div class="abs-element" style="bottom: 20px; right: 30px; font-size: 50pt; color: #ff3333; opacity: 0.8; z-index: 1;">
             <i class="fas fa-stamp"></i> Viện nghiên cứu công nghệ Novastars
         </div>
-        `
-    }
-];
+""")
+
+with open('slides.js', 'w', encoding='utf-8') as f:
+    f.write('const slideData = [\n')
+    for i, slide_content in enumerate(slides):
+        f.write('    {\n')
+        f.write(f'        id: {i+1},\n')
+        f.write('        content: `')
+        f.write(slide_content)
+        f.write('        `\n')
+        if i < len(slides) - 1:
+            f.write('    },\n')
+        else:
+            f.write('    }\n')
+    f.write('];\n')
