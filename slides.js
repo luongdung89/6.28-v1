@@ -65,7 +65,7 @@ const slides = [
         content: `
         <div class="abs-element slide-bg" style="background-image: url('assets/slide5_bg.png'); z-index: -1;"></div>
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 26pt; color: #ff3333;">CẢNH BÁO KHẨN CẤP</div>
+            <div class="title editable draggable" style="font-size: 26pt; color: #ff3333;">CẢNH BÁO HỆ THỐNG</div>
         </div>
         <div class="center-layout abs-element dashboard-card alert-box" style="width: 80%; text-align: center; border-color: #ff3333; animation: flash-alert 0.5s infinite alternate; background: rgba(50,0,0,0.8);">
             <div class="body-text editable draggable" style="font-size: 20pt; color: #ffeb3b; font-weight: bold; line-height: 1.8;">
@@ -169,7 +169,7 @@ const slides = [
         id: 10,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 32pt;">ĐÁP ÁN</div>
+            <div class="title editable draggable" style="font-size: 32pt;">KẾT QUẢ</div>
         </div>
         <div class="center-layout abs-element dashboard-card" style="width: 85%; text-align: left; border-color: #00ffcc;">
             <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
@@ -195,11 +195,11 @@ const slides = [
         id: 12,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 26pt;">NHIỆM VỤ CHI TIẾT</div>
+            <div class="title editable draggable" style="font-size: 26pt;">HỒ SƠ NHIỆM VỤ</div>
         </div>
         <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: center; position: absolute;">
             <div class="body-text editable draggable" style="font-size: 18pt; text-align: center; display: flex; justify-content: center; width: 100%;">
-                <button onclick="document.getElementById('task-modal').style.display='flex'" class="interactive-btn" style="font-size: 18pt; padding: 15px 30px; background: rgba(0, 255, 204, 0.2); border: 2px solid #00ffcc; color: #00ffcc; cursor: pointer; border-radius: 8px;"><i class="fas fa-folder-open"></i> XEM CHI TIẾT</button>
+                <button onclick="document.getElementById('task-modal').style.display='flex'" class="interactive-btn" style="font-size: 18pt; padding: 15px 30px; background: rgba(0, 255, 204, 0.2); border: 2px solid #00ffcc; color: #00ffcc; cursor: pointer; border-radius: 8px;"><i class="fas fa-folder-open"></i> TRUY CẬP HỒ SƠ</button>
             </div>
         </div>
         <div id="task-modal" class="modal-overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 100; align-items: center; justify-content: center;">
@@ -319,7 +319,7 @@ const slides = [
         id: 17,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
+            <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT PHIÊN LÀM VIỆC</div>
         </div>
         <div class="center-layout abs-element" style="width: 80%; text-align: left;">
             <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
@@ -433,7 +433,7 @@ const slides = [
         id: 22,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 32pt;">ĐÁP ÁN</div>
+            <div class="title editable draggable" style="font-size: 32pt;">KẾT QUẢ</div>
         </div>
         <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: left; border-color: #00ffcc;">
             <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8; width: 100%;">
@@ -467,7 +467,7 @@ const slides = [
         id: 23,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
+            <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT PHIÊN LÀM VIỆC</div>
         </div>
         <div class="center-layout abs-element" style="width: 80%; text-align: left;">
             <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
@@ -586,7 +586,7 @@ const slides = [
         id: 28,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
+            <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT PHIÊN LÀM VIỆC</div>
         </div>
         <div class="center-layout abs-element" style="width: 80%; text-align: left;">
             <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
@@ -697,7 +697,7 @@ const slides = [
         id: 33,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 32pt;">ĐÁP ÁN</div>
+            <div class="title editable draggable" style="font-size: 32pt;">KẾT QUẢ</div>
         </div>
         <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: left; border-color: #00ffcc;">
             <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
@@ -794,7 +794,7 @@ const slides = [
         id: 38,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT</div>
+            <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT PHIÊN LÀM VIỆC</div>
         </div>
         <div class="center-layout abs-element" style="width: 70%; text-align: left;">
             <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8;">
