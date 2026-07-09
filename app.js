@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v16';
+    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v17';
     let slideData = [];
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
@@ -120,32 +120,17 @@ document.addEventListener('DOMContentLoaded', () => {
             btnTiet3.classList.remove('active');
         }
 
-        // Update Left Sidebar items active & completed states
+        // Update Left Sidebar items active states
         const menuItems = document.querySelectorAll('.menu-item');
         menuItems.forEach(item => {
             const idx = parseInt(item.getAttribute('data-slide-index'), 10);
-            const iconEl = item.querySelector('.status-icon i');
 
             if (currentSlideIndex === idx) {
                 item.classList.add('active');
-                item.classList.remove('completed');
-                if (iconEl) {
-                    iconEl.className = 'fas fa-circle-notch fa-spin';
-                }
                 // Scroll the active item into view inside the sidebar
                 item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            } else if (currentSlideIndex > idx) {
-                item.classList.remove('active');
-                item.classList.add('completed');
-                if (iconEl) {
-                    iconEl.className = 'fas fa-check-circle';
-                }
             } else {
                 item.classList.remove('active');
-                item.classList.remove('completed');
-                if (iconEl) {
-                    iconEl.className = 'far fa-circle';
-                }
             }
         });
     }
@@ -622,18 +607,39 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!sidebarMenu) return;
         sidebarMenu.innerHTML = '';
         
-        slideData.forEach((slide, index) => {
-            const title = getSlideTitle(slide.content, index);
-            const menuItem = document.createElement('div');
-            menuItem.className = 'menu-item';
-            menuItem.setAttribute('data-slide-index', index);
-            menuItem.onclick = () => goToSlide(index);
-            
-            menuItem.innerHTML = `
-                <span class="status-icon"><i class="far fa-circle"></i></span>
-                <span class="menu-text" title="${title}">${index + 1}. ${title}</span>
-            `;
-            sidebarMenu.appendChild(menuItem);
+        const phases = [
+            { title: "Khởi động & Chuẩn bị", start: 0, end: 7 },
+            { title: "GĐ 1: Điều tra sự cố AI", start: 8, end: 9 },
+            { title: "GĐ 2: Nhận yêu cầu", start: 10, end: 11 },
+            { title: "GĐ 3: Thu thập dữ liệu", start: 12, end: 16 },
+            { title: "GĐ 4: Phân tích thông tin", start: 17, end: 22 },
+            { title: "GĐ 5: Đóng gói thuật toán", start: 23, end: 27 },
+            { title: "GĐ 6: Thử nghiệm quy trình", start: 28, end: 32 },
+            { title: "GĐ 7: Nhật kí chuyên gia", start: 33, end: 34 },
+            { title: "GĐ 8: Vận hành hệ thống", start: 35, end: 39 }
+        ];
+
+        phases.forEach(phase => {
+            // Section Header
+            const header = document.createElement('div');
+            header.className = 'menu-section-header';
+            header.textContent = phase.title;
+            sidebarMenu.appendChild(header);
+
+            // Section Slides
+            for (let i = phase.start; i <= phase.end; i++) {
+                if (i >= totalSlides) break;
+                
+                const slide = slideData[i];
+                const title = getSlideTitle(slide.content, i);
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item';
+                menuItem.setAttribute('data-slide-index', i);
+                menuItem.onclick = () => goToSlide(i);
+                
+                menuItem.innerHTML = `<span class="menu-text" title="${title}">${i + 1}. ${title}</span>`;
+                sidebarMenu.appendChild(menuItem);
+            }
         });
     }
 
