@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v18';
+    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v19';
     let slideData = [];
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
@@ -608,8 +608,8 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebarMenu.innerHTML = '';
         
         const phases = [
-            { title: "Khởi động & Chuẩn bị", start: 0, end: 7 },
-            { title: "GĐ 1: Điều tra sự cố AI", start: 8, end: 9 },
+            { title: "Khởi động & Chuẩn bị", start: 0, end: 4 },
+            { title: "GĐ 1: Điều tra sự cố AI", start: 5, end: 9 },
             { title: "GĐ 2: Nhận yêu cầu", start: 10, end: 11 },
             { title: "GĐ 3: Thu thập dữ liệu", start: 12, end: 16 },
             { title: "GĐ 4: Phân tích thông tin", start: 17, end: 22 },
