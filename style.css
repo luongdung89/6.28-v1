@@ -292,8 +292,9 @@ body.presentation-mode #toolbar {
 
 /* Toolbar */
 #toolbar {
-    width: 90vw;
-    margin-top: 15px;
+    width: 95vw;
+    max-width: 1720px;
+    margin: 15px auto 10px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -690,8 +691,8 @@ select {
 
 /* Header Navigation & Activity Progress Styles */
 #header-nav {
-    width: 90vw;
-    max-width: 142.22vh;
+    width: 95vw;
+    max-width: 1720px;
     height: 55px;
     margin: 10px auto 0 auto;
     display: grid;
