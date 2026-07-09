@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v14';
+    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v15';
     let slideData = [];
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
@@ -55,8 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnTiet3 = document.getElementById('btn-tiet-3');
     
     if (btnTiet1) btnTiet1.addEventListener('click', () => goToSlide(0));
-    if (btnTiet2) btnTiet2.addEventListener('click', () => goToSlide(17));
-    if (btnTiet3) btnTiet3.addEventListener('click', () => goToSlide(28));
+    // btnTiet2 & btnTiet3 are locked for now
 
     // Scaling logic for accurate pt rendering like PowerPoint
     function resizeSlide() {
@@ -103,6 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateActivityProgress();
     }
 
+    // Expose goToSlide globally for sidebar click navigation
+    window.goToSlide = goToSlide;
+
     function updateActivityProgress() {
         const progressPercentage = Math.round(((currentSlideIndex + 1) / totalSlides) * 100);
         const progressFill = document.getElementById('progress-fill');
@@ -111,20 +113,41 @@ document.addEventListener('DOMContentLoaded', () => {
         if (progressFill) progressFill.style.width = `${progressPercentage}%`;
         if (progressPercentageEl) progressPercentageEl.textContent = `${progressPercentage}%`;
         
-        // Update Tiet navigation active states
+        // Update Tiet navigation active states (Tiết 1 active, Tiết 2 & 3 locked)
         if (btnTiet1 && btnTiet2 && btnTiet3) {
-            btnTiet1.classList.remove('active');
+            btnTiet1.classList.add('active');
             btnTiet2.classList.remove('active');
             btnTiet3.classList.remove('active');
-            
-            if (currentSlideIndex < 17) {
-                btnTiet1.classList.add('active');
-            } else if (currentSlideIndex >= 17 && currentSlideIndex < 28) {
-                btnTiet2.classList.add('active');
-            } else {
-                btnTiet3.classList.add('active');
-            }
         }
+
+        // Update Left Sidebar items active & completed states
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            const range = item.getAttribute('data-range').split('-');
+            const start = parseInt(range[0], 10);
+            const end = parseInt(range[1], 10);
+            const iconEl = item.querySelector('.status-icon i');
+
+            if (currentSlideIndex >= start && currentSlideIndex <= end) {
+                item.classList.add('active');
+                item.classList.remove('completed');
+                if (iconEl) {
+                    iconEl.className = 'fas fa-circle-notch fa-spin';
+                }
+            } else if (currentSlideIndex > end) {
+                item.classList.remove('active');
+                item.classList.add('completed');
+                if (iconEl) {
+                    iconEl.className = 'fas fa-check-circle';
+                }
+            } else {
+                item.classList.remove('active');
+                item.classList.remove('completed');
+                if (iconEl) {
+                    iconEl.className = 'far fa-circle';
+                }
+            }
+        });
     }
 
     // Timer variables
