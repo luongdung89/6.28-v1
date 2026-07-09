@@ -12,7 +12,7 @@
             document.body.appendChild(errDiv);
         };
         // Auto-clean old localStorage data to ensure fresh slide load
-        const currentKey = 'ai_lesson_slides_data_38_v13';
+        const currentKey = 'ai_lesson_slides_data_38_v14';
         try {
             for (let i = localStorage.length - 1; i >= 0; i--) {
                 const key = localStorage.key(i);
@@ -24,12 +24,35 @@
     </script>
     <!-- Use Roboto and Inter fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=31">
+    <link rel="stylesheet" href="style.css?v=32">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div id="app-container">
+        <!-- Activity Progress and Lesson Navigation -->
+        <div id="header-nav">
+            <div class="lesson-buttons">
+                <button id="btn-tiet-1" class="lesson-btn active" data-start-slide="0">
+                    <i class="fas fa-rocket"></i> TIẾT 1
+                </button>
+                <button id="btn-tiet-2" class="lesson-btn" data-start-slide="17">
+                    <i class="fas fa-brain"></i> TIẾT 2
+                </button>
+                <button id="btn-tiet-3" class="lesson-btn" data-start-slide="28">
+                    <i class="fas fa-award"></i> TIẾT 3
+                </button>
+            </div>
+            
+            <div class="activity-progress">
+                <div class="progress-bar-label"><i class="fas fa-tasks"></i> TIẾN TRÌNH:</div>
+                <div class="progress-track">
+                    <div id="progress-fill" style="width: 0%;"></div>
+                </div>
+                <div id="progress-percentage">0%</div>
+            </div>
+        </div>
+
         <!-- Main Presentation Area -->
         <div id="presentation-frame">
             <div id="slide-content">
@@ -64,7 +87,7 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script src="slides.js?v=31"></script>
-    <script src="app.js?v=31"></script>
+    <script src="slides.js?v=32"></script>
+    <script src="app.js?v=32"></script>
 </body>
 </html>

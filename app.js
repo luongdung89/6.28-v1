@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v13';
+    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v14';
     let slideData = [];
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
@@ -49,6 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
         slideSelectorEl.appendChild(option);
     }
 
+    // Initialize Tiet buttons
+    const btnTiet1 = document.getElementById('btn-tiet-1');
+    const btnTiet2 = document.getElementById('btn-tiet-2');
+    const btnTiet3 = document.getElementById('btn-tiet-3');
+    
+    if (btnTiet1) btnTiet1.addEventListener('click', () => goToSlide(0));
+    if (btnTiet2) btnTiet2.addEventListener('click', () => goToSlide(17));
+    if (btnTiet3) btnTiet3.addEventListener('click', () => goToSlide(28));
+
     // Scaling logic for accurate pt rendering like PowerPoint
     function resizeSlide() {
         const baseWidth = 1280;
@@ -90,6 +99,32 @@ document.addEventListener('DOMContentLoaded', () => {
         
         btnPrev.disabled = currentSlideIndex === 0;
         btnNext.disabled = currentSlideIndex === totalSlides - 1;
+        
+        updateActivityProgress();
+    }
+
+    function updateActivityProgress() {
+        const progressPercentage = Math.round(((currentSlideIndex + 1) / totalSlides) * 100);
+        const progressFill = document.getElementById('progress-fill');
+        const progressPercentageEl = document.getElementById('progress-percentage');
+        
+        if (progressFill) progressFill.style.width = `${progressPercentage}%`;
+        if (progressPercentageEl) progressPercentageEl.textContent = `${progressPercentage}%`;
+        
+        // Update Tiet navigation active states
+        if (btnTiet1 && btnTiet2 && btnTiet3) {
+            btnTiet1.classList.remove('active');
+            btnTiet2.classList.remove('active');
+            btnTiet3.classList.remove('active');
+            
+            if (currentSlideIndex < 17) {
+                btnTiet1.classList.add('active');
+            } else if (currentSlideIndex >= 17 && currentSlideIndex < 28) {
+                btnTiet2.classList.add('active');
+            } else {
+                btnTiet3.classList.add('active');
+            }
+        }
     }
 
     // Timer variables

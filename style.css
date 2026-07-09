@@ -47,7 +47,7 @@ body {
     height: 50.625vw; /* 16:9 ratio based on width */
     max-width: 142.22vh; /* 16:9 ratio based on height */
     max-height: 80vh;
-    margin: 20px auto;
+    margin: 10px auto;
     background-color: var(--bg-dark);
     box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
     border: 2px solid var(--primary-blue);
@@ -686,4 +686,101 @@ select {
 #slide-content[data-slide-id="32"] .title,
 #slide-content[data-slide-id="35"] .title {
     font-size: 38pt !important;
+}
+
+/* Header Navigation & Activity Progress Styles */
+#header-nav {
+    width: 90vw;
+    max-width: 142.22vh;
+    height: 55px;
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: rgba(10, 17, 34, 0.7);
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.1);
+    z-index: 10;
+}
+
+.lesson-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.lesson-btn {
+    background: rgba(7, 11, 20, 0.8);
+    border: 1px solid rgba(122, 0, 255, 0.4);
+    color: rgba(224, 242, 254, 0.7);
+    font-size: 11pt;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lesson-btn:hover {
+    border-color: var(--primary-blue);
+    color: #fff;
+    box-shadow: 0 0 8px rgba(0, 210, 255, 0.3);
+}
+
+.lesson-btn.active {
+    background: linear-gradient(135deg, var(--primary-purple) 0%, rgba(122, 0, 255, 0.6) 100%);
+    border-color: #9d4edd;
+    color: #fff;
+    box-shadow: 0 0 12px var(--purple-glow);
+}
+
+.activity-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-grow: 1;
+    max-width: 50%;
+    justify-content: flex-end;
+}
+
+.progress-bar-label {
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.progress-track {
+    width: 200px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+#progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-purple) 0%, var(--primary-blue) 100%);
+    border-radius: 4px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px var(--accent-glow);
+    width: 0%;
+}
+
+#progress-percentage {
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--text-main);
+    width: 45px;
+    text-align: right;
 }
