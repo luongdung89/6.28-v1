@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v15';
+    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v16';
     let slideData = [];
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
@@ -123,18 +123,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update Left Sidebar items active & completed states
         const menuItems = document.querySelectorAll('.menu-item');
         menuItems.forEach(item => {
-            const range = item.getAttribute('data-range').split('-');
-            const start = parseInt(range[0], 10);
-            const end = parseInt(range[1], 10);
+            const idx = parseInt(item.getAttribute('data-slide-index'), 10);
             const iconEl = item.querySelector('.status-icon i');
 
-            if (currentSlideIndex >= start && currentSlideIndex <= end) {
+            if (currentSlideIndex === idx) {
                 item.classList.add('active');
                 item.classList.remove('completed');
                 if (iconEl) {
                     iconEl.className = 'fas fa-circle-notch fa-spin';
                 }
-            } else if (currentSlideIndex > end) {
+                // Scroll the active item into view inside the sidebar
+                item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else if (currentSlideIndex > idx) {
                 item.classList.remove('active');
                 item.classList.add('completed');
                 if (iconEl) {
@@ -604,6 +604,40 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(resizeSlide, 200);
     });
 
+    function getSlideTitle(content, slideIndex) {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = content;
+        const titleEl = tempDiv.querySelector('.title');
+        if (titleEl) {
+            // Remove icon tags
+            const icons = titleEl.querySelectorAll('i');
+            icons.forEach(icon => icon.remove());
+            return titleEl.innerText.replace(/<[^>]*>/g, '').replace(/\r?\n|\r/g, ' ').trim();
+        }
+        return `Slide ${slideIndex + 1}`;
+    }
+
+    function renderSidebar() {
+        const sidebarMenu = document.querySelector('.sidebar-menu');
+        if (!sidebarMenu) return;
+        sidebarMenu.innerHTML = '';
+        
+        slideData.forEach((slide, index) => {
+            const title = getSlideTitle(slide.content, index);
+            const menuItem = document.createElement('div');
+            menuItem.className = 'menu-item';
+            menuItem.setAttribute('data-slide-index', index);
+            menuItem.onclick = () => goToSlide(index);
+            
+            menuItem.innerHTML = `
+                <span class="status-icon"><i class="far fa-circle"></i></span>
+                <span class="menu-text" title="${title}">${index + 1}. ${title}</span>
+            `;
+            sidebarMenu.appendChild(menuItem);
+        });
+    }
+
     // Initial render
+    renderSidebar();
     goToSlide(0);
 });
