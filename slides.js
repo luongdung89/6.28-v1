@@ -726,7 +726,7 @@ const slides = [
         id: 35,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 44pt;">Hoàn thành Nhật kí chuyên gia</div>
+            <div class="title editable draggable" style="font-size: 44pt;">Nhật kí chuyên gia</div>
             <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Hoàn thành Nhật kí chuyên gia sau khi kết thúc các nhiệm vụ.</div>
         </div>
         <div class="abs-element dashboard-card chat-box" style="top: 230px; left: 10%; width: 80%; height: 450px; text-align: left; position: absolute; padding: 30px 40px; box-sizing: border-box;">
