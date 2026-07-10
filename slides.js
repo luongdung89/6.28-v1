@@ -773,7 +773,7 @@ const slides = [
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
             <div class="title editable draggable" style="font-size: 44pt;">THỬ THÁCH TUẦN</div>
-            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Hãy vận hành hệ thống học chủ động cùng AI bằng cách áp dụng vào một môn học trong tuần tới.</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Hãy vận hành hệ thống học chủ động cùng AI bằng cách áp dụng vào các môn học trong tuần.</div>
         </div>
         <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 10%; width: 80%; height: 420px; text-align: left; position: absolute; padding: 30px 40px; box-sizing: border-box;">
             <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.4;">
