@@ -266,8 +266,8 @@ slides.append("""
 # SLIDE 16
 slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 44pt;">Rà soát dữ liệu AI</div>
-            <div class="subtitle editable draggable" style="font-size: 32pt; margin-top: 10px; color: #00ffcc;">Đọc các thẻ và phân loại vào đúng nhóm.</div>
+            <div class="title editable draggable" style="font-size: 44pt;">AI nên làm gì:</div>
+            <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Đọc các thẻ và phân loại vào đúng&nbsp;nhóm.</div>
         </div>
         <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 5%; width: 90%; height: 460px; text-align: left; position: absolute; padding: 25px 35px; box-sizing: border-box;">
             <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.3;">
