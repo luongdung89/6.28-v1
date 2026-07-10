@@ -778,7 +778,7 @@ const slides = [
         <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 10%; width: 80%; height: 420px; text-align: left; position: absolute; padding: 30px 40px; box-sizing: border-box;">
             <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.4;">
                 <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 10px;">Thử thách "Học chủ động cùng AI"</p>
-                <p style="margin-bottom: 8px;">Trong tuần này, hãy chọn một môn học (Toán, Khoa học, Tiếng Anh, Lịch sử, Địa lí,...) và áp dụng quy trình học chủ động cùng AI.</p>
+                <p style="margin-bottom: 8px;">Trong tuần này, hãy chọn các môn học (Toán, Khoa học, Tiếng Anh, Lịch sử, Địa lí,...) và áp dụng quy trình học chủ động cùng AI.</p>
                 <p style="margin-bottom: 8px;">Thực hiện đầy đủ 4 bước:</p>
                 <ul style="list-style-type: disc; margin-left: 30px; font-size: 18pt;">
                     <li style="margin-bottom: 5px;">Nêu điều em chưa hiểu.</li>
