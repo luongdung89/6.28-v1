@@ -279,7 +279,7 @@ const slides = [
         id: 16,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 44pt;">AI nên làm gì:</div>
+            <div class="title editable draggable" style="font-size: 44pt;">AI nên làm gì?</div>
             <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Đọc các thẻ và phân loại vào đúng&nbsp;nhóm.</div>
         </div>
         <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 5%; width: 90%; height: 460px; text-align: left; position: absolute; padding: 25px 35px; box-sizing: border-box;">
