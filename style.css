@@ -43,11 +43,9 @@ body {
 /* 16:9 Aspect Ratio Container */
 #presentation-frame {
     position: relative;
-    width: 90vw;
-    height: 50.625vw; /* 16:9 ratio based on width */
-    max-width: 142.22vh; /* 16:9 ratio based on height */
+    flex: 1;
+    aspect-ratio: 16 / 9;
     max-height: 80vh;
-    margin: 10px auto;
     background-color: var(--bg-dark);
     box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
     border: 2px solid var(--primary-blue);
@@ -837,7 +835,7 @@ select {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     width: 95vw;
     max-width: 1720px;
     margin: 10px auto;
@@ -847,8 +845,6 @@ select {
 /* Sidebar Left styling */
 #sidebar-left {
     width: 280px;
-    height: 50.625vw;
-    max-height: 80vh;
     background: rgba(10, 17, 34, 0.7);
     border: 1px solid rgba(0, 210, 255, 0.2);
     border-radius: 12px;
