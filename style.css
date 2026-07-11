@@ -79,6 +79,22 @@ body.presentation-mode #toolbar {
     display: none;
 }
 
+body.presentation-mode #sidebar-left {
+    display: none;
+}
+
+body.presentation-mode #header-nav {
+    display: none;
+}
+
+body.presentation-mode #main-layout {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
 /* Grid background for AI command center feel */
 #presentation-frame::before {
     content: '';
