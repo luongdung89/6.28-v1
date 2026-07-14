@@ -42,11 +42,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize slide selector
     totalSlidesEl.textContent = totalSlides;
-    for (let i = 0; i < totalSlides; i++) {
-        const option = document.createElement('option');
-        option.value = i;
-        option.textContent = `Slide ${i + 1}`;
-        slideSelectorEl.appendChild(option);
+    function getSlideRange(slideIndex) {
+        if (slideIndex < 40) {
+            return { start: 0, end: Math.min(39, totalSlides - 1), length: Math.min(40, totalSlides), tiet: 1 };
+        } else if (slideIndex < 83) {
+            return { start: 40, end: Math.min(82, totalSlides - 1), length: Math.min(43, totalSlides - 40), tiet: 2 };
+        } else {
+            return { start: 83, end: totalSlides - 1, length: Math.max(0, totalSlides - 83), tiet: 3 };
+        }
+    }
+
+    function rebuildSlideSelector(tiet) {
+        const range = getSlideRange(tiet === 1 ? 0 : (tiet === 2 ? 40 : 83));
+        const oldVal = slideSelectorEl.value;
+        slideSelectorEl.innerHTML = '';
+        for (let i = range.start; i <= range.end; i++) {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.textContent = `Slide ${i - range.start + 1}`;
+            slideSelectorEl.appendChild(opt);
+        }
+        if (oldVal >= range.start && oldVal <= range.end) {
+            slideSelectorEl.value = oldVal;
+        }
     }
 
     // Initialize Tiet buttons
@@ -54,8 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnTiet2 = document.getElementById('btn-tiet-2');
     const btnTiet3 = document.getElementById('btn-tiet-3');
     
-    if (btnTiet1) btnTiet1.addEventListener('click', () => goToSlide(0));
-    // btnTiet2 & btnTiet3 are locked for now
+    if (btnTiet1) btnTiet1.addEventListener('click', () => goToSlide(0, true));
+    if (btnTiet2) btnTiet2.addEventListener('click', () => goToSlide(40, true));
+    if (btnTiet3) btnTiet3.addEventListener('click', () => goToSlide(83, true));
 
     // Scaling logic for accurate pt rendering like PowerPoint
     function resizeSlide() {
@@ -81,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resizeSlide();
 
     // Navigation logic
-    function goToSlide(index) {
+    function goToSlide(index, isTietSwitch = false) {
         if (index < 0 || index >= totalSlides) return;
         
         // Save current slide data if in edit mode before leaving
@@ -89,15 +108,26 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCurrentSlideData();
         }
 
+        const oldRange = getSlideRange(currentSlideIndex);
         currentSlideIndex = index;
+        const newRange = getSlideRange(currentSlideIndex);
+        
+        const tietChanged = (oldRange.tiet !== newRange.tiet);
+        
+        if (isTietSwitch || tietChanged || slideSelectorEl.options.length === 0) {
+            rebuildSlideSelector(newRange.tiet);
+            renderSidebar();
+        }
+        
         renderSlide();
         
         // Update UI
-        currentSlideEl.textContent = currentSlideIndex + 1;
+        currentSlideEl.textContent = currentSlideIndex - newRange.start + 1;
+        totalSlidesEl.textContent = newRange.length;
         slideSelectorEl.value = currentSlideIndex;
         
-        btnPrev.disabled = currentSlideIndex === 0;
-        btnNext.disabled = currentSlideIndex === totalSlides - 1;
+        btnPrev.disabled = currentSlideIndex === newRange.start;
+        btnNext.disabled = currentSlideIndex === newRange.end;
         
         updateActivityProgress();
     }
@@ -106,18 +136,19 @@ document.addEventListener('DOMContentLoaded', () => {
     window.goToSlide = goToSlide;
 
     function updateActivityProgress() {
-        const progressPercentage = Math.round(((currentSlideIndex + 1) / totalSlides) * 100);
+        const currentRange = getSlideRange(currentSlideIndex);
+        const progressPercentage = Math.round(((currentSlideIndex - currentRange.start + 1) / currentRange.length) * 100);
         const progressFill = document.getElementById('progress-fill');
         const progressPercentageEl = document.getElementById('progress-percentage');
         
         if (progressFill) progressFill.style.width = `${progressPercentage}%`;
         if (progressPercentageEl) progressPercentageEl.textContent = `${progressPercentage}%`;
         
-        // Update Tiet navigation active states (Tiết 1 active, Tiết 2 & 3 locked)
+        // Update Tiet navigation active states
         if (btnTiet1 && btnTiet2 && btnTiet3) {
-            btnTiet1.classList.add('active');
-            btnTiet2.classList.remove('active');
-            btnTiet3.classList.remove('active');
+            btnTiet1.classList.toggle('active', currentRange.tiet === 1);
+            btnTiet2.classList.toggle('active', currentRange.tiet === 2);
+            btnTiet3.classList.toggle('active', currentRange.tiet === 3);
         }
 
         // Update Left Sidebar items active states
@@ -164,8 +195,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- SPECIFIC SLIDE INTERACTIONS ---
         
-        // Slide 1: Typewriter effect
-        if (currentSlideIndex === 0 && !isEditMode) {
+        // Typewriter effect on lesson start slides
+        if ((currentSlideIndex === 0 || currentSlideIndex === 40 || currentSlideIndex === 83) && !isEditMode) {
             const twElements = slideContentEl.querySelectorAll('.typewriter-effect');
             twElements.forEach(el => {
                 const text = el.textContent || '';
@@ -182,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Slide 5: Flash Warning Animation
+        // Warning Slide Flash Warning Animation
         if (slide.isWarningSlide && !isEditMode) {
             const warningBox = slideContentEl.querySelector('.warning-box');
             let flashes = 0;
@@ -198,79 +229,80 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         }
 
-        // Slide 12: Modal Popup
-        if (currentSlideIndex === 11) { // Slide 12
-            const btnShowTask = slideContentEl.querySelector('#btn-show-task');
-            const taskModal = slideContentEl.querySelector('#task-modal');
-            const btnCloseTask = slideContentEl.querySelector('#btn-close-task');
-            
-            if (btnShowTask && taskModal && btnCloseTask) {
-                btnShowTask.addEventListener('click', () => {
-                    taskModal.classList.remove('hidden');
-                    taskModal.style.opacity = '1';
-                    taskModal.style.pointerEvents = 'auto';
-                });
-                btnCloseTask.addEventListener('click', () => {
-                    taskModal.style.opacity = '0';
-                    taskModal.style.pointerEvents = 'none';
-                    setTimeout(() => taskModal.classList.add('hidden'), 300);
-                });
-            }
+        // Modal Popups (Generic support for Slide 12, Tiet 2 / Tiet 3 task modals)
+        const taskModal = slideContentEl.querySelector('#task-modal, #tiet2-task-modal, #tiet3-task-modal');
+        const btnShowTask = slideContentEl.querySelector('#btn-show-task, #tiet2-btn-show-task, #tiet3-btn-show-task');
+        const btnCloseTask = slideContentEl.querySelector('#btn-close-task, #tiet2-btn-close-task, #tiet3-btn-close-task');
+        
+        if (btnShowTask && taskModal && btnCloseTask) {
+            btnShowTask.addEventListener('click', () => {
+                taskModal.style.display = 'flex';
+                taskModal.classList.remove('hidden');
+                taskModal.style.opacity = '1';
+                taskModal.style.pointerEvents = 'auto';
+            });
+            btnCloseTask.addEventListener('click', () => {
+                taskModal.style.opacity = '0';
+                taskModal.style.pointerEvents = 'none';
+                setTimeout(() => {
+                    taskModal.classList.add('hidden');
+                    taskModal.style.display = 'none';
+                }, 300);
+            });
         }
 
-        // Slide 39: Checkbox & Stamp
-        if (currentSlideIndex === 38) { // Slide 39
-            const btnCommit = slideContentEl.querySelector('#btn-commit');
-            const stampContainer = slideContentEl.querySelector('#stamp-container');
-            const classNameInput = slideContentEl.querySelector('#class-name-input');
-            
-            if (btnCommit && stampContainer && classNameInput) {
-                btnCommit.addEventListener('click', () => {
-                    if (classNameInput.value.trim() === '') {
-                        alert("Vui lòng nhập tên lớp trước khi cam kết!");
-                        return;
-                    }
-                    stampContainer.style.opacity = '1';
-                    stampContainer.style.transform = 'scale(1) rotate(-20deg)';
-                });
-            }
-        }
-
-        // Slide 40: Confetti
-        if (currentSlideIndex === 39) { // Slide 40
-            const btnFinish = slideContentEl.querySelector('#btn-finish');
-            const teamNameInput = slideContentEl.querySelector('#team-name-input');
-            
-            if (btnFinish) {
-                btnFinish.addEventListener('click', () => {
-                    if (window.confetti) {
-                        var duration = 3 * 1000;
-                        var animationEnd = Date.now() + duration;
-                        var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
-
-                        var interval = setInterval(function() {
-                            var timeLeft = animationEnd - Date.now();
-                            if (timeLeft <= 0) {
-                                return clearInterval(interval);
-                            }
-                            var particleCount = 50 * (timeLeft / duration);
-                            window.confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random(), y: Math.random() - 0.2 } }));
-                        }, 250);
-                    }
-                });
-
-                // allow enter key on input to trigger button
-                if(teamNameInput) {
-                    teamNameInput.addEventListener('keypress', function(e) {
-                        if (e.key === 'Enter') {
-                            btnFinish.click();
-                        }
-                    });
+        // Checkbox & Stamp (Slide 39 / Tiết 3 Cam kết)
+        const btnCommit = slideContentEl.querySelector('#btn-commit, #tiet3-btn-commit');
+        const stampContainer = slideContentEl.querySelector('#stamp-container, #tiet3-stamp-container');
+        const classNameInput = slideContentEl.querySelector('#class-name-input, #tiet3-class-name-input');
+        
+        if (btnCommit && stampContainer && classNameInput) {
+            btnCommit.addEventListener('click', () => {
+                if (classNameInput.value.trim() === '') {
+                    alert("Vui lòng nhập tên lớp trước khi cam kết!");
+                    return;
                 }
+                stampContainer.style.opacity = '1';
+                stampContainer.style.transform = 'scale(1) rotate(-20deg)';
+            });
+        }
+
+        // Finish & Confetti (Slide 40, Tiet 2 finish, Tiet 3 finish)
+        const btnFinish = slideContentEl.querySelector('#btn-finish, #tiet2-btn-finish, #tiet3-btn-finish');
+        const teamNameInput = slideContentEl.querySelector('#team-name-input, #tiet2-team-name-input, #tiet3-team-name-input');
+        
+        if (btnFinish) {
+            btnFinish.addEventListener('click', () => {
+                if (teamNameInput && teamNameInput.value.trim() === '') {
+                    alert("Vui lòng nhập tên nhóm!");
+                    return;
+                }
+                if (window.confetti) {
+                    var duration = 3 * 1000;
+                    var animationEnd = Date.now() + duration;
+                    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
+
+                    var interval = setInterval(function() {
+                        var timeLeft = animationEnd - Date.now();
+                        if (timeLeft <= 0) {
+                            return clearInterval(interval);
+                        }
+                        var particleCount = 50 * (timeLeft / duration);
+                        window.confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random(), y: Math.random() - 0.2 } }));
+                    }, 250);
+                }
+            });
+
+            if (teamNameInput) {
+                teamNameInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        btnFinish.click();
+                    }
+                });
             }
         }
 
-        // Timers Logic (Slides 9, 16, 21, 26, 31, 34)
+        // Timers Logic (Generic container search)
         const timerContainer = slideContentEl.querySelector('.timer-container');
         if (timerContainer) {
             const timerDisplay = timerContainer.querySelector('.timer-display');
@@ -308,8 +340,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             slideContentEl.style.backgroundColor = flashes % 2 === 0 ? 'rgba(255,0,0,0.4)' : 'transparent';
                             flashes++;
                             if (flashes >= 6) {
-                                clearInterval(alarmInterval);
-                                slideContentEl.style.backgroundColor = 'transparent';
+                                  clearInterval(alarmInterval);
+                                  slideContentEl.style.backgroundColor = 'transparent';
                             }
                         }, 300);
                     }
@@ -551,9 +583,6 @@ document.addEventListener('DOMContentLoaded', () => {
             el.classList.remove('editing-active');
         });
         
-        // If typewriter was used, we need to save the final text, which is what is currently there.
-        // But we shouldn't save the interval state. cloneNode captures the innerHTML which is good.
-        
         slideData[currentSlideIndex].content = clone.innerHTML;
     }
 
@@ -607,17 +636,45 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!sidebarMenu) return;
         sidebarMenu.innerHTML = '';
         
-        const phases = [
-            { title: "MỞ ĐẦU", start: 0, end: 4 },
-            { title: "GĐ 1: MỞ KHOÁ NHIỆM VỤ", start: 5, end: 9 },
-            { title: "GĐ 2: Nhận yêu cầu", start: 10, end: 11 },
-            { title: "GĐ 3: Thu thập dữ liệu", start: 12, end: 16 },
-            { title: "GĐ 4: Phân tích thông tin", start: 17, end: 22 },
-            { title: "GĐ 5: Đóng gói thuật toán", start: 23, end: 27 },
-            { title: "GĐ 6: Thử nghiệm quy trình", start: 28, end: 32 },
-            { title: "GĐ 7: Nhật kí chuyên gia", start: 33, end: 34 },
-            { title: "GĐ 8: Vận hành hệ thống", start: 35, end: 39 }
-        ];
+        const currentRange = getSlideRange(currentSlideIndex);
+        let phases = [];
+        
+        if (currentRange.tiet === 1) {
+            phases = [
+                { title: "MỞ ĐẦU", start: 0, end: 4 },
+                { title: "GĐ 1: MỞ KHOÁ NHIỆM VỤ", start: 5, end: 9 },
+                { title: "GĐ 2: Nhận yêu cầu", start: 10, end: 11 },
+                { title: "GĐ 3: Thu thập dữ liệu", start: 12, end: 16 },
+                { title: "GĐ 4: Phân tích thông tin", start: 17, end: 22 },
+                { title: "GĐ 5: Đóng gói thuật toán", start: 23, end: 27 },
+                { title: "GĐ 6: Thử nghiệm quy trình", start: 28, end: 32 },
+                { title: "GĐ 7: Nhật kí chuyên gia", start: 33, end: 34 },
+                { title: "GĐ 8: VẬN HÀNH HỆ THỐNG", start: 35, end: 39 }
+            ];
+        } else if (currentRange.tiet === 2) {
+            phases = [
+                { title: "MỞ ĐẦU BÀI HỌC", start: 40, end: 43 },
+                { title: "GĐ 1: MỞ KHOÁ NHIỆM VỤ", start: 44, end: 53 },
+                { title: "GĐ 2: NHẬN THÁCH THỨC", start: 54, end: 55 },
+                { title: "GĐ 3: THU THẬP BẰNG CHỨNG", start: 56, end: 62 },
+                { title: "GĐ 4: XÂY DỰNG LẬP LUẬN", start: 63, end: 67 },
+                { title: "GĐ 5: DỰ DOÁN PHẢN BIỆN", start: 68, end: 72 },
+                { title: "GĐ 6: HOÀN THIỆN HỒ SƠ", start: 73, end: 77 },
+                { title: "GĐ 7: NHẬT KÝ CHUYÊN GIA", start: 78, end: 79 },
+                { title: "GĐ 8: VẬN HÀNH HỆ THỐNG", start: 80, end: 82 }
+            ];
+        } else {
+            phases = [
+                { title: "MỞ ĐẦU BÀI HỌC", start: 83, end: 86 },
+                { title: "GĐ 1: NHẬN LUẬT TRANH BIỆN", start: 87, end: 89 },
+                { title: "GĐ 2: DIỄN TẬP", start: 90, end: 94 },
+                { title: "GĐ 3: TRANH BIỆN & CHẤT VẤN", start: 95, end: 100 },
+                { title: "GĐ 4: HỘI ĐỒNG KẾT LUẬN", start: 101, end: 106 },
+                { title: "GĐ 5: NHẬT KÝ CHUYÊN GIA", start: 107, end: 108 },
+                { title: "GĐ 6: CAM KẾT CHUYÊN GIA", start: 109, end: 110 },
+                { title: "KHEN THƯỞNG VINH DANH", start: 111, end: 111 }
+            ];
+        }
 
         phases.forEach(phase => {
             // Section Header
@@ -637,13 +694,233 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuItem.setAttribute('data-slide-index', i);
                 menuItem.onclick = () => goToSlide(i);
                 
-                menuItem.innerHTML = `<span class="menu-text" title="${title}">${i + 1}. ${title}</span>`;
+                const relativeIndex = i - currentRange.start + 1;
+                menuItem.innerHTML = `<span class="menu-text" title="${title}">${relativeIndex}. ${title}</span>`;
                 sidebarMenu.appendChild(menuItem);
             }
         });
     }
 
+    // --- ANAGRAM INTERACTIVE GAME LOGIC ---
+    function resetAnagramGame(gameContainer) {
+        const slots = gameContainer.querySelectorAll('.slot');
+        const letterBlocks = gameContainer.querySelectorAll('.letter-block');
+        const feedback = gameContainer.querySelector('.game-feedback');
+        
+        slots.forEach(slot => {
+            slot.textContent = '';
+            slot.className = 'slot';
+            slot.removeAttribute('data-letter-id');
+        });
+        
+        const pool = gameContainer.querySelector('.letter-pool');
+        const expectedWord = gameContainer.getAttribute('data-word');
+        if (pool && expectedWord) {
+            const blocksArray = Array.from(letterBlocks);
+            let isSorted = true;
+            let tries = 0;
+            
+            while (isSorted && tries < 10) {
+                for (let i = blocksArray.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    const temp = blocksArray[i];
+                    blocksArray[i] = blocksArray[j];
+                    blocksArray[j] = temp;
+                }
+                tries++;
+                
+                // Check if it spells the target word
+                const shuffledSpelling = blocksArray.map(b => b.getAttribute('data-letter')).join('');
+                if (shuffledSpelling !== expectedWord) {
+                    isSorted = false;
+                }
+            }
+            
+            pool.innerHTML = '';
+            blocksArray.forEach(block => {
+                block.classList.remove('used');
+                pool.appendChild(block);
+            });
+        } else {
+            letterBlocks.forEach(block => {
+                block.classList.remove('used');
+            });
+        }
+        
+        if (feedback) {
+            feedback.textContent = '';
+            feedback.style.color = '';
+        }
+    }
+
+    function checkAnagramAnswer(gameContainer) {
+        const slots = gameContainer.querySelectorAll('.slot');
+        const feedback = gameContainer.querySelector('.game-feedback');
+        const expectedWord = gameContainer.getAttribute('data-word');
+        
+        let allFilled = true;
+        let spelledWord = '';
+        slots.forEach(slot => {
+            if (!slot.classList.contains('filled')) {
+                allFilled = false;
+            } else {
+                spelledWord += slot.textContent;
+            }
+        });
+        
+        if (!allFilled) return;
+        
+        const cleanSpelled = spelledWord.replace(/\s+/g, '').toUpperCase();
+        const cleanExpected = expectedWord.replace(/\s+/g, '').toUpperCase();
+        
+        // Helper to strip diacritics/accents for robust fallback matching
+        const normalizeStr = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/Đ/g, "D");
+        
+        if (cleanSpelled === cleanExpected || normalizeStr(cleanSpelled) === normalizeStr(cleanExpected)) {
+            slots.forEach(slot => {
+                slot.classList.add('correct');
+                slot.classList.remove('incorrect');
+            });
+            if (feedback) {
+                feedback.textContent = '🎉 CHÍNH XÁC!';
+                feedback.style.color = '#00ffcc';
+            }
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 50,
+                    spread: 60,
+                    origin: { y: 0.7 }
+                });
+            }
+        } else {
+            slots.forEach(slot => {
+                slot.classList.add('incorrect');
+                setTimeout(() => slot.classList.remove('incorrect'), 500);
+            });
+            if (feedback) {
+                feedback.textContent = '❌ CHƯA ĐÚNG, HÃY THỬ LẠI!';
+                feedback.style.color = '#ff3333';
+            }
+        }
+    }
+
+    document.addEventListener('click', (e) => {
+        // 1. Handle Letter Block Click
+        const letterBlock = e.target.closest('.letter-block');
+        if (letterBlock && !letterBlock.classList.contains('used')) {
+            const gameContainer = letterBlock.closest('.anagram-game');
+            if (gameContainer) {
+                const slots = gameContainer.querySelectorAll('.slot');
+                let targetSlot = null;
+                for (let slot of slots) {
+                    if (!slot.classList.contains('filled')) {
+                        targetSlot = slot;
+                        break;
+                    }
+                }
+                
+                if (targetSlot) {
+                    const letter = letterBlock.getAttribute('data-letter');
+                    targetSlot.textContent = letter;
+                    targetSlot.classList.add('filled');
+                    const allBlocks = Array.from(gameContainer.querySelectorAll('.letter-block'));
+                    targetSlot.setAttribute('data-letter-id', letterBlock.innerText + '_' + allBlocks.indexOf(letterBlock));
+                    letterBlock.classList.add('used');
+                    
+                    checkAnagramAnswer(gameContainer);
+                }
+            }
+            return;
+        }
+
+        // 2. Handle Slot Click (to return letter to pool)
+        const slot = e.target.closest('.slot');
+        if (slot && slot.classList.contains('filled')) {
+            const gameContainer = slot.closest('.anagram-game');
+            if (gameContainer) {
+                if (slot.classList.contains('correct')) return;
+                
+                const letterId = slot.getAttribute('data-letter-id');
+                const letterBlocks = gameContainer.querySelectorAll('.letter-block');
+                
+                const parts = letterId.split('_');
+                const blockIdx = parseInt(parts[parts.length - 1], 10);
+                if (letterBlocks[blockIdx]) {
+                    letterBlocks[blockIdx].classList.remove('used');
+                }
+                
+                slot.textContent = '';
+                slot.classList.remove('filled', 'incorrect');
+                slot.removeAttribute('data-letter-id');
+                
+                const feedback = gameContainer.querySelector('.game-feedback');
+                if (feedback) {
+                    feedback.textContent = '';
+                    feedback.style.color = '';
+                }
+                
+                gameContainer.querySelectorAll('.slot').forEach(s => s.classList.remove('incorrect'));
+            }
+            return;
+        }
+
+        // 3. Handle Reset Anagram Game Button
+        const resetBtn = e.target.closest('.reset-game-btn');
+        if (resetBtn) {
+            const gameContainer = resetBtn.closest('.anagram-game');
+            if (gameContainer) {
+                resetAnagramGame(gameContainer);
+            }
+            return;
+        }
+
+        // 4. Handle MCQ Option Button Click
+        const optionBtn = e.target.closest('.option-btn');
+        if (optionBtn) {
+            const optionsContainer = optionBtn.closest('.interactive-options');
+            if (optionsContainer) {
+                if (optionsContainer.classList.contains('solved')) return;
+                
+                const correctOpt = optionsContainer.getAttribute('data-correct');
+                const selectedOpt = optionBtn.getAttribute('data-opt');
+                const card = optionsContainer.closest('.chat-box');
+                const blank = card ? card.querySelector('.answer-blank') : null;
+                
+                if (selectedOpt === correctOpt) {
+                    optionBtn.classList.add('correct');
+                    optionsContainer.classList.add('solved');
+                    
+                    if (blank) {
+                        const text = optionBtn.textContent.replace(/^[A-C]\.\s*/, '');
+                        blank.textContent = text;
+                        blank.style.color = '#00ffcc';
+                    }
+                    
+                    if (typeof confetti === 'function') {
+                        confetti({
+                            particleCount: 20,
+                            spread: 40,
+                            origin: { y: 0.8 }
+                        });
+                    }
+                } else {
+                    optionBtn.classList.add('interactive-btn-error'); // fallback error class if incorrect
+                    optionBtn.classList.add('incorrect');
+                    setTimeout(() => optionBtn.classList.remove('incorrect'), 500);
+                }
+            }
+        }
+    });
+
+    // Auto-save on page exit or refresh
+    window.addEventListener('beforeunload', () => {
+        if (isEditMode) {
+            updateCurrentSlideData();
+            saveData();
+        }
+    });
+
     // Initial render
     renderSidebar();
-    goToSlide(0);
+    goToSlide(0, true);
 });

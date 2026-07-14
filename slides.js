@@ -871,4 +871,1678 @@ const slides = [
         </div>
         `
     }
+,
+    {
+        id: 41,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="font-weight: bold; font-size: 18pt; margin-bottom: 20px; color: var(--primary-blue);">Bài 6.28</div>
+            <div class="title typewriter-effect editable draggable" style="font-size: 44pt; margin-bottom: 20px;">Dùng AI thế nào để học chủ động hơn?</div>
+            <div class="body-text editable draggable" style="font-size: 20pt; font-style: italic; color: #ffeb3b;">Tiết 2: PHÒNG CHIẾN LƯỢC CÔNG NGHỆ</div>
+        </div>
+        `
+    },
+    {
+        id: 42,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">MỤC TIÊU BÀI HỌC</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 5%; width: 90%; display: flex; justify-content: space-between; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card" style="width: 31%; height: 430px; border-color: #00ffcc; text-align: left; padding: 20px; box-sizing: border-box;">
+                <h3 style="color: #00ffcc; text-align: center; font-size: 22pt; margin-bottom: 15px;">Kiến thức</h3>
+                <ul style="font-size: 16pt; line-height: 1.6; color: #fff; margin-left: 20px;">
+                    <li>Ôn tập cách học chủ động cùng AI.</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 31%; height: 430px; border-color: #ffeb3b; text-align: left; padding: 20px; box-sizing: border-box;">
+                <h3 style="color: #ffeb3b; text-align: center; font-size: 22pt; margin-bottom: 15px;">Kỹ năng</h3>
+                <ul style="font-size: 16pt; line-height: 1.6; color: #fff; margin-left: 20px;">
+                    <li style="margin-bottom: 10px;">Rèn luyện cách làm việc nhóm, chia sẻ nhiệm vụ và làm tài liệu tranh luận.</li>
+                    <li>Biết cách suy nghĩ phản biện và lập luận rõ ràng.</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 31%; height: 430px; border-color: #ff3333; text-align: left; padding: 20px; box-sizing: border-box;">
+                <h3 style="color: #ff3333; text-align: center; font-size: 22pt; margin-bottom: 15px;">Thái độ</h3>
+                <ul style="font-size: 16pt; line-height: 1.6; color: #fff; margin-left: 20px;">
+                    <li>Tự tin, có trách nhiệm và tôn trọng ý kiến khác biệt của các nhóm bạn.</li>
+                </ul>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 43,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">NHẬN NHIỆM VỤ CHUYÊN GIA</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 200px; left: 5%; width: 90%; padding: 40px; border-color: var(--primary-blue); position: absolute; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.8; text-align: justify; color: #fff; width: 100%;">
+                Chào mừng các Chuyên gia công nghệ! Hôm nay các chuyên gia sẽ cùng làm việc nhóm, thu thập bằng chứng và xây dựng một hồ sơ tranh biện hoàn chỉnh để bảo vệ ý kiến của nhóm mình về việc: <span style="color: #00ffcc; font-weight: bold;">Nên dùng AI trước hay sau khi làm bài để học tốt nhất.</span>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 44,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ff3333;">CÂU HỎI LỚN</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 180px; left: 15%; width: 70%; padding: 30px; border-color: #ffeb3b; text-align: center; position: absolute; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 24pt; font-weight: bold; line-height: 1.5; color: #ffeb3b; width: 100%;">
+                Học sinh nên nhờ AI hỗ trợ nhiều nhất ở giai đoạn nào trong quá trình học để học tập chủ động và hiệu quả nhất?
+            </div>
+        </div>
+        <div class="abs-element" style="top: 410px; left: 50%; transform: translateX(-50%); width: 180px; height: 180px; display: flex; justify-content: center; align-items: center; position: absolute;">
+            <svg width="140" height="140" viewBox="0 0 100 100" style="filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.3));">
+                <!-- Background Shadow Shape -->
+                <path d="M35 35 C35 20, 65 20, 65 35 C65 45, 50 48, 50 60" fill="none" stroke="#10172a" stroke-width="12" stroke-linecap="round"/>
+                <circle cx="50" cy="78" r="6" fill="#10172a"/>
+                <!-- Main Yellow Question Mark -->
+                <path d="M35 35 C35 20, 65 20, 65 35 C65 45, 50 48, 50 60" fill="none" stroke="#ffeb3b" stroke-width="8" stroke-linecap="round"/>
+                <circle cx="50" cy="78" r="5" fill="#ffeb3b"/>
+                <!-- Highlight inner stroke for Comic style -->
+                <path d="M38 32 C38 23, 62 23, 62 32" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+        </div>
+        `
+    },
+    {
+        id: 45,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 1</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">MỞ KHÓA NHIỆM VỤ</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Giải mã 5 từ khóa để biết AI giúp chúng ta làm gì và thảo luận xem thời điểm nào AI giúp ích nhất.</div>
+        </div>
+        `
+    },
+    {
+        id: 46,
+        isWarningSlide: true,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ff3333;">CẢNH BÁO HỆ THỐNG</div>
+        </div>
+        <div class="abs-element dashboard-card warning-box alert-box" style="top: 150px; left: 10%; width: 80%; padding: 30px; border-color: #ff3333; background: rgba(50,0,0,0.85); box-shadow: 0 0 30px rgba(255, 0, 0, 0.5); position: absolute; box-sizing: border-box; text-align: center;">
+            <div class="body-text editable draggable" style="font-size: 22pt; font-weight: bold; line-height: 1.6; color: #ffeb3b; width: 100%; text-align: justify;">
+                Máy chủ của Phòng Chiến lược Công nghệ đột ngột bị lỗi do hai hệ thống trí tuệ nhân tạo (AI) xung đột với nhau. Một bên muốn AI giúp học sinh trước khi làm bài, bên còn lại muốn AI chỉ giúp sau khi làm bài xong. Tranh cãi này làm hệ thống bị khóa! Các Chuyên gia hãy giải mã 5 từ khóa để mở khóa máy chủ và cùng thảo luận xem thời điểm nào trí tuệ nhân tạo (AI) giúp ích nhất.
+            </div>
+        </div>
+        <div class="abs-element" style="top: 430px; left: 50%; transform: translateX(-50%); width: 220px; height: 180px; display: flex; flex-direction: column; align-items: center; position: absolute;">
+            <svg width="110" height="90" viewBox="0 0 100 80" style="filter: drop-shadow(0px 4px 15px rgba(255,0,0,0.4));">
+                <!-- Light Rays -->
+                <path d="M10 20 L25 28 M30 10 L40 22 M70 10 L60 22 M90 20 L75 28" stroke="#ff3333" stroke-width="4" stroke-linecap="round"/>
+                <!-- Siren Base Outline -->
+                <path d="M20 70 L80 70 L75 50 L25 50 Z" fill="#10172a" stroke="#10172a" stroke-width="8" stroke-linejoin="round"/>
+                <!-- Glass Dome Outline -->
+                <path d="M25 50 C25 20, 75 20, 75 50 Z" fill="#10172a" stroke="#10172a" stroke-width="8" stroke-linejoin="round"/>
+                
+                <!-- Glass Dome Fill -->
+                <path d="M25 50 C25 20, 75 20, 75 50 Z" fill="#ff3333"/>
+                <!-- Inner glow/reflection -->
+                <path d="M35 50 C35 30, 65 30, 65 50 Z" fill="#ff9900" opacity="0.7"/>
+                <path d="M30 45 C35 30, 45 30, 45 45 Z" fill="#ffffff" opacity="0.5"/>
+                
+                <!-- Siren Base Fill -->
+                <path d="M20 70 L80 70 L75 50 L25 50 Z" fill="#475569" stroke="#10172a" stroke-width="4" stroke-linejoin="round"/>
+                <rect x="35" y="58" width="30" height="6" rx="2" fill="#1e293b"/>
+            </svg>
+            <div style="margin-top: 10px; background: #ff3333; color: #fff; font-family: 'Inter', sans-serif; font-weight: bold; font-size: 15pt; padding: 4px 16px; border-radius: 6px; border: 2px solid #10172a; box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); letter-spacing: 2px; text-transform: uppercase;">CẢNH BÁO</div>
+        </div>
+        <audio autoplay src="https://assets.mixkit.co/sfx/preview/mixkit-warning-alarm-buzzer-991.mp3"></audio>
+        `
+    },
+    {
+        id: 47,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #00ffcc;">CHUẨN BỊ</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 10%; width: 80%; display: flex; justify-content: space-between; gap: 40px; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">✔ Giấy</li>
+                    <li>✔ Bút</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <div style="font-size: 32pt; font-weight: bold; color: #fff;">
+                    Nhóm 4
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 48,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">QUY TRÌNH THỰC HIỆN</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 5%; width: 90%; display: flex; justify-content: space-between; align-items: center; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 5px; text-align: center; height: 320px; display: flex; flex-direction: column; justify-content: center; padding: 15px; border-color: #00ffcc; box-sizing: border-box;">
+                <div style="font-size: 22pt; font-weight: bold; color: #00ffcc; margin-bottom: 10px;">Bước 1</div>
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.4;">Quan sát các chữ cái bị xáo trộn trên màn hình.</div>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 20pt; color: var(--primary-blue); margin: 0 5px;"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 5px; text-align: center; height: 320px; display: flex; flex-direction: column; justify-content: center; padding: 15px; border-color: #00ffcc; box-sizing: border-box;">
+                <div style="font-size: 22pt; font-weight: bold; color: #00ffcc; margin-bottom: 10px;">Bước 2</div>
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.4;">Thảo luận nhóm giải mã từ khoá và xác định thời điểm sử dụng AI.</div>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 20pt; color: var(--primary-blue); margin: 0 5px;"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 5px; text-align: center; height: 320px; display: flex; flex-direction: column; justify-content: center; padding: 15px; border-color: #ffeb3b; box-sizing: border-box;">
+                <div style="font-size: 22pt; font-weight: bold; color: #ffeb3b; margin-bottom: 10px;">Bước 3</div>
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.4;">Thảo luận trả lời câu hỏi thảo luận lớn trên màn hình.</div>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 20pt; color: var(--primary-blue); margin: 0 5px;"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 5px; text-align: center; height: 320px; display: flex; flex-direction: column; justify-content: center; padding: 15px; border-color: #ffeb3b; box-sizing: border-box;">
+                <div style="font-size: 22pt; font-weight: bold; color: #ffeb3b; margin-bottom: 10px;">Bước 4</div>
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.4;">Đại diện các nhóm chia sẻ ý kiến của nhóm mình trước lớp.</div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 49,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">GỌI CỨU TRỢ AI</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 10px;">Giải mã từ khóa thứ nhất chỉ hành động AI hỗ trợ khi học.</div>
+        </div>
+        <div class="abs-element anagram-game" data-word="GIẢITHÍCH" style="top: 170px; left: 10%; width: 80%; position: absolute; box-sizing: border-box;">
+            <div class="letters-pool">
+                <div class="letter-block" data-letter="T">T</div>
+                <div class="letter-block" data-letter="H">H</div>
+                <div class="letter-block" data-letter="Í">Í</div>
+                <div class="letter-block" data-letter="C">C</div>
+                <div class="letter-block" data-letter="H">H</div>
+                <div class="letter-block" data-letter="Ả">Ả</div>
+                <div class="letter-block" data-letter="I">I</div>
+                <div class="letter-block" data-letter="G">G</div>
+                <div class="letter-block" data-letter="I">I</div>
+            </div>
+            <div class="answer-slots">
+                <div class="slot" data-index="0"></div>
+                <div class="slot" data-index="1"></div>
+                <div class="slot" data-index="2"></div>
+                <div class="slot" data-index="3"></div>
+                <div class="slot" data-index="4"></div>
+                <div class="slot" data-index="5"></div>
+                <div class="slot" data-index="6"></div>
+                <div class="slot" data-index="7"></div>
+                <div class="slot" data-index="8"></div>
+            </div>
+            <div class="game-controls">
+                <button class="btn-game reset-game-btn" style="padding: 10px 20px; font-size: 16pt; background: #ff3333; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"><i class="fas fa-undo"></i> LÀM LẠI</button>
+                <div class="game-feedback"></div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 5%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="45" style="font-family: monospace; font-size: 40pt;">00:45</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 50,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">GỌI CỨU TRỢ AI</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 10px;">Giải mã từ khóa thứ hai chỉ hành động AI hỗ trợ khi học.</div>
+        </div>
+        <div class="abs-element anagram-game" data-word="GỢIÝ" style="top: 170px; left: 10%; width: 80%; position: absolute; box-sizing: border-box;">
+            <div class="letters-pool">
+                <div class="letter-block" data-letter="Ý">Ý</div>
+                <div class="letter-block" data-letter="I">I</div>
+                <div class="letter-block" data-letter="G">G</div>
+                <div class="letter-block" data-letter="Ợ">Ợ</div>
+            </div>
+            <div class="answer-slots">
+                <div class="slot" data-index="0"></div>
+                <div class="slot" data-index="1"></div>
+                <div class="slot" data-index="2"></div>
+                <div class="slot" data-index="3"></div>
+            </div>
+            <div class="game-controls">
+                <button class="btn-game reset-game-btn" style="padding: 10px 20px; font-size: 16pt; background: #ff3333; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"><i class="fas fa-undo"></i> LÀM LẠI</button>
+                <div class="game-feedback"></div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 5%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="45" style="font-family: monospace; font-size: 40pt;">00:45</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 51,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">GỌI CỨU TRỢ AI</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 10px;">Giải mã từ khóa thứ ba chỉ hành động AI hỗ trợ khi học.</div>
+        </div>
+        <div class="abs-element anagram-game" data-word="KIỂMTRA" style="top: 170px; left: 10%; width: 80%; position: absolute; box-sizing: border-box;">
+            <div class="letters-pool">
+                <div class="letter-block" data-letter="T">T</div>
+                <div class="letter-block" data-letter="R">R</div>
+                <div class="letter-block" data-letter="A">A</div>
+                <div class="letter-block" data-letter="K">K</div>
+                <div class="letter-block" data-letter="I">I</div>
+                <div class="letter-block" data-letter="M">M</div>
+                <div class="letter-block" data-letter="Ể">Ể</div>
+            </div>
+            <div class="answer-slots">
+                <div class="slot" data-index="0"></div>
+                <div class="slot" data-index="1"></div>
+                <div class="slot" data-index="2"></div>
+                <div class="slot" data-index="3"></div>
+                <div class="slot" data-index="4"></div>
+                <div class="slot" data-index="5"></div>
+                <div class="slot" data-index="6"></div>
+            </div>
+            <div class="game-controls">
+                <button class="btn-game reset-game-btn" style="padding: 10px 20px; font-size: 16pt; background: #ff3333; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"><i class="fas fa-undo"></i> LÀM LẠI</button>
+                <div class="game-feedback"></div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 5%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="45" style="font-family: monospace; font-size: 40pt;">00:45</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 52,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">GỌI CỨU TRỢ AI</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 10px;">Giải mã từ khóa thứ tư chỉ hành động AI hỗ trợ khi học.</div>
+        </div>
+        <div class="abs-element anagram-game" data-word="GÓPÝ" style="top: 170px; left: 10%; width: 80%; position: absolute; box-sizing: border-box;">
+            <div class="letters-pool">
+                <div class="letter-block" data-letter="Ý">Ý</div>
+                <div class="letter-block" data-letter="P">P</div>
+                <div class="letter-block" data-letter="Ó">Ó</div>
+                <div class="letter-block" data-letter="G">G</div>
+            </div>
+            <div class="answer-slots">
+                <div class="slot" data-index="0"></div>
+                <div class="slot" data-index="1"></div>
+                <div class="slot" data-index="2"></div>
+                <div class="slot" data-index="3"></div>
+            </div>
+            <div class="game-controls">
+                <button class="btn-game reset-game-btn" style="padding: 10px 20px; font-size: 16pt; background: #ff3333; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"><i class="fas fa-undo"></i> LÀM LẠI</button>
+                <div class="game-feedback"></div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 5%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="45" style="font-family: monospace; font-size: 40pt;">00:45</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 53,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">GỌI CỨU TRỢ AI</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 10px;">Giải mã từ khóa thứ năm chỉ hành động AI hỗ trợ khi học.</div>
+        </div>
+        <div class="abs-element anagram-game" data-word="ÔNTẬP" style="top: 170px; left: 10%; width: 80%; position: absolute; box-sizing: border-box;">
+            <div class="letters-pool">
+                <div class="letter-block" data-letter="P">P</div>
+                <div class="letter-block" data-letter="Ậ">Ậ</div>
+                <div class="letter-block" data-letter="T">T</div>
+                <div class="letter-block" data-letter="N">N</div>
+                <div class="letter-block" data-letter="Ô">Ô</div>
+            </div>
+            <div class="answer-slots">
+                <div class="slot" data-index="0"></div>
+                <div class="slot" data-index="1"></div>
+                <div class="slot" data-index="2"></div>
+                <div class="slot" data-index="3"></div>
+                <div class="slot" data-index="4"></div>
+            </div>
+            <div class="game-controls">
+                <button class="btn-game reset-game-btn" style="padding: 10px 20px; font-size: 16pt; background: #ff3333; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"><i class="fas fa-undo"></i> LÀM LẠI</button>
+                <div class="game-feedback"></div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 5%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="45" style="font-family: monospace; font-size: 40pt;">00:45</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 54,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">THẢO LUẬN THỜI ĐIỂM VÀNG</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 5px;">Thảo luận nhóm 4 để đưa ra lựa chọn thời điểm sử dụng AI tốt nhất.</div>
+        </div>
+        <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 10%; width: 80%; padding: 30px; text-align: left; position: absolute; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6; color: #fff;">
+                Nếu chỉ được nhờ AI hỗ trợ ở một thời điểm (trước hoặc sau khi làm bài), em sẽ chọn thời điểm nào? Vì sao?
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 5%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="120" style="font-family: monospace; font-size: 40pt;">02:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+
+    {
+        id: 56,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 2</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">NHẬN THÁCH THỨC</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Nhận nhiệm vụ nhóm và bốc thăm chọn phe tranh luận.</div>
+        </div>
+        `
+    },
+    {
+        id: 57,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #00ffcc;">HỒ SƠ NHIỆM VỤ</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 150px; left: 10%; width: 80%; height: 420px; border-radius: 12px; border: 2px solid var(--primary-blue); display: flex; align-items: center; justify-content: center; position: absolute; box-sizing: border-box; background: rgba(10, 17, 34, 0.8);">
+            <button onclick="document.getElementById('tiet2-task-modal').style.display='flex'" class="interactive-btn" style="font-size: 24pt; padding: 20px 40px; background: rgba(0, 255, 204, 0.3); border: 3px solid #00ffcc; color: #00ffcc; cursor: pointer; border-radius: 10px; font-weight: bold; box-shadow: 0 0 25px rgba(0, 255, 204, 0.6);"><i class="fas fa-folder-open"></i> TRUY CẬP HỒ SƠ</button>
+        </div>
+        <div id="tiet2-task-modal" class="modal-overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; padding: 40px; box-sizing: border-box;">
+            <div class="dashboard-card" style="width: 90%; max-height: 90%; overflow-y: auto; text-align: left; background: var(--bg-dark); border-color: #00ffcc; position: relative; padding: 35px; box-sizing: border-box;">
+                <button onclick="document.getElementById('tiet2-task-modal').style.display='none'" style="position: absolute; top: 15px; right: 25px; font-size: 30pt; background: transparent; border: none; color: #fff; cursor: pointer;">&times;</button>
+                <h2 style="color: #ffeb3b; font-size: 28pt; margin-bottom: 20px; text-align: center;">HỒ SƠ TRANH BIỆN CHUYÊN GIA</h2>
+                <div style="font-size: 18pt; line-height: 1.5; color: #fff;">
+                    <div style="width: 100%;">
+                        <p style="color: #00ffcc; font-weight: bold; margin-bottom: 10px; font-size: 20pt;"><i class="fas fa-tasks"></i> Nhiệm vụ:</p>
+                        <p style="margin-bottom: 15px; text-align: justify;">Các nhóm xây dựng một Hồ sơ Tranh biện hoàn chỉnh để bảo vệ ý kiến của phe mình.</p>
+                        <p style="color: #00ffcc; font-weight: bold; margin-bottom: 10px; font-size: 20pt;"><i class="fas fa-users-cog"></i> Phân vai tranh biện:</p>
+                        <ul style="margin-left: 25px; margin-bottom: 15px;">
+                            <li><strong>Phe A:</strong> AI nên hỗ trợ trước khi làm bài.</li>
+                            <li><strong>Phe B:</strong> AI nên hỗ trợ sau khi làm bài.</li>
+                        </ul>
+                        <p style="color: #00ffcc; font-weight: bold; margin-bottom: 10px; font-size: 20pt;"><i class="fas fa-file-alt"></i> Hồ sơ gồm 6 phần:</p>
+                        <ol style="margin-left: 25px; display: flex; gap: 30px; list-style-position: inside;">
+                            <li>Quan điểm</li>
+                            <li>Luận điểm</li>
+                            <li>Lý do</li>
+                            <li>Bằng chứng</li>
+                            <li>Phản biện</li>
+                            <li>Kết luận</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 58,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 3</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">THU THẬP BẰNG CHỨNG</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Đọc câu lệnh AI của các bạn học sinh, tìm xem câu lệnh giúp ích gì và chọn bằng chứng cho phe mình.</div>
+        </div>
+        `
+    },
+    {
+        id: 59,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #00ffcc;">CHUẨN BỊ</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 10%; width: 80%; display: flex; justify-content: space-between; gap: 40px; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">✔ Giấy</li>
+                    <li>✔ Bút</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <div style="font-size: 32pt; font-weight: bold; color: #fff;">
+                    4 đội
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 60,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">QUY TRÌNH THỰC HIỆN</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 15%; width: 70%; display: flex; justify-content: space-between; align-items: center; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card process-step" style="width: 45%; text-align: center; height: 300px; display: flex; flex-direction: column; justify-content: center; padding: 20px; border-color: #00ffcc; box-sizing: border-box;">
+                <div style="font-size: 24pt; font-weight: bold; color: #00ffcc; margin-bottom: 15px;">Bước 1</div>
+                <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.5;">Thảo luận nhóm để lần lượt phân tích 6 hồ sơ câu lệnh AI và điền từ thích hợp vào chỗ trống.</div>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 30pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="width: 45%; text-align: center; height: 300px; display: flex; flex-direction: column; justify-content: center; padding: 20px; border-color: #ffeb3b; box-sizing: border-box;">
+                <div style="font-size: 24pt; font-weight: bold; color: #ffeb3b; margin-bottom: 15px;">Bước 2</div>
+                <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.5;">Chọn và gom các hồ sơ phù hợp để xây dựng bộ bằng chứng bảo vệ ý kiến của phe mình.</div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 61,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 3%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 28pt;">TÌM KIẾM BẰNG CHỨNG - HỒ SƠ 1 & 2</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; color: #00ffcc; margin-top: 5px;">Thảo luận nhóm để điền từ vào chỗ trống và xác định nhiệm vụ hỗ trợ của AI.</div>
+        </div>
+        <div class="abs-element" style="top: 135px; left: 5%; width: 90%; display: flex; justify-content: space-between; gap: 30px; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card chat-box" style="width: 48%; height: 410px; padding: 20px; box-sizing: border-box;">
+                <h4 style="color: #ffeb3b; font-size: 20pt; margin-bottom: 10px;"><i class="fas fa-file-alt"></i> Hồ sơ 1 (Minh)</h4>
+                <p style="font-size: 14pt; line-height: 1.4; font-style: italic; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; margin-bottom: 15px; min-height: 80px;">"Mình sắp học bài về phân số. Hãy giải thích phân số là gì bằng ngôn ngữ dễ hiểu và cho mình 3 ví dụ đơn giản."</p>
+                <p style="font-size: 15pt; line-height: 1.5; color: #00ffcc; margin-bottom: 10px;">Câu lệnh giúp Minh: <span class="answer-blank" style="border-bottom: 2px solid #00ffcc; padding: 0 10px; font-weight: bold; color: #fff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                <div class="interactive-options" data-correct="A" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+                    <button class="option-btn" data-opt="A">A. Hiểu kiến thức</button>
+                    <button class="option-btn" data-opt="B">B. Kiểm tra lỗi</button>
+                    <button class="option-btn" data-opt="C">C. Chỉnh sửa bài</button>
+                </div>
+            </div>
+            <div class="dashboard-card chat-box" style="width: 48%; height: 410px; padding: 20px; box-sizing: border-box; border-color: #ffeb3b;">
+                <h4 style="color: #ffeb3b; font-size: 20pt; margin-bottom: 10px;"><i class="fas fa-file-alt"></i> Hồ sơ 2 (Lan)</h4>
+                <p style="font-size: 14pt; line-height: 1.4; font-style: italic; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; margin-bottom: 15px; min-height: 80px;">"Hãy gợi ý từng bước để mình tự giải bài toán này."</p>
+                <p style="font-size: 15pt; line-height: 1.5; color: #00ffcc; margin-bottom: 10px;">Câu lệnh giúp Lan: <span class="answer-blank" style="border-bottom: 2px solid #00ffcc; padding: 0 10px; font-weight: bold; color: #fff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                <div class="interactive-options" data-correct="B" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+                    <button class="option-btn" data-opt="A">A. Xem đáp án</button>
+                    <button class="option-btn" data-opt="B">B. Định hướng cách làm</button>
+                    <button class="option-btn" data-opt="C">C. Chấm điểm bài</button>
+                </div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="120" style="font-family: monospace; font-size: 36pt;">02:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 62,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 3%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 28pt;">TÌM KIẾM BẰNG CHỨNG - HỒ SƠ 3 & 4</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; color: #00ffcc; margin-top: 5px;">Thảo luận nhóm để điền từ vào chỗ trống và xác định nhiệm vụ hỗ trợ của AI.</div>
+        </div>
+        <div class="abs-element" style="top: 135px; left: 5%; width: 90%; display: flex; justify-content: space-between; gap: 30px; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card chat-box" style="width: 48%; height: 410px; padding: 20px; box-sizing: border-box;">
+                <h4 style="color: #ffeb3b; font-size: 20pt; margin-bottom: 10px;"><i class="fas fa-file-alt"></i> Hồ sơ 3 (Mai)</h4>
+                <p style="font-size: 14pt; line-height: 1.4; font-style: italic; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; margin-bottom: 15px; min-height: 80px;">"Đây là bài văn mình đã viết. Hãy góp ý xem mình cần bổ sung hoặc chỉnh sửa ở đâu."</p>
+                <p style="font-size: 15pt; line-height: 1.5; color: #00ffcc; margin-bottom: 10px;">Câu lệnh giúp Mai: <span class="answer-blank" style="border-bottom: 2px solid #00ffcc; padding: 0 10px; font-weight: bold; color: #fff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                <div class="interactive-options" data-correct="B" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+                    <button class="option-btn" data-opt="A">A. Học bài mới</button>
+                    <button class="option-btn" data-opt="B">B. Chỉnh sửa bài</button>
+                    <button class="option-btn" data-opt="C">C. Tìm đáp án</button>
+                </div>
+            </div>
+            <div class="dashboard-card chat-box" style="width: 48%; height: 410px; padding: 20px; box-sizing: border-box; border-color: #ffeb3b;">
+                <h4 style="color: #ffeb3b; font-size: 20pt; margin-bottom: 10px;"><i class="fas fa-file-alt"></i> Hồ sơ 4 (Nam)</h4>
+                <p style="font-size: 14pt; line-height: 1.4; font-style: italic; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; margin-bottom: 15px; min-height: 80px;">"Ngày mai mình kiểm tra môn Lịch sử. Hãy tạo cho mình 5 câu hỏi ôn tập về bài này."</p>
+                <p style="font-size: 15pt; line-height: 1.5; color: #00ffcc; margin-bottom: 10px;">Câu lệnh giúp Nam: <span class="answer-blank" style="border-bottom: 2px solid #00ffcc; padding: 0 10px; font-weight: bold; color: #fff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                <div class="interactive-options" data-correct="A" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+                    <button class="option-btn" data-opt="A">A. Ôn tập kiến thức</button>
+                    <button class="option-btn" data-opt="B">B. Sửa bài làm</button>
+                    <button class="option-btn" data-opt="C">C. Tìm lỗi sai</button>
+                </div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="120" style="font-family: monospace; font-size: 36pt;">02:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 63,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 3%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 28pt;">TÌM KIẾM BẰNG CHỨNG - HỒ SƠ 5 & 6</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; color: #00ffcc; margin-top: 5px;">Thảo luận nhóm để điền từ vào chỗ trống và xác định nhiệm vụ hỗ trợ của AI.</div>
+        </div>
+        <div class="abs-element" style="top: 135px; left: 5%; width: 90%; display: flex; justify-content: space-between; gap: 30px; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card chat-box" style="width: 48%; height: 410px; padding: 20px; box-sizing: border-box;">
+                <h4 style="color: #ffeb3b; font-size: 20pt; margin-bottom: 10px;"><i class="fas fa-file-alt"></i> Hồ sơ 5 (An)</h4>
+                <p style="font-size: 14pt; line-height: 1.4; font-style: italic; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; margin-bottom: 15px; min-height: 80px;">"Sau khi xem bài làm văn của mình, hãy nhận xét 3 điểm mình làm tốt và 2 điều mình cần cải thiện cho lần sau."</p>
+                <p style="font-size: 15pt; line-height: 1.5; color: #00ffcc; margin-bottom: 10px;">Câu lệnh giúp An: <span class="answer-blank" style="border-bottom: 2px solid #00ffcc; padding: 0 10px; font-weight: bold; color: #fff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                <div class="interactive-options" data-correct="B" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+                    <button class="option-btn" data-opt="A">A. Ghi nhớ bài</button>
+                    <button class="option-btn" data-opt="B">B. Rút kinh nghiệm</button>
+                    <button class="option-btn" data-opt="C">C. Tìm đáp án</button>
+                </div>
+            </div>
+            <div class="dashboard-card chat-box" style="width: 48%; height: 410px; padding: 20px; box-sizing: border-box; border-color: #ffeb3b;">
+                <h4 style="color: #ffeb3b; font-size: 20pt; margin-bottom: 10px;"><i class="fas fa-file-alt"></i> Hồ sơ 6 (Hương)</h4>
+                <p style="font-size: 14pt; line-height: 1.4; font-style: italic; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; margin-bottom: 15px; min-height: 80px;">"Đây là bài toán mình đã làm. Hãy kiểm tra kết quả, nếu sai hãy xem mình sai ở bước nào nhưng chưa cần cho đáp án đúng."</p>
+                <p style="font-size: 15pt; line-height: 1.5; color: #00ffcc; margin-bottom: 10px;">Câu lệnh giúp Hương: <span class="answer-blank" style="border-bottom: 2px solid #00ffcc; padding: 0 10px; font-weight: bold; color: #fff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                <div class="interactive-options" data-correct="B" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+                    <button class="option-btn" data-opt="A">A. Học kiến thức</button>
+                    <button class="option-btn" data-opt="B">B. Sửa lỗi sai</button>
+                    <button class="option-btn" data-opt="C">C. Ôn tập bài</button>
+                </div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="120" style="font-family: monospace; font-size: 36pt;">02:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 64,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #00ffcc;">BỘ BẰNG CHỨNG HỒ SƠ</div>
+        </div>
+        <div class="abs-element" style="top: 180px; left: 5%; width: 90%; display: flex; justify-content: space-between; gap: 30px; position: absolute; box-sizing: border-box;">
+            <!-- Cột Phe A -->
+            <div class="dashboard-card" style="width: 48%; padding: 25px; box-sizing: border-box; border-color: #00ffcc; background: rgba(0, 255, 204, 0.05);">
+                <h4 style="color: #00ffcc; font-size: 22pt; margin-bottom: 20px; text-align: center; border-bottom: 2px solid #00ffcc; padding-bottom: 10px;">PHE A (Trước khi làm bài)</h4>
+                <ul style="font-size: 16pt; line-height: 1.8; color: #fff; list-style-type: none; padding: 0;">
+                    <li style="margin-bottom: 15px;"><i class="fas fa-file-alt" style="color: #00ffcc; margin-right: 10px;"></i> <strong>Hồ sơ 1:</strong> Hiểu kiến thức</li>
+                    <li style="margin-bottom: 15px;"><i class="fas fa-file-alt" style="color: #00ffcc; margin-right: 10px;"></i> <strong>Hồ sơ 2:</strong> Định hướng cách làm</li>
+                    <li><i class="fas fa-file-alt" style="color: #00ffcc; margin-right: 10px;"></i> <strong>Hồ sơ 4:</strong> Ôn tập kiến thức</li>
+                </ul>
+            </div>
+            <!-- Cột Phe B -->
+            <div class="dashboard-card" style="width: 48%; padding: 25px; box-sizing: border-box; border-color: #ff3333; background: rgba(255, 51, 51, 0.05);">
+                <h4 style="color: #ff3333; font-size: 22pt; margin-bottom: 20px; text-align: center; border-bottom: 2px solid #ff3333; padding-bottom: 10px;">PHE B (Sau khi làm bài)</h4>
+                <ul style="font-size: 16pt; line-height: 1.8; color: #fff; list-style-type: none; padding: 0;">
+                    <li style="margin-bottom: 15px;"><i class="fas fa-file-alt" style="color: #ff3333; margin-right: 10px;"></i> <strong>Hồ sơ 3:</strong> Chỉnh sửa bài</li>
+                    <li style="margin-bottom: 15px;"><i class="fas fa-file-alt" style="color: #ff3333; margin-right: 10px;"></i> <strong>Hồ sơ 5:</strong> Rút kinh nghiệm</li>
+                    <li><i class="fas fa-file-alt" style="color: #ff3333; margin-right: 10px;"></i> <strong>Hồ sơ 6:</strong> Sửa lỗi sai</li>
+                </ul>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 65,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 4</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">XÂY DỰNG LẬP LUẬN</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Viết 2 luận điểm của nhóm theo đúng cấu trúc để bảo vệ ý kiến của phe mình.</div>
+        </div>
+        `
+    },
+    {
+        id: 66,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #00ffcc;">CHUẨN BỊ</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 10%; width: 80%; display: flex; justify-content: space-between; gap: 40px; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">✔ Giấy</li>
+                    <li>✔ Bút</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <div style="font-size: 32pt; font-weight: bold; color: #fff;">
+                    4 đội
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 67,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">QUY TRÌNH THỰC HIỆN</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 20%; width: 60%; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card process-step" style="text-align: center; height: 300px; display: flex; flex-direction: column; justify-content: center; padding: 30px; border-color: #00ffcc; box-sizing: border-box;">
+                <div style="font-size: 26pt; font-weight: bold; color: #00ffcc; margin-bottom: 20px;">Nhiệm vụ</div>
+                <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.6;">Viết 2 luận điểm của nhóm theo cấu trúc: Luận điểm ➔ Lý do ➔ Ví dụ/Bằng chứng.</div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 68,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">XÂY DỰNG LẬP LUẬN CHIẾN LƯỢC</div>
+            <div class="subtitle editable draggable" style="font-size: 22pt; color: #00ffcc; margin-top: 5px;">Viết 2 luận điểm lớn của nhóm theo đúng cấu trúc mẫu để chứng minh ý kiến của phe mình.</div>
+        </div>
+        <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 10%; width: 80%; padding: 25px; text-align: left; position: absolute; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.5;">
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 15px; font-size: 22pt; text-align: center;">Cấu trúc Luận điểm mẫu:</p>
+                <div style="background: rgba(0,0,0,0.4); padding: 15px 25px; border-radius: 8px; border: 1px solid rgba(0, 210, 255, 0.2); margin-bottom: 15px;">
+                    <span style="font-weight: bold; color: #00ffcc; font-size: 18pt;">1. Luận điểm chính:</span>
+                    <p style="margin-top: 5px; color: #fff; font-size: 16pt; font-style: italic;">(Nêu rõ ý kiến cốt lõi của nhóm)</p>
+                </div>
+                <div style="background: rgba(0,0,0,0.4); padding: 15px 25px; border-radius: 8px; border: 1px solid rgba(0, 210, 255, 0.2); margin-bottom: 15px;">
+                    <span style="font-weight: bold; color: #00ffcc; font-size: 18pt;">2. Lý do (Tại sao?):</span>
+                    <p style="margin-top: 5px; color: #fff; font-size: 16pt; font-style: italic;">(Giải thích vì sao luận điểm đó lại đúng và quan trọng)</p>
+                </div>
+                <div style="background: rgba(0,0,0,0.4); padding: 15px 25px; border-radius: 8px; border: 1px solid rgba(0, 210, 255, 0.2);">
+                    <span style="font-weight: bold; color: #00ffcc; font-size: 18pt;">3. Ví dụ / Bằng chứng:</span>
+                    <p style="margin-top: 5px; color: #fff; font-size: 16pt; font-style: italic;">(Dẫn chứng thực tế của học sinh hoặc các hồ sơ phân tích)</p>
+                </div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="480" style="font-family: monospace; font-size: 36pt;">08:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 69,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="title editable draggable" style="font-size: 44pt; margin-bottom: 20px; color: #ffeb3b;"><i class="fas fa-bullhorn"></i> TRÌNH BÀY KẾT QUẢ</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6; color: #fff;">Các nhóm sẵn sàng đứng lên trình bày 2 luận điểm của nhóm mình trước lớp!</div>
+        </div>
+        `
+    },
+    {
+        id: 70,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 5</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">DỰ ĐOÁN PHẢN BIỆN</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Nghĩ xem đội bạn sẽ hỏi khó nhóm mình câu gì và chuẩn bị trước câu trả lời để bảo vệ ý kiến.</div>
+        </div>
+        `
+    },
+    {
+        id: 71,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #00ffcc;">CHUẨN BỊ</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 10%; width: 80%; display: flex; justify-content: space-between; gap: 40px; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">✔ Giấy</li>
+                    <li>✔ Bút</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <div style="font-size: 32pt; font-weight: bold; color: #fff;">
+                    4 đội
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 72,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">QUY TRÌNH THỰC HIỆN</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 15%; width: 70%; display: flex; justify-content: space-between; align-items: center; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card process-step" style="width: 45%; text-align: center; height: 300px; display: flex; flex-direction: column; justify-content: center; padding: 20px; border-color: #00ffcc; box-sizing: border-box;">
+                <div style="font-size: 24pt; font-weight: bold; color: #00ffcc; margin-bottom: 15px;">Bước 1</div>
+                <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.5;">Thảo luận nhóm và đoán ít nhất 1 câu hỏi phản biện mà đối thủ có thể hỏi.</div>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 30pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="width: 45%; text-align: center; height: 300px; display: flex; flex-direction: column; justify-content: center; padding: 20px; border-color: #ffeb3b; box-sizing: border-box;">
+                <div style="font-size: 24pt; font-weight: bold; color: #ffeb3b; margin-bottom: 15px;">Bước 2</div>
+                <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.5;">Cùng nghĩ câu trả lời thuyết phục nhất để bảo vệ ý kiến của nhóm.</div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 73,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ff3333;">HỎI XOÁY – ĐÁP XOAY</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 5px;">Đoán trước câu hỏi chất vấn của đội bạn và chuẩn bị phương án trả lời.</div>
+        </div>
+        <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 5%; width: 90%; height: 380px; padding: 25px 30px; box-sizing: border-box; position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.4; width: 100%; display: flex; flex-direction: column; gap: 15px;">
+                <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                    <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0; color: #ffeb3b;">1. Nếu chúng ta nói:</span>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 20px; flex-shrink: 0;"></i>
+                    <input type="text" placeholder="Nhập lập luận chính của phe mình..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                </div>
+                <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                    <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0; color: #ff3333;">2. Đội khác sẽ phản đối điều gì?:</span>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 20px; flex-shrink: 0;"></i>
+                    <input type="text" placeholder="Nhập câu hỏi phản biện của đối thủ..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                </div>
+                <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                    <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0; color: #00ffcc;">3. Chúng ta trả lời thế nào?:</span>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 20px; flex-shrink: 0;"></i>
+                    <input type="text" placeholder="Nhập cách tự tin trả lời để bảo vệ ý kiến..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                </div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="300" style="font-family: monospace; font-size: 36pt;">05:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 74,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="title editable draggable" style="font-size: 44pt; margin-bottom: 20px; color: #ffeb3b;"><i class="fas fa-bullhorn"></i> TRÌNH BÀY KẾT QUẢ</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6; color: #fff;">Các nhóm chia sẻ nhanh câu hỏi phản biện và cách giải quyết của nhóm mình trước lớp!</div>
+        </div>
+        `
+    },
+    {
+        id: 75,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 6</div>
+            <div class="title editable draggable" style="font-size: 36pt; margin-bottom: 30px; color: var(--primary-blue);">HOÀN THIỆN HỒ SƠ TRANH BIỆN</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Tổng hợp các nội dung đã chuẩn bị vào một hồ sơ hoàn chỉnh và chia việc cho các thành viên trong nhóm.</div>
+        </div>
+        `
+    },
+    {
+        id: 76,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #00ffcc;">CHUẨN BỊ</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 10%; width: 80%; display: flex; justify-content: space-between; gap: 40px; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 20px;">Dụng cụ</h3>
+                <ul style="font-size: 24pt; color: #fff; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">✔ Giấy A4</li>
+                    <li>✔ Bút</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 320px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 20px;">Hình thức tổ chức</h3>
+                <div style="font-size: 32pt; font-weight: bold; color: #fff;">
+                    4 đội
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 77,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">QUY TRÌNH THỰC HIỆN</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 5%; width: 90%; display: flex; justify-content: space-between; align-items: center; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 300px; display: flex; flex-direction: column; justify-content: center; padding: 15px; border-color: #00ffcc; box-sizing: border-box;">
+                <div style="font-size: 22pt; font-weight: bold; color: #00ffcc; margin-bottom: 15px;">Bước 1</div>
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.5;">Tổng hợp các nội dung: Quan điểm, Luận điểm, Lý do, Bằng chứng, Phản biện, Kết luận.</div>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 20pt; color: var(--primary-blue); margin: 0 10px;"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 300px; display: flex; flex-direction: column; justify-content: center; padding: 15px; border-color: #00ffcc; box-sizing: border-box;">
+                <div style="font-size: 22pt; font-weight: bold; color: #00ffcc; margin-bottom: 15px;">Bước 2</div>
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.5;">Thiết kế áp phích hồ sơ tranh biện hoàn chỉnh lên giấy.</div>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 20pt; color: var(--primary-blue); margin: 0 10px;"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 300px; display: flex; flex-direction: column; justify-content: center; padding: 15px; border-color: #ffeb3b; box-sizing: border-box;">
+                <div style="font-size: 22pt; font-weight: bold; color: #ffeb3b; margin-bottom: 15px;">Bước 3</div>
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.5;">Hoàn thành và trưng bày sản phẩm tại khu vực nhóm.</div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 78,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">HOÀN THIỆN HỒ SƠ CHIẾN LƯỢC</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 5px;">Viết hồ sơ tranh biện hoàn chỉnh lên giấy.</div>
+        </div>
+        <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 10%; width: 80%; padding: 25px 35px; text-align: left; position: absolute; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.5;">
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 10px; font-size: 22pt; text-align: center;">Thiết kế áp phích hồ sơ chiến lược trên giấy A4 gồm:</p>
+                <div style="display: flex; gap: 40px; margin-top: 15px;">
+                    <div style="width: 50%;">
+                        <ol style="margin-left: 30px; color: #fff; font-size: 18pt; line-height: 1.6;">
+                            <li>Tên nhóm</li>
+                            <li>Quan điểm</li>
+                            <li>Luận điểm</li>
+                            <li>Lý do</li>
+                        </ol>
+                    </div>
+                    <div style="width: 50%;">
+                        <ol start="5" style="margin-left: 30px; color: #fff; font-size: 18pt; line-height: 1.6;">
+                            <li>Bằng chứng</li>
+                            <li>Câu hỏi - Câu trả lời phản biện</li>
+                            <li>Kết luận</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="420" style="font-family: monospace; font-size: 36pt;">07:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 79,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="title editable draggable" style="font-size: 44pt; margin-bottom: 20px; color: #ffeb3b;"><i class="fas fa-bullhorn"></i> TRÌNH BÀY KẾT QUẢ</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6; color: #fff;">Các nhóm trưng bày áp phích hồ sơ tranh biện lên bảng</div>
+        </div>
+        `
+    },
+    {
+        id: 80,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 7</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">NHẬT KÝ CHUYÊN GIA</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Tự suy nghĩ và viết nhật ký cá nhân</div>
+        </div>
+        `
+    },
+    {
+        id: 81,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">NHẬT KÝ CHUYÊN GIA CÔNG NGHỆ</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 5px;">Tự viết nhật ký cá nhân để suy ngẫm về cách em dùng AI khi học.</div>
+        </div>
+        <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 5%; width: 90%; height: 380px; padding: 25px 30px; box-sizing: border-box; position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.4; width: 100%; display: flex; flex-direction: column; gap: 15px;">
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 10px; font-size: 22pt; text-align: center;">Hoàn thành 3 câu hỏi sau vào giấy/vở:</p>
+                <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                    <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0; color: #fff;">1. Điều em học được hôm nay là:</span>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 20px; flex-shrink: 0;"></i>
+                    <input type="text" placeholder="Nhập câu trả lời của em..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                </div>
+                <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                    <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0; color: #fff;">2. Điều em thường bỏ qua là:</span>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 20px; flex-shrink: 0;"></i>
+                    <input type="text" placeholder="Nhập câu trả lời của em..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                </div>
+                <div style="background: rgba(0,0,0,0.4); padding: 12px 25px; border-radius: 10px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                    <span style="font-weight: bold; font-size: 20pt; white-space: nowrap; width: 480px; flex-shrink: 0; color: #fff;">3. Điều em muốn thay đổi là:</span>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; margin: 0 20px; flex-shrink: 0;"></i>
+                    <input type="text" placeholder="Nhập câu trả lời của em..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 20pt; flex-grow: 1; outline: none;">
+                </div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="240" style="font-family: monospace; font-size: 36pt;">04:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 82,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 8</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">THỬ THÁCH THỰC TẾ</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Về nhà thử dùng AI ở cả hai thời điểm (trước và sau khi làm bài) để tự so sánh xem cách nào hiệu quả hơn.</div>
+        </div>
+        `
+    },
+    {
+        id: 83,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">CHIẾN DỊCH THỬ NGHIỆM THỰC TẾ AI</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; color: #00ffcc; margin-top: 5px;">Thực hành tự dùng AI ở nhà ở cả hai thời điểm (Trước và Sau) đối với một môn học trong tuần.</div>
+        </div>
+        <div class="abs-element dashboard-card chat-box" style="top: 240px; left: 10%; width: 80%; padding: 25px 35px; text-align: left; position: absolute; box-sizing: border-box;">
+            <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.6; color: #fff;">
+                <ul style="margin-left: 25px; margin-bottom: 15px;">
+                    <li style="margin-bottom: 10px;">Chọn một môn học (Toán, Văn, Tiếng Anh...) để làm bài tập tuần này.</li>
+                    <li style="margin-bottom: 10px;"><strong style="color: #ffeb3b;">Trải nghiệm 1 (Dùng AI trước):</strong> Nhờ AI giải thích lý thuyết hoặc từ vựng khó hiểu trước khi tự làm bài tập. Ghi lại kết quả.</li>
+                    <li style="margin-bottom: 10px;"><strong style="color: #ffeb3b;">Trải nghiệm 2 (Dùng AI sau):</strong> Tự giải bài tập trước, sau đó gửi bài nhờ AI kiểm tra lỗi chính tả, ngữ pháp hoặc xem sai ở dòng nào. Ghi lại kết quả.</li>
+                    <li><strong style="color: #ffeb3b;">So sánh:</strong> So sánh xem cách nào giúp em tự làm bài tốt và hiểu bài sâu sắc hơn.</li>
+                </ul>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 84,
+        content: `
+        <div class="abs-element" style="background: rgba(0,0,0,0.85); width: 100%; height: 100%; z-index: -1;"></div>
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%; z-index: 2;">
+            <div class="title editable draggable" style="color: #ffeb3b; font-size: 36pt;"><i class="fas fa-award"></i> CHỨNG NHẬN HOÀN THÀNH NHIỆM VỤ</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; margin-top: 10px; max-width: 80%; margin-left: auto; margin-right: auto; line-height: 1.4; color: #fff;">Chúc mừng các nhóm Chuyên gia Công nghệ đã hoàn thành xuất sắc việc xây dựng và hoàn thiện Hồ sơ Tranh biện. Sự chủ động, tinh thần hợp tác và những lập luận sắc bén của các em hôm nay đã giải quyết thành công sự cố hệ thống.</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 260px; left: 50%; transform: translateX(-50%); z-index: 2; width: 60%; text-align: center; padding: 25px 30px; box-sizing: border-box; border: 2px solid #ffeb3b; position: absolute;">
+            <div style="font-size: 24pt; color: #fff; margin-bottom: 15px; font-weight: bold;">Trao chứng nhận cho</div>
+            <div style="display: flex; align-items: center; justify-content: center; font-size: 22pt; color: #fff; gap: 10px;">
+                <span>Nhóm Chuyên gia:</span>
+                <input type="text" id="team-name-input" placeholder="Nhập tên nhóm..." style="width: 280px; padding: 5px 10px; font-size: 22pt; background: transparent; border: none; border-bottom: 2px dashed #00d2ff; color: #00ffcc; text-align: center; outline: none; font-family: 'Inter', sans-serif;">
+            </div>
+            <div style="margin-top: 25px; display: flex; justify-content: center; width: 100%;">
+                <button id="btn-finish" class="interactive-btn" style="font-size: 20pt; padding: 12px 36px; background: #ffeb3b; color: #000; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 0 15px rgba(255, 235, 59, 0.5); display: flex; align-items: center; justify-content: center; text-align: center;">HOÀN THÀNH</button>
+            </div>
+        </div>
+        <div class="abs-element" style="bottom: 40px; right: 40px; transform: rotate(-15deg); border: 4px solid #ff3333; color: #ff3333; font-size: 16pt; font-weight: bold; padding: 8px 12px; border-radius: 8px; text-align: center; background: rgba(255, 255, 255, 0.05); z-index: 5; font-family: 'Inter', sans-serif;">
+            <div>VIỆN NGHIÊN CỨU</div>
+            <div style="font-size: 13pt; border-top: 2px solid #ff3333; margin-top: 4px; padding-top: 4px;">NOVASTARS</div>
+        </div>
+        `
+    },
+    {
+        id: 85,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="font-weight: bold; font-size: 18pt; margin-bottom: 20px; color: var(--primary-blue);">Bài 6.28</div>
+            <div class="title typewriter-effect editable draggable" style="font-size: 44pt; margin-bottom: 20px;">Dùng AI thế nào để học chủ động hơn?</div>
+            <div class="body-text editable draggable" style="font-size: 20pt; font-style: italic; color: #ffeb3b;">Tiết 3: DIỄN ĐÀN CHUYÊN GIA CÔNG NGHỆ</div>
+        </div>
+        `
+    },
+    {
+        id: 86,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">MỤC TIÊU BÀI HỌC</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 5%; width: 90%; display: flex; justify-content: space-between; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card" style="width: 31%; height: 430px; border-color: #00ffcc; text-align: left; padding: 20px; box-sizing: border-box;">
+                <h3 style="color: #00ffcc; text-align: center; font-size: 22pt; margin-bottom: 15px;">Kiến thức</h3>
+                <ul style="font-size: 16pt; line-height: 1.6; color: #fff; margin-left: 20px;">
+                    <li>Hiểu rằng AI có thể hỗ trợ học tập ở nhiều thời điểm khác nhau (trước hoặc sau khi làm bài).</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 31%; height: 430px; border-color: #ffeb3b; text-align: left; padding: 20px; box-sizing: border-box;">
+                <h3 style="color: #ffeb3b; text-align: center; font-size: 22pt; margin-bottom: 15px;">Kỹ năng</h3>
+                <ul style="font-size: 16pt; line-height: 1.6; color: #fff; margin-left: 20px;">
+                    <li style="margin-bottom: 10px;">Trình bày, bảo vệ và phản biện quan điểm bằng lý lẽ, bằng chứng thuyết phục.</li>
+                    <li>Ghi chép chọn lọc thông tin, câu hỏi phản biện khi lắng nghe đội bạn trình bày.</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 31%; height: 430px; border-color: #ff3333; text-align: left; padding: 20px; box-sizing: border-box;">
+                <h3 style="color: #ff3333; text-align: center; font-size: 22pt; margin-bottom: 15px;">Thái độ</h3>
+                <ul style="font-size: 16pt; line-height: 1.6; color: #fff; margin-left: 20px;">
+                    <li style="margin-bottom: 10px;">Tôn trọng ý kiến khác biệt, sẵn sàng điều chỉnh quan điểm khi có lập luận thuyết phục.</li>
+                    <li>Cam kết sử dụng AI có trách nhiệm.</li>
+                </ul>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 87,
+        content: `
+        <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: center; border-color: var(--primary-purple);">
+            <div class="title editable draggable" style="font-size: 36pt; margin-bottom: 20px; color: #ffeb3b;">KÍCH HOẠT HỒ SƠ CHUYÊN GIA</div>
+            <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.8; color: #fff;">
+                Chào mừng các Chuyên gia công nghệ, hôm nay các Chuyên gia công nghệ sẽ trình bày, bảo vệ lập trường của đội mình (Phe A hoặc Phe B) và phản biện lập trường của đội bạn về thời điểm sử dụng AI tối ưu nhất (Trước hay Sau khi làm bài) để học chủ động và hiệu quả.
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 88,
+        content: `
+        <div class="center-layout abs-element dashboard-card" style="width: 80%; text-align: center; border-color: #ffeb3b;">
+            <div class="title editable draggable" style="font-size: 26pt; margin-bottom: 20px; color: #00ffcc;">CÂU HỎI LỚN</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; font-weight: bold; line-height: 1.6;">
+                Nên dùng AI hỗ trợ trước hay sau khi làm bài để học tốt nhất?
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 89,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 1</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">NHẬN LUẬT TRANH BIỆN</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Giúp học sinh hiểu chủ đề, luật tranh biện, cấu trúc phiên và kích hoạt bộ quy tắc diễn đàn.</div>
+        </div>
+        `
+    },
+    {
+        id: 90,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ff3333;">CẢNH BÁO HỆ THỐNG</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 10%; width: 80%; position: absolute; box-sizing: border-box;">
+            <div class="dashboard-card alert-box" style="width: 100%; height: 400px; border-color: #ff3333; animation: flash-alert 0.5s infinite alternate; background: rgba(50,0,0,0.85); display: flex; flex-direction: column; justify-content: center; padding: 35px; box-sizing: border-box; text-align: center;">
+                <div class="body-text editable draggable" style="font-size: 20pt; color: #ffeb3b; font-weight: bold; line-height: 1.8;">
+                    Hệ thống điều phối thông tin của diễn đàn bị lỗi tràn bộ nhớ do nhận cùng lúc quá nhiều dữ liệu lập luận trái chiều từ các nhóm.<br><br>
+                    Các Chuyên gia công nghệ cần hợp sức kích hoạt lại "Bộ quy tắc diễn đàn" để khôi phục hệ thống!
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 48pt; color: #ff3333; animation: blink-warning 0.8s infinite alternate; text-shadow: 0 0 20px #ff3333;"></i>
+                </div>
+            </div>
+        </div>
+        <audio autoplay src="https://assets.mixkit.co/sfx/preview/mixkit-warning-alarm-buzzer-991.mp3"></audio>
+        <style>
+        @keyframes flash-alert { from { box-shadow: 0 0 15px #ff3333; } to { box-shadow: 0 0 45px #ff3333; } }
+        @keyframes blink-warning { from { opacity: 0.3; transform: scale(0.95); } to { opacity: 1; transform: scale(1.05); } }
+        </style>
+        `
+    },
+    {
+        id: 91,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">LUẬT TRANH BIỆN</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 180px; left: 15%; width: 70%; height: 380px; border-color: var(--primary-blue); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px; box-sizing: border-box; text-align: center; position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 24pt; line-height: 1.6; margin-bottom: 40px; color: #fff;">
+                Xem Quy tắc tranh biện và Tiêu chí đánh giá của Diễn đàn Chuyên gia.
+            </div>
+            <button id="btn-show-task" class="interactive-btn" style="font-size: 22pt; padding: 18px 45px; background: rgba(0, 210, 255, 0.1); border: 2px solid var(--primary-blue); color: var(--primary-blue); cursor: pointer; border-radius: 8px; font-weight: bold; box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);">XEM CHI TIẾT</button>
+        </div>
+
+        <!-- Modal Popup for Rules and Criteria -->
+        <div id="tiet3-task-modal" class="hidden" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5, 8, 16, 0.95); z-index: 100; display: none; align-items: center; justify-content: center; padding: 40px; box-sizing: border-box;">
+            <div class="dashboard-card" style="width: 90%; height: 90%; border-color: var(--primary-blue); background: #0a0f1d; padding: 30px; position: relative; display: flex; flex-direction: column; text-align: left; box-sizing: border-box; overflow-y: auto;">
+                <button id="tiet3-btn-close-task" style="position: absolute; top: 20px; right: 20px; background: transparent; border: none; color: #ff3333; font-size: 28pt; cursor: pointer;"><i class="fas fa-times-circle"></i></button>
+                <h2 style="color: #ffeb3b; font-size: 28pt; text-align: center; margin-bottom: 20px; border-bottom: 2px dashed rgba(0, 210, 255, 0.3); padding-bottom: 10px;">LUẬT TRANH BIỆN</h2>
+                <div style="display: flex; justify-content: space-between; flex-grow: 1; gap: 20px; box-sizing: border-box; align-items: center;">
+                    <div style="width: 48%; background: rgba(0,0,0,0.3); padding: 25px; border-radius: 8px; border: 1px solid rgba(122, 0, 255, 0.25); box-sizing: border-box;">
+                        <h4 style="color: #ffeb3b; font-size: 18pt; margin-bottom: 15px; text-align: center;"><i class="fas fa-gavel"></i> Quy tắc tranh biện</h4>
+                        <ul style="font-size: 14pt; color: #fff; margin-left: 20px; line-height: 1.6;">
+                            <li style="margin-bottom: 8px;">Tập trung trao đổi về ý kiến và lập luận.</li>
+                            <li style="margin-bottom: 8px;">Tôn trọng ý kiến của các nhóm khác, không công kích cá nhân.</li>
+                            <li style="margin-bottom: 8px;">Lắng nghe hết lượt nói của đội bạn, không ngắt lời.</li>
+                            <li>Sử dụng ví dụ hoặc tình huống thực tế để bảo vệ quan điểm.</li>
+                        </ul>
+                    </div>
+                    <div style="width: 48%; background: rgba(0,0,0,0.3); padding: 25px; border-radius: 8px; border: 1px solid rgba(255, 51, 51, 0.25); box-sizing: border-box;">
+                        <h4 style="color: #ff3333; font-size: 18pt; margin-bottom: 15px; text-align: center;"><i class="fas fa-star"></i> Tiêu chí đánh giá</h4>
+                        <ul style="font-size: 14pt; color: #fff; margin-left: 20px; line-height: 1.6;">
+                            <li style="margin-bottom: 8px;"><strong>Lập luận rõ ràng:</strong> Nêu ý kiến và giải thích hợp lý.</li>
+                            <li style="margin-bottom: 8px;"><strong>Có bằng chứng:</strong> Đưa ra ví dụ/tình huống phù hợp.</li>
+                            <li style="margin-bottom: 8px;"><strong>Phản biện hợp lý:</strong> Trả lời đúng câu hỏi nhóm khác.</li>
+                            <li><strong>Trình bày tự tin:</strong> Nói rõ ràng, dễ hiểu, đúng giờ.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 92,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 2</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">DIỄN TẬP</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Các nhóm rà soát lại Hồ sơ tranh biện và diễn tập trình bày trước khi tranh biện chính thức.</div>
+        </div>
+        `
+    },
+    {
+        id: 93,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
+        </div>
+        <div class="center-layout abs-element" style="width: 80%; display: flex; justify-content: space-between; top: 55%;">
+            <div class="dashboard-card" style="width: 48%; height: 350px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding: 20px;">
+                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 25px;"><i class="fas fa-folder-open"></i> Dụng cụ</h3>
+                <ul style="font-size: 22pt; color: #fff; list-style: none; padding: 0; line-height: 1.8;">
+                    <li>✔ Hồ sơ tranh biện đã hoàn thiện ở Tiết 2</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 350px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding: 20px;">
+                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 25px;"><i class="fas fa-users"></i> Hình thức tổ chức</h3>
+                <div style="font-size: 32pt; font-weight: bold; color: #fff; line-height: 1.8;">
+                    4 Đội
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 94,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 8%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">QUY TRÌNH THỰC HIỆN</div>
+        </div>
+        <div class="center-layout abs-element" style="width: 90%; display: flex; justify-content: space-between; align-items: center; top: 55%;">
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 15px; text-align: center; height: 180px; display: flex; align-items: center; justify-content: center; border-color: var(--primary-blue); box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.6; color: #fff;"><strong>Bước 1:</strong><br>Rà soát lập luận và bằng chứng.</div>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 30pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 15px; text-align: center; height: 180px; display: flex; align-items: center; justify-content: center; border-color: var(--primary-purple); box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.6; color: #fff;"><strong>Bước 2:</strong><br>Thống nhất nội dung của từng người nói.</div>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 30pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 15px; text-align: center; height: 180px; display: flex; align-items: center; justify-content: center; border-color: #ffeb3b; box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.6; color: #fff;"><strong>Bước 3:</strong><br>Luyện tập trình bày.</div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 111,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">CẤU TRÚC ĐỘI HÌNH & VAI TRÒ</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; color: #00ffcc; margin-top: 5px;">Chủ đề: Nên dùng AI trước hay sau khi làm bài để học tốt nhất?</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 5%; width: 90%; display: flex; justify-content: space-between; position: absolute; box-sizing: border-box; height: 420px;">
+            <div class="dashboard-card" style="width: 48%; height: 100%; border-color: var(--primary-blue); padding: 25px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="color: #00ffcc; font-size: 22pt; margin-bottom: 20px; text-align: center;"><i class="fas fa-users"></i> Phân công Đội hình</h3>
+                <ul style="font-size: 18pt; color: #fff; line-height: 2; margin-left: 20px;">
+                    <li><strong>Phe A:</strong> AI nên hỗ trợ trước khi làm bài.</li>
+                    <li><strong>Phe B:</strong> AI nên hỗ trợ sau khi làm bài.</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 100%; border-color: var(--primary-purple); padding: 25px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="color: #ffeb3b; font-size: 22pt; margin-bottom: 20px; text-align: center;"><i class="fas fa-user-tag"></i> Vai trò Thành viên</h3>
+                <ul style="font-size: 16pt; color: #fff; line-height: 1.8; margin-left: 20px;">
+                    <li style="margin-bottom: 10px;"><strong>Người nói 1:</strong> Giới thiệu lập trường, trình bày luận điểm 1.</li>
+                    <li style="margin-bottom: 10px;"><strong>Người nói 2:</strong> Trình bày luận điểm 2, đưa ra ví dụ/bằng chứng.</li>
+                    <li><strong>Người nói 3:</strong> Phản biện đối phương, tổng kết lập luận.</li>
+                </ul>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 95,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">RÀ SOÁT HỒ SƠ TRANH BIỆN VÀ DIỄN TẬP</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 200px; left: 10%; width: 80%; height: 380px; padding: 25px 40px; box-sizing: border-box; text-align: left; border-color: var(--primary-purple); position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 20pt; line-height: 1.6; color: #fff;">
+                <p style="margin-bottom: 10px;"><strong>Kiểm tra rà soát Hồ sơ tranh biện đã chuẩn bị ở tiết trước:</strong></p>
+                <ul style="margin-left: 30px; margin-bottom: 20px; list-style-type: square; font-size: 18pt;">
+                    <li style="margin-bottom: 6px;">Quan điểm của đội (Phe A hay Phe B).</li>
+                    <li style="margin-bottom: 6px;">Luận điểm 1 & Luận điểm 2.</li>
+                    <li style="margin-bottom: 6px;">Lý do.</li>
+                    <li style="margin-bottom: 6px;">Bằng chứng thực tế.</li>
+                    <li style="margin-bottom: 6px;">Nội dung phản biện & phần tổng kết lập luận.</li>
+                </ul>
+                <p><strong>Luyện tập nói trong nhóm</strong></p>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="420" style="font-family: monospace; font-size: 36pt; color: #00ffcc; font-weight: bold; margin-bottom: 10px;">07:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 96,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 3</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">TRANH BIỆN ĐỒNG ĐỘI VÀ CHẤT VẤN</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Các đội thực hiện phiên tranh biện, phản biện và trả lời chất vấn của đội bạn bằng lý lẽ và bằng chứng.</div>
+        </div>
+        `
+    },
+    {
+        id: 97,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
+        </div>
+        <div class="center-layout abs-element" style="width: 80%; display: flex; justify-content: space-between; top: 55%;">
+            <div class="dashboard-card" style="width: 48%; height: 350px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding: 20px;">
+                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 25px;"><i class="fas fa-briefcase"></i> Dụng cụ</h3>
+                <ul style="font-size: 22pt; color: #fff; list-style: none; padding: 0; line-height: 1.8;">
+                    <li style="margin-bottom: 8px;">✔ Hồ sơ tranh biện</li>
+                    <li style="margin-bottom: 8px;">✔ Giấy nháp</li>
+                    <li>✔ Bút ghi chú</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 350px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding: 20px;">
+                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 25px;"><i class="fas fa-comments"></i> Hình thức tổ chức</h3>
+                <div style="font-size: 24pt; font-weight: bold; color: #fff; line-height: 1.8;">
+                    Hai đội đối đầu trực tiếp<br>
+                    <span style="color: #00ffcc; font-size: 28pt;">Phe A vs Phe B</span>
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 98,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 8%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">QUY TRÌNH THỰC HIỆN</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 5%; width: 90%; display: flex; justify-content: space-between; align-items: center; position: absolute; box-sizing: border-box; height: 300px;">
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 200px; display: flex; align-items: center; justify-content: center; border-color: var(--primary-blue); box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.5; color: #fff;"><strong>Bước 1:</strong><br>Bốc thăm chọn thứ tự tranh biện.</div>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 20pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 200px; display: flex; align-items: center; justify-content: center; border-color: var(--primary-purple); box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.5; color: #fff;"><strong>Bước 2:</strong><br>Thực hiện tranh biện theo cấu trúc lượt nói.</div>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 20pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 200px; display: flex; align-items: center; justify-content: center; border-color: #ffeb3b; box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.5; color: #fff;"><strong>Bước 3:</strong><br>Ghi lại các ý phản biện khi đội bạn trình bày.</div>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 20pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 200px; display: flex; align-items: center; justify-content: center; border-color: #ff3333; box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 16pt; line-height: 1.5; color: #fff;"><strong>Bước 4:</strong><br>Trả lời chất vấn và phản biện lại đội bạn.</div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 99,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">CẤU TRÚC PHIÊN TRANH BIỆN</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; color: #00ffcc; margin-top: 5px;">Chủ đề: Nên dùng AI trước hay sau khi làm bài để học tốt nhất?</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 260px; left: 5%; width: 90%; height: 420px; padding: 25px 40px; box-sizing: border-box; text-align: left; border-color: var(--primary-purple); position: absolute; overflow-y: auto;">
+            <div style="display: flex; justify-content: space-between; gap: 40px; box-sizing: border-box; width: 100%; align-items: stretch;">
+                <div style="width: 48%; background: rgba(0,0,0,0.3); padding: 25px; border-radius: 8px; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box;">
+                    <h4 style="color: #00ffcc; font-size: 18pt; margin-bottom: 15px; text-align: center; font-weight: bold;">CẤU TRÚC LƯỢT NÓI</h4>
+                    <ul style="font-size: 15pt; color: #fff; margin-left: 20px; line-height: 1.8;">
+                        <li style="margin-bottom: 12px;"><strong>Lượt 1:</strong> Người nói 1 Phe A vs Người nói 1 Phe B.</li>
+                        <li style="margin-bottom: 12px;"><strong>Lượt 2:</strong> Người nói 2 Phe A vs Người nói 2 Phe B.</li>
+                        <li style="margin-bottom: 12px;"><strong>Lượt 3:</strong> Người nói 3 Phe A vs Người nói 3 Phe B.</li>
+                    </ul>
+                </div>
+                <div style="width: 48%; background: rgba(0,0,0,0.3); padding: 25px; border-radius: 8px; border: 1px solid rgba(255, 235, 59, 0.2); box-sizing: border-box;">
+                    <h4 style="color: #ffeb3b; font-size: 18pt; margin-bottom: 15px; text-align: center; font-weight: bold;">NHIỆM VỤ KHI LẮNG NGHE</h4>
+                    <ul style="font-size: 15pt; color: #fff; margin-left: 20px; line-height: 1.8;">
+                        <li style="margin-bottom: 8px;">Ghi chú quan điểm chính của đối phương.</li>
+                        <li style="margin-bottom: 8px;">Ghi lại các bằng chứng thuyết phục của họ.</li>
+                        <li style="margin-bottom: 8px;">Ghi nhận những điểm em chưa đồng tình.</li>
+                        <li>Chuẩn bị câu hỏi chất vấn.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 114,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">THỨ TỰ TRANH BIỆN</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; color: #00ffcc; margin-top: 5px;">Các đội chuẩn bị vị trí và sẵn sàng vào trận</div>
+        </div>
+        <div class="abs-element" style="top: 200px; left: 10%; width: 80%; display: flex; justify-content: space-between; gap: 40px; position: absolute; box-sizing: border-box; height: 380px;">
+            <div class="dashboard-card" style="width: 48%; height: 100%; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 30px; box-sizing: border-box; text-align: center;">
+                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 30px; font-weight: bold;"><i class="fas fa-gavel"></i> TRẬN 1</h3>
+                <div style="font-size: 24pt; color: #fff; font-weight: bold; line-height: 1.8;">
+                    Đội 1 Phe A <br>
+                    <span style="color: #ff3333; font-size: 20pt;">vs</span> <br>
+                    Đội 1 Phe B
+                </div>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 100%; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 30px; box-sizing: border-box; text-align: center;">
+                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 30px; font-weight: bold;"><i class="fas fa-gavel"></i> TRẬN 2</h3>
+                <div style="font-size: 24pt; color: #fff; font-weight: bold; line-height: 1.8;">
+                    Đội 2 Phe A <br>
+                    <span style="color: #ff3333; font-size: 20pt;">vs</span> <br>
+                    Đội 2 Phe B
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 112,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">TRẬN TRANH BIỆN 1</div>
+            <div class="subtitle editable draggable" style="font-size: 18pt; color: #ccc; margin-top: 8px;">Chủ đề: Nên dùng AI trước hay sau khi làm bài để học tốt nhất?</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 270px; left: 10%; width: 80%; border-color: var(--primary-purple); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 28px 30px; box-sizing: border-box; text-align: center; position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 22pt; line-height: 1.8; color: #fff; font-weight: bold;">
+                Trận tranh biện chính thức giữa:<br>
+                <span style="color: #00ffcc; font-size: 26pt;">Đội 1 Phe A</span> và <span style="color: #ffeb3b; font-size: 26pt;">Đội 1 Phe B</span>
+            </div>
+            <div class="body-text editable draggable" style="font-size: 16pt; margin-top: 16px; line-height: 1.7; color: #ddd;">
+                <span style="color: #00ffcc; font-weight: bold;">Phe A:</span> AI nên hỗ trợ <u>trước</u> khi làm bài.&nbsp;&nbsp;&nbsp;
+                <span style="color: #ffeb3b; font-weight: bold;">Phe B:</span> AI nên hỗ trợ <u>sau</u> khi làm bài.
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 5%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="600" style="font-family: monospace; font-size: 40pt; color: #00ffcc; font-weight: bold; margin-bottom: 10px;">10:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 113,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">TRẬN TRANH BIỆN 2</div>
+            <div class="subtitle editable draggable" style="font-size: 18pt; color: #ccc; margin-top: 8px;">Chủ đề: Nên dùng AI trước hay sau khi làm bài để học tốt nhất?</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 270px; left: 10%; width: 80%; border-color: var(--primary-purple); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 28px 30px; box-sizing: border-box; text-align: center; position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 22pt; line-height: 1.8; color: #fff; font-weight: bold;">
+                Trận tranh biện chính thức giữa:<br>
+                <span style="color: #00ffcc; font-size: 26pt;">Đội 2 Phe A</span> và <span style="color: #ffeb3b; font-size: 26pt;">Đội 2 Phe B</span>
+            </div>
+            <div class="body-text editable draggable" style="font-size: 16pt; margin-top: 16px; line-height: 1.7; color: #ddd;">
+                <span style="color: #00ffcc; font-weight: bold;">Phe A:</span> AI nên hỗ trợ <u>trước</u> khi làm bài.&nbsp;&nbsp;&nbsp;
+                <span style="color: #ffeb3b; font-weight: bold;">Phe B:</span> AI nên hỗ trợ <u>sau</u> khi làm bài.
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 5%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="600" style="font-family: monospace; font-size: 40pt; color: #00ffcc; font-weight: bold; margin-bottom: 10px;">10:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 100,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">HỘI ĐỒNG CHUYÊN GIA KẾT LUẬN</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Tổng hợp các lập luận từ cả hai phe và thống nhất các khuyến nghị sử dụng AI học tập một cách chủ động, hiệu quả.</div>
+        </div>
+        `
+    },
+    {
+        id: 101,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">CHUẨN BỊ</div>
+        </div>
+        <div class="center-layout abs-element" style="width: 80%; display: flex; justify-content: space-between; top: 55%;">
+            <div class="dashboard-card" style="width: 48%; height: 350px; text-align: center; border-color: #00ffcc; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding: 20px;">
+                <h3 style="color: #00ffcc; font-size: 26pt; margin-bottom: 25px;"><i class="fas fa-edit"></i> Dụng cụ</h3>
+                <ul style="font-size: 22pt; color: #fff; list-style: none; padding: 0; line-height: 1.8;">
+                    <li style="margin-bottom: 8px;">✔ Giấy nháp</li>
+                    <li>✔ Bút viết</li>
+                </ul>
+            </div>
+            <div class="dashboard-card" style="width: 48%; height: 350px; text-align: center; border-color: #ffeb3b; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; padding: 20px;">
+                <h3 style="color: #ffeb3b; font-size: 26pt; margin-bottom: 25px;"><i class="fas fa-users"></i> Hình thức tổ chức</h3>
+                <div style="font-size: 32pt; font-weight: bold; color: #fff; line-height: 1.8;">
+                    4 Đội
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 102,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 10%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 28pt;">QUY TRÌNH THỰC HIỆN</div>
+        </div>
+        <div class="abs-element" style="top: 220px; left: 5%; width: 90%; display: flex; justify-content: space-between; align-items: center; position: absolute; box-sizing: border-box; height: 300px;">
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 180px; display: flex; align-items: center; justify-content: center; border-color: var(--primary-blue); box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 15pt; line-height: 1.5; color: #fff;"><strong>Bước 1:</strong><br>Thảo luận trong nhóm và chọn lọc các ý kiến hợp lý.</div>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 18pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 180px; display: flex; align-items: center; justify-content: center; border-color: var(--primary-purple); box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 15pt; line-height: 1.5; color: #fff;"><strong>Bước 2:</strong><br>Đề xuất khuyến nghị dùng AI học tập.</div>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 18pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 180px; display: flex; align-items: center; justify-content: center; border-color: #ffeb3b; box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 15pt; line-height: 1.5; color: #fff;"><strong>Bước 3:</strong><br>Đại diện các nhóm trình bày ý kiến.</div>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 18pt; color: var(--primary-blue);"></i>
+            <div class="dashboard-card process-step" style="flex: 1; margin: 0 10px; text-align: center; height: 180px; display: flex; align-items: center; justify-content: center; border-color: #00ffcc; box-sizing: border-box; padding: 15px;">
+                <div class="body-text editable draggable" style="font-size: 15pt; line-height: 1.5; color: #fff;"><strong>Bước 4:</strong><br>Cả lớp thống nhất khuyến nghị chung.</div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 103,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">ĐƯA RA KHUYẾN NGHỊ TỔNG KẾT</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; color: #00ffcc; margin-top: 5px;">Thảo luận trong nhóm 4 để rút ra các kết luận</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 220px; left: 10%; width: 80%; height: 350px; padding: 25px 45px; box-sizing: border-box; text-align: left; border-color: var(--primary-purple); position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.6; color: #fff;">
+                <p style="color: #00ffcc; font-weight: bold; margin-bottom: 10px; font-size: 20pt;">Câu hỏi thảo luận:</p>
+                <ol style="margin-left: 25px;">
+                    <li style="margin-bottom: 6px;">Những lập luận nào của mỗi đội là hợp lý và thuyết phục?</li>
+                    <li style="margin-bottom: 6px;">AI nên hỗ trợ trước khi làm bài trong những trường hợp nào?</li>
+                    <li style="margin-bottom: 6px;">AI nên hỗ trợ sau khi làm bài trong những trường hợp nào?</li>
+                    <li style="margin-bottom: 6px;">Nhóm em đề xuất những khuyến nghị nào để sử dụng AI hiệu quả?</li>
+                </ol>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="480" style="font-family: monospace; font-size: 36pt; color: #00ffcc; font-weight: bold; margin-bottom: 10px;">08:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 104,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="title editable draggable" style="font-size: 40pt; color: #ffeb3b; margin-bottom: 20px;"><i class="fas fa-bullhorn"></i> TRÌNH BÀY KẾT QUẢ</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6; color: #fff;">Đại diện từng nhóm chia sẻ các đề xuất khuyến nghị sử dụng AI của nhóm mình trước Hội đồng Chuyên gia.</div>
+        </div>
+        `
+    },
+    {
+        id: 105,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt;">TỔNG KẾT PHIÊN LÀM VIỆC</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 220px; left: 10%; width: 80%; height: 420px; padding: 30px 45px; box-sizing: border-box; text-align: left; border-color: #00ffcc; position: absolute; overflow-y: auto;">
+            <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.8; color: #fff;">
+                <p style="color: #ffeb3b; font-weight: bold; font-size: 22pt; margin-bottom: 15px;">Một số khuyến nghị sử dụng AI để học chủ động và hiệu quả:</p>
+                <ul style="margin-left: 25px; list-style-type: disc;">
+                    <li style="margin-bottom: 10px;"><strong>Tự suy nghĩ trước</strong> khi sử dụng AI khi có thể.</li>
+                    <li style="margin-bottom: 10px;"><strong>Dùng AI để giải thích hoặc gợi ý</strong> khi gặp khó khăn.</li>
+                    <li style="margin-bottom: 10px;"><strong>Không sao chép nguyên văn</strong> nội dung do AI tạo ra.</li>
+                    <li style="margin-bottom: 10px;"><strong>Kiểm tra lại thông tin</strong> AI cung cấp.</li>
+                    <li style="margin-bottom: 10px;"><strong>Chịu trách nhiệm</strong> hoàn toàn với bài làm và kết quả học tập của mình.</li>
+                </ul>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 106,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 5</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">NHẬT KÝ CHUYÊN GIA</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Học sinh tự đánh giá nhận thức, thái độ của bản thân và rút ra bài học kinh nghiệm sâu sắc sau phiên tranh biện.</div>
+        </div>
+        `
+    },
+    {
+        id: 107,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">NHẬT KÝ CHUYÊN GIA CÔNG NGHỆ</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; color: #00ffcc; margin-top: 5px;">Tự đánh giá nhận thức và ghi lại bài học của bản thân</div>
+        </div>
+        <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 5%; width: 90%; height: 380px; padding: 20px 30px; box-sizing: border-box; position: absolute;">
+            <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.4; width: 100%; display: flex; flex-direction: column; gap: 15px;">
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 5px; font-size: 20pt; text-align: center;">Hoàn thành nhật ký của em vào phiếu:</p>
+                <div style="background: rgba(0,0,0,0.4); padding: 10px 20px; border-radius: 8px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                    <span style="font-weight: bold; font-size: 16pt; white-space: nowrap; width: 480px; flex-shrink: 0; color: #fff;">1. Điều em đồng tình nhất sau buổi tranh biện là:</span>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 16pt; margin: 0 15px; flex-shrink: 0;"></i>
+                    <input type="text" placeholder="Nhập câu trả lời của em..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 16pt; flex-grow: 1; outline: none;">
+                </div>
+                <div style="background: rgba(0,0,0,0.4); padding: 10px 20px; border-radius: 8px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                    <span style="font-weight: bold; font-size: 16pt; white-space: nowrap; width: 480px; flex-shrink: 0; color: #fff;">2. Một lập luận giúp em có góc nhìn mới là:</span>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 16pt; margin: 0 15px; flex-shrink: 0;"></i>
+                    <input type="text" placeholder="Nhập câu trả lời của em..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 16pt; flex-grow: 1; outline: none;">
+                </div>
+                <div style="background: rgba(0,0,0,0.4); padding: 10px 20px; border-radius: 8px; display: flex; align-items: center; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box; width: 100%;">
+                    <span style="font-weight: bold; font-size: 16pt; white-space: nowrap; width: 480px; flex-shrink: 0; color: #fff;">3. Điều em sẽ áp dụng khi sử dụng AI để học là:</span>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 16pt; margin: 0 15px; flex-shrink: 0;"></i>
+                    <input type="text" placeholder="Nhập câu trả lời của em..." style="background: transparent; border: none; border-bottom: 2px dashed #00ffcc; color: #00ffcc; font-size: 16pt; flex-grow: 1; outline: none;">
+                </div>
+            </div>
+        </div>
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; position: absolute;">
+            <div class="timer-display" data-time="180" style="font-family: monospace; font-size: 36pt; color: #00ffcc; font-weight: bold; margin-bottom: 10px;">03:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+                <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
+                <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
+                <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 108,
+        content: `
+        <div class="center-layout abs-element" style="width: 100%; text-align: center;">
+            <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 20px;">Giai đoạn 6</div>
+            <div class="title editable draggable" style="font-size: 40pt; margin-bottom: 30px; color: var(--primary-blue);">CAM KẾT CHUYÊN GIA</div>
+            <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto; line-height: 1.6;">Chính thức thiết lập cam kết sử dụng AI đúng mục đích, có trách nhiệm và đưa hệ thống vào vận hành thực tế.</div>
+        </div>
+        `
+    },
+    {
+        id: 109,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">BẢN CAM KẾT HÀNH ĐỘNG</div>
+            <div class="subtitle editable draggable" style="font-size: 22pt; margin-top: 5px; color: #00ffcc;">Chúng ta là những Chuyên gia Công nghệ thông thái và tự chủ. Chúng ta sử dụng AI như một trợ lý thông minh để nâng cao trí tuệ, quyết không để AI làm mình lười suy nghĩ!</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 260px; left: 10%; width: 80%; padding: 30px; text-align: left; position: absolute; box-sizing: border-box; border-color: var(--primary-purple);">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 30px; box-sizing: border-box; width: 100%;">
+                <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.4; width: 62%; box-sizing: border-box;">
+                    <p style="color: #00ffcc; font-weight: bold; margin-bottom: 12px; font-size: 20pt;">Sau bài học này, em cam kết thực hiện:</p>
+                    <div class="checkbox-group" style="margin-left: 10px; line-height: 1.5;">
+                        <label class="custom-checkbox" style="font-size: 15pt; margin-bottom: 10px; display: block;"><input type="checkbox"><span class="checkmark"></span> Sử dụng AI để hỗ trợ học tập, không nhờ AI làm thay bài tập.</label>
+                        <label class="custom-checkbox" style="font-size: 15pt; margin-bottom: 10px; display: block;"><input type="checkbox"><span class="checkmark"></span> Tự suy nghĩ và hoàn thành bài trước khi sử dụng AI hỗ trợ.</label>
+                        <label class="custom-checkbox" style="font-size: 15pt; margin-bottom: 10px; display: block;"><input type="checkbox"><span class="checkmark"></span> Kiểm tra lại thông tin AI cung cấp trước khi sử dụng.</label>
+                        <label class="custom-checkbox" style="font-size: 15pt; margin-bottom: 10px; display: block;"><input type="checkbox"><span class="checkmark"></span> Trung thực và có trách nhiệm với bài làm của mình.</label>
+                        <label class="custom-checkbox" style="font-size: 15pt; margin-bottom: 10px; display: block;"><input type="checkbox"><span class="checkmark"></span> Sử dụng AI đúng mục đích để học tập hiệu quả hơn.</label>
+                    </div>
+                </div>
+                
+                <div style="width: 35%; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 15px; background: rgba(0,0,0,0.3); padding: 25px 20px; border-radius: 10px; border: 1px dashed var(--primary-blue); box-sizing: border-box;">
+                    <div style="margin-bottom: 5px; width: 100%;">
+                        <input type="text" id="class-name-input" placeholder="Nhập tên lớp..." style="padding: 10px; font-size: 16pt; background: rgba(0,0,0,0.5); border: 1px solid var(--primary-blue); color: #fff; border-radius: 5px; width: 100%; text-align: center; box-sizing: border-box; outline: none;">
+                    </div>
+                    <button id="btn-commit" class="interactive-btn" style="font-size: 18pt; padding: 12px 24px; background: rgba(0, 255, 204, 0.1); border: 2px solid #00ffcc; color: #00ffcc; cursor: pointer; border-radius: 8px; width: 100%; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);">CAM KẾT</button>
+                </div>
+            </div>
+            <!-- Container for stamp -->
+            <div id="stamp-container" style="position: absolute; bottom: 60px; right: 40px; pointer-events: none; opacity: 0; transform: scale(3) rotate(-20deg); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 10;">
+                <div style="border: 5px solid #ff3333; color: #ff3333; font-size: 30pt; font-weight: bold; padding: 10px 20px; border-radius: 10px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 0 20px rgba(255, 51, 51, 0.4);">ĐÃ CAM KẾT</div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 110,
+        content: `
+        <div class="abs-element" style="background: rgba(0,0,0,0.85); width: 100%; height: 100%; z-index: -1;"></div>
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%; z-index: 2;">
+            <div class="title editable draggable" style="color: #ffeb3b; font-size: 36pt;"><i class="fas fa-award"></i> CHỨNG NHẬN HOÀN THÀNH NHIỆM VỤ</div>
+            <div class="subtitle editable draggable" style="font-size: 20pt; margin-top: 10px; max-width: 80%; margin-left: auto; margin-right: auto; line-height: 1.4; color: #fff;">Chúc mừng các Chuyên gia Công nghệ đã hoàn thành xuất sắc diễn đàn tranh biện hôm nay!</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 260px; left: 50%; transform: translateX(-50%); z-index: 2; width: 60%; text-align: center; padding: 25px 30px; box-sizing: border-box; border: 2px solid #ffeb3b; position: absolute;">
+            <div style="font-size: 24pt; color: #fff; margin-bottom: 15px; font-weight: bold;">Trao chứng nhận cho</div>
+            <div style="display: flex; align-items: center; justify-content: center; font-size: 22pt; color: #fff; gap: 10px;">
+                <span>Nhóm Chuyên gia:</span>
+                <input type="text" id="tiet3-team-name-input" placeholder="Nhập tên nhóm..." style="width: 280px; padding: 5px 10px; font-size: 22pt; background: transparent; border: none; border-bottom: 2px dashed #00d2ff; color: #00ffcc; text-align: center; outline: none; font-family: 'Inter', sans-serif;">
+            </div>
+            <div style="margin-top: 25px; display: flex; justify-content: center; width: 100%;">
+                <button id="tiet3-btn-finish" class="interactive-btn" style="font-size: 20pt; padding: 12px 36px; background: #ffeb3b; color: #000; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 0 15px rgba(255, 235, 59, 0.5); display: flex; align-items: center; justify-content: center; text-align: center;">HOÀN THÀNH</button>
+            </div>
+        </div>
+        <div class="abs-element" style="bottom: 40px; right: 40px; transform: rotate(-15deg); border: 4px solid #ff3333; color: #ff3333; font-size: 16pt; font-weight: bold; padding: 8px 12px; border-radius: 8px; text-align: center; background: rgba(255, 255, 255, 0.95); z-index: 5; font-family: 'Inter', sans-serif;">
+            <div>VIỆN NGHIÊN CỨU</div>
+            <div style="font-size: 13pt; border-top: 2px solid #ff3333; margin-top: 4px; padding-top: 4px;">NOVASTARS</div>
+        </div>
+        `
+    }
 ];

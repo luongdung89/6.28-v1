@@ -480,40 +480,39 @@ slides.append("""
             <div class="title editable draggable" style="font-size: 40pt;">Lắp ráp quy trình học chủ động</div>
             <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Sắp xếp các mảnh ghép thuật toán học tập chủ động với AI theo đúng trình tự:</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 10%; width: 80%; height: 420px; text-align: left; position: absolute; padding: 20px 25px; box-sizing: border-box;">
-            <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.3;">
-                <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 25px;">
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Nêu điều mình chưa hiểu</div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Nhờ AI giải thích</div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Tự làm</div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Nhờ AI góp ý</div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Chép nguyên bài AI</div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Nộp bài ngay</div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Không cần đọc lại</div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.4); border: 2px solid var(--primary-purple); padding: 6px 16px; border-radius: 8px; color: #fff; font-size: 16pt;">Bỏ qua bước tự làm</div>
+        <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 5%; width: 90%; height: 480px; text-align: left; position: absolute; padding: 15px 25px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="body-text editable draggable" style="font-size: 16pt; width: 100%;">
+                <!-- 6 mảnh ghép kéo thả có hình ảnh -->
+                <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 15px; flex-wrap: wrap;">
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                        <img src="assets/6.28-V4-01-neu-dieu-chua-hieu.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                        <img src="assets/6.28-V4-02-nho-ai-giai-thich.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                        <img src="assets/6.28-V4-03-tu-lam.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                        <img src="assets/6.28-V4-04-nho-ai-gop-y.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                        <img src="assets/6.28-V4-05-bo-qua-tu-lam.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                        <img src="assets/6.28-V4-06-chep-nguyen-bai-ai.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
+                    </div>
                 </div>
-                <div style="display: flex; justify-content: space-around; align-items: stretch; margin-top: 10px;">
-                    <div class="drop-zone" style="flex: 1; min-height: 160px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
-                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 8px; font-size: 18pt; width: 100%;">Bước 1</h4>
-                    </div>
-                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 24pt; display: flex; align-items: center;"></i>
-                    <div class="drop-zone" style="flex: 1; min-height: 160px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
-                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 8px; font-size: 18pt; width: 100%;">Bước 2</h4>
-                    </div>
-                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 24pt; display: flex; align-items: center;"></i>
-                    <div class="drop-zone" style="flex: 1; min-height: 160px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
-                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 8px; font-size: 18pt; width: 100%;">Bước 3</h4>
-                    </div>
-                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 24pt; display: flex; align-items: center;"></i>
-                    <div class="drop-zone" style="flex: 1; min-height: 160px; margin: 0 10px; border: 2px dashed #00ffcc; border-radius: 10px; padding: 10px; background: rgba(0, 255, 204, 0.1); display: flex; align-items: center; justify-content: flex-start; flex-direction: column;">
-                        <h4 style="color: #00ffcc; text-align: center; margin-bottom: 8px; font-size: 18pt; width: 100%;">Bước 4</h4>
-                    </div>
+                <!-- Sơ đồ quy trình 4 bước ở dưới -->
+                <div style="display: flex; flex-direction: column; align-items: center; margin-top: 5px;">
+                    <div style="color: #00ffcc; font-size: 16pt; font-weight: bold; margin-bottom: 6px; text-align: center;">SƠ ĐỒ QUY TRÌNH 4 BƯỚC HỌC CHỦ ĐỘNG VỚI AI</div>
+                    <img src="assets/6.28-V3-07-quy-trinh-bon-buoc.png" style="width: 620px; height: auto; object-fit: contain; border: 2px solid #00ffcc; border-radius: 10px; background: rgba(0, 255, 204, 0.05); padding: 4px;" draggable="false">
                 </div>
             </div>
         </div>
-        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center;">
-            <div class="timer-display" data-time="300" style="font-family: monospace; font-size: 50pt;">05:00</div>
-            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px;">
+        <div class="abs-element timer-container" style="bottom: 2%; left: 50%; transform: translateX(-50%); width: 400px; text-align: center; z-index: 100;">
+            <div class="timer-display" data-time="300" style="font-family: monospace; font-size: 40pt; line-height: 1;">05:00</div>
+            <div class="timer-controls" style="display: flex; justify-content: center; gap: 20px; margin-top: 5px;">
                 <button class="btn-timer start-btn" title="Bắt đầu"><i class="fas fa-play"></i></button>
                 <button class="btn-timer pause-btn" title="Tạm dừng"><i class="fas fa-pause"></i></button>
                 <button class="btn-timer reset-btn" title="Làm lại"><i class="fas fa-redo"></i></button>
