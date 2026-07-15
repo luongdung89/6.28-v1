@@ -2206,52 +2206,6 @@ const slides = [
         `
     },
     {
-        id: 99,
-        content: `
-        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">CẤU TRÚC PHIÊN TRANH BIỆN</div>
-            <div class="subtitle editable draggable" style="font-size: 20pt; color: #00ffcc; margin-top: 5px;">Chủ đề: Nên dùng AI trước hay sau khi làm bài để học tốt nhất?</div>
-        </div>
-        <div class="abs-element dashboard-card" style="top: 260px; left: 5%; width: 90%; height: 430px; padding: 20px 35px; box-sizing: border-box; text-align: left; border-color: var(--primary-purple); position: absolute; overflow-y: auto;">
-            <div style="color: #ffeb3b; font-size: 16pt; font-weight: bold; margin-bottom: 12px; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 235, 59, 0.2);">
-                Cấu trúc lượt nói cho mỗi cặp tranh biện:
-            </div>
-            
-            <div style="display: flex; justify-content: space-between; gap: 30px; box-sizing: border-box; width: 100%; align-items: stretch; margin-bottom: 15px;">
-                <div style="width: 48%; background: rgba(0,0,0,0.3); padding: 15px 20px; border-radius: 8px; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box;">
-                    <h4 style="color: #00ffcc; font-size: 15pt; margin-top: 0; margin-bottom: 10px; font-weight: bold; border-bottom: 1px solid rgba(0, 210, 255, 0.2); padding-bottom: 5px;">Lượt 1. Trình bày</h4>
-                    <ul style="font-size: 13pt; color: #fff; margin-left: 20px; line-height: 1.5; padding: 0; list-style-type: none;">
-                        <li style="margin-bottom: 6px;"><i class="fas fa-user" style="color: #00ffcc; margin-right: 8px; font-size: 11pt;"></i>Đội A – Người nói 1</li>
-                        <li style="margin-bottom: 6px;"><i class="fas fa-user" style="color: #00ffcc; margin-right: 8px; font-size: 11pt;"></i>Đội A – Người nói 2</li>
-                        <li style="margin-bottom: 6px;"><i class="fas fa-user" style="color: #ffeb3b; margin-right: 8px; font-size: 11pt;"></i>Đội B – Người nói 1</li>
-                        <li><i class="fas fa-user" style="color: #ffeb3b; margin-right: 8px; font-size: 11pt;"></i>Đội B – Người nói 2</li>
-                    </ul>
-                </div>
-                
-                <div style="width: 48%; background: rgba(0,0,0,0.3); padding: 15px 20px; border-radius: 8px; border: 1px solid rgba(255, 235, 59, 0.2); box-sizing: border-box;">
-                    <h4 style="color: #ffeb3b; font-size: 15pt; margin-top: 0; margin-bottom: 10px; font-weight: bold; border-bottom: 1px solid rgba(255, 235, 59, 0.2); padding-bottom: 5px;">Lượt 2. Phản biện</h4>
-                    <ul style="font-size: 13pt; color: #fff; margin-left: 20px; line-height: 1.5; padding: 0; list-style-type: none;">
-                        <li style="margin-bottom: 6px;"><i class="fas fa-question-circle" style="color: #00ffcc; margin-right: 8px; font-size: 11pt;"></i>Đội A – Người 3 đặt câu hỏi</li>
-                        <li style="margin-bottom: 6px;"><i class="fas fa-reply" style="color: #ffeb3b; margin-right: 8px; font-size: 11pt;"></i>Đội B – Người 3 trả lời và kết luận</li>
-                        <li style="margin-bottom: 6px;"><i class="fas fa-question-circle" style="color: #ffeb3b; margin-right: 8px; font-size: 11pt;"></i>Đội B – Người 3 đặt câu hỏi</li>
-                        <li><i class="fas fa-reply" style="color: #00ffcc; margin-right: 8px; font-size: 11pt;"></i>Đội A – Người 3 trả lời và kết luận</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="border-top: 1px dashed rgba(255, 255, 255, 0.1); padding-top: 12px; box-sizing: border-box;">
-                <div style="color: #00ffcc; font-size: 15pt; font-weight: bold; margin-bottom: 8px;"><i class="fas fa-ear-listen" style="margin-right: 8px;"></i>NHIỆM VỤ KHI LẮNG NGHE:</div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; font-size: 12pt; color: #ddd;">
-                    <div><i class="fas fa-check" style="color: #00ffcc; margin-right: 8px; font-size: 10pt;"></i>Ghi chú quan điểm chính của đối phương.</div>
-                    <div><i class="fas fa-check" style="color: #00ffcc; margin-right: 8px; font-size: 10pt;"></i>Ghi lại các bằng chứng thuyết phục của họ.</div>
-                    <div><i class="fas fa-check" style="color: #00ffcc; margin-right: 8px; font-size: 10pt;"></i>Ghi nhận những điểm em chưa đồng tình.</div>
-                    <div><i class="fas fa-check" style="color: #00ffcc; margin-right: 8px; font-size: 10pt;"></i>Chuẩn bị câu hỏi chất vấn.</div>
-                </div>
-            </div>
-        </div>
-        `
-    },
-    {
         id: 114,
         content: `
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
@@ -2273,6 +2227,51 @@ const slides = [
                     Đội 2 Phe A <br>
                     <span style="color: #ff3333; font-size: 20pt;">vs</span> <br>
                     Đội 2 Phe B
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        id: 99,
+        content: `
+        <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
+            <div class="title editable draggable" style="font-size: 32pt; color: #ffeb3b;">CẤU TRÚC PHIÊN TRANH BIỆN</div>
+        </div>
+        <div class="abs-element dashboard-card" style="top: 160px; left: 5%; width: 90%; height: 470px; padding: 25px 35px; box-sizing: border-box; text-align: left; border-color: var(--primary-purple); position: absolute; overflow-y: auto;">
+            <div style="color: #ffeb3b; font-size: 16pt; font-weight: bold; margin-bottom: 12px; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 235, 59, 0.2);">
+                Cấu trúc lượt nói cho mỗi cặp tranh biện:
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; gap: 30px; box-sizing: border-box; width: 100%; align-items: stretch; margin-bottom: 15px;">
+                <div style="width: 48%; background: rgba(0,0,0,0.3); padding: 15px 20px; border-radius: 8px; border: 1px solid rgba(0, 210, 255, 0.2); box-sizing: border-box;">
+                    <h4 style="color: #00ffcc; font-size: 15pt; margin-top: 0; margin-bottom: 10px; font-weight: bold; border-bottom: 1px solid rgba(0, 210, 255, 0.2); padding-bottom: 5px;">Lượt 1. Trình bày</h4>
+                    <ul style="font-size: 13pt; color: #fff; margin-left: 20px; line-height: 1.5; padding: 0; list-style-type: none;">
+                        <li style="margin-bottom: 6px;"><i class="fas fa-user" style="color: #00ffcc; margin-right: 8px; font-size: 11pt;"></i>Phe A – Người nói 1</li>
+                        <li style="margin-bottom: 6px;"><i class="fas fa-user" style="color: #00ffcc; margin-right: 8px; font-size: 11pt;"></i>Phe A – Người nói 2</li>
+                        <li style="margin-bottom: 6px;"><i class="fas fa-user" style="color: #ffeb3b; margin-right: 8px; font-size: 11pt;"></i>Phe B – Người nói 1</li>
+                        <li><i class="fas fa-user" style="color: #ffeb3b; margin-right: 8px; font-size: 11pt;"></i>Phe B – Người nói 2</li>
+                    </ul>
+                </div>
+                
+                <div style="width: 48%; background: rgba(0,0,0,0.3); padding: 15px 20px; border-radius: 8px; border: 1px solid rgba(255, 235, 59, 0.2); box-sizing: border-box;">
+                    <h4 style="color: #ffeb3b; font-size: 15pt; margin-top: 0; margin-bottom: 10px; font-weight: bold; border-bottom: 1px solid rgba(255, 235, 59, 0.2); padding-bottom: 5px;">Lượt 2. Phản biện</h4>
+                    <ul style="font-size: 13pt; color: #fff; margin-left: 20px; line-height: 1.5; padding: 0; list-style-type: none;">
+                        <li style="margin-bottom: 6px;"><i class="fas fa-question-circle" style="color: #00ffcc; margin-right: 8px; font-size: 11pt;"></i>Phe A – Người 3 đặt câu hỏi</li>
+                        <li style="margin-bottom: 6px;"><i class="fas fa-reply" style="color: #ffeb3b; margin-right: 8px; font-size: 11pt;"></i>Phe B – Người 3 trả lời và kết luận</li>
+                        <li style="margin-bottom: 6px;"><i class="fas fa-question-circle" style="color: #ffeb3b; margin-right: 8px; font-size: 11pt;"></i>Phe B – Người 3 đặt câu hỏi</li>
+                        <li><i class="fas fa-reply" style="color: #00ffcc; margin-right: 8px; font-size: 11pt;"></i>Phe A – Người 3 trả lời và kết luận</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="border-top: 1px dashed rgba(255, 255, 255, 0.1); padding-top: 12px; box-sizing: border-box;">
+                <div style="color: #00ffcc; font-size: 15pt; font-weight: bold; margin-bottom: 8px;"><i class="fas fa-ear-listen" style="margin-right: 8px;"></i>NHIỆM VỤ KHI LẮNG NGHE:</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; font-size: 12pt; color: #ddd;">
+                    <div><i class="fas fa-check" style="color: #00ffcc; margin-right: 8px; font-size: 10pt;"></i>Ghi chú quan điểm chính của đối phương.</div>
+                    <div><i class="fas fa-check" style="color: #00ffcc; margin-right: 8px; font-size: 10pt;"></i>Ghi lại các bằng chứng thuyết phục của họ.</div>
+                    <div><i class="fas fa-check" style="color: #00ffcc; margin-right: 8px; font-size: 10pt;"></i>Ghi nhận những điểm em chưa đồng tình.</div>
+                    <div><i class="fas fa-check" style="color: #00ffcc; margin-right: 8px; font-size: 10pt;"></i>Chuẩn bị câu hỏi chất vấn.</div>
                 </div>
             </div>
         </div>
