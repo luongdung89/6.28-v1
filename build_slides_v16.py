@@ -269,26 +269,42 @@ slides.append("""
             <div class="title editable draggable" style="font-size: 44pt;">AI nên làm gì?</div>
             <div class="subtitle editable draggable" style="font-size: 28pt; margin-top: 10px; color: #00ffcc;">Đọc các thẻ và phân loại vào đúng&nbsp;nhóm.</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 5%; width: 90%; height: 460px; text-align: left; position: absolute; padding: 25px 35px; box-sizing: border-box;">
+        <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 5%; width: 90%; height: 480px; text-align: left; position: absolute; padding: 15px 35px; box-sizing: border-box;">
             <div class="body-text editable draggable" style="font-size: 18pt; line-height: 1.3;">
-                <p style="color: #ffeb3b; font-weight: bold; text-align: center; margin-bottom: 15px; font-size: 20pt;">Hãy đọc các thẻ thông tin dưới đây và phân loại vào đúng hai nhóm:</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 20px;">
-                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">AI giúp giải thích bài</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Viết hộ bài văn</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Kiểm tra đáp án</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Cho mình dàn ý</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Làm luôn bài tập</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Gợi ý từ vựng</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Đặt câu hỏi để mình tự trả lời</div>
-                    <div class="alg-block draggable" style="z-index: 10; padding: 8px 16px; background: rgba(0,210,255,0.2); border: 1px solid #00d2ff; border-radius: 5px; font-size: 15pt;">Kể hộ trải nghiệm</div>
+                <div class="cards-pool" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 10px; height: 115px; border: 2px dashed rgba(255,255,255,0.15); border-radius: 12px; padding: 6px; box-sizing: border-box; align-items: center; background: rgba(255,255,255,0.02); width: 100%;">
+                    <div class="alg-block draggable" style="position: relative; z-index: 10; padding: 0; background: none; border: 2px solid #1e2a44; border-radius: 12px; width: 140px; height: 105px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/6.28-V3-09-the-giai-thich-bai.png" style="position: absolute; width: 116.3%; height: 155%; top: -28%; left: -8.1%; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="position: relative; z-index: 10; padding: 0; background: none; border: 2px solid #1e2a44; border-radius: 12px; width: 140px; height: 105px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/6.28-V3-10-the-viet-ho-bai-van.png" style="position: absolute; width: 116.3%; height: 155%; top: -28%; left: -8.1%; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="position: relative; z-index: 10; padding: 0; background: none; border: 2px solid #1e2a44; border-radius: 12px; width: 140px; height: 105px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/6.28-V3-11-the-kiem-tra-dap-an.png" style="position: absolute; width: 116.3%; height: 155%; top: -28%; left: -8.1%; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="position: relative; z-index: 10; padding: 0; background: none; border: 2px solid #1e2a44; border-radius: 12px; width: 140px; height: 105px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/6.28-V3-12-the-cho-danh-y.png" style="position: absolute; width: 116.3%; height: 155%; top: -28%; left: -8.1%; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="position: relative; z-index: 10; padding: 0; background: none; border: 2px solid #1e2a44; border-radius: 12px; width: 140px; height: 105px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/6.28-V3-13-the-lam-luon-bai-tap.png" style="position: absolute; width: 116.3%; height: 155%; top: -28%; left: -8.1%; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="position: relative; z-index: 10; padding: 0; background: none; border: 2px solid #1e2a44; border-radius: 12px; width: 140px; height: 105px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/6.28-V3-14-the-goi-y-tu-vung.png" style="position: absolute; width: 116.3%; height: 155%; top: -28%; left: -8.1%; pointer-events: none;" draggable="false">
+                    </div>
+                    <div class="alg-block draggable" style="position: relative; z-index: 10; padding: 0; background: none; border: 2px solid #1e2a44; border-radius: 12px; width: 140px; height: 105px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/6.28-V3-15-the-dat-cau-hoi.png" style="position: absolute; width: 116.3%; height: 155%; top: -28%; left: -8.1%; pointer-events: none;" draggable="false">
+                    </div>
                 </div>
-                <div style="display: flex; justify-content: space-around; margin-top: 15px;">
-                    <div class="drop-zone" style="width: 45%; min-height: 160px; border: 3px dashed #00ffcc; border-radius: 10px; padding: 15px; position: relative;">
+                <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+                    <div class="drop-zone" id="zone-support" style="width: 48%; height: 260px; min-height: 260px; border: 3px dashed #00ffcc; border-radius: 10px; padding: 10px; position: relative; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-content: flex-start; background: rgba(0, 255, 204, 0.05); box-sizing: border-box;">
                         <span style="position: absolute; top: -18px; left: 10px; background: var(--bg-dark); color: #00ffcc; font-weight: bold; padding: 0 10px; font-size: 15pt;">AI NÊN HỖ TRỢ</span>
                     </div>
-                    <div class="drop-zone" style="width: 45%; min-height: 160px; border: 3px dashed #ff3333; border-radius: 10px; padding: 15px; position: relative;">
+                    <div class="drop-zone" id="zone-avoid" style="width: 48%; height: 260px; min-height: 260px; border: 3px dashed #ff3333; border-radius: 10px; padding: 10px; position: relative; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-content: flex-start; background: rgba(255, 51, 51, 0.05); box-sizing: border-box;">
                         <span style="position: absolute; top: -18px; left: 10px; background: var(--bg-dark); color: #ff3333; font-weight: bold; padding: 0 10px; font-size: 15pt;">KHÔNG NÊN YÊU CẦU AI</span>
                     </div>
+                </div>
+                <div style="display: flex; justify-content: center; margin-top: 15px; gap: 20px; width: 100%;">
+                    <button id="btn-check-answers" style="padding: 10px 24px; font-size: 15pt; background: #00ffcc; color: #000; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: 'Inter', sans-serif; box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);">KIỂM TRA ĐÁP ÁN</button>
+                    <button id="btn-reset-game" style="padding: 10px 24px; font-size: 15pt; background: #ff3333; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: 'Inter', sans-serif; display: none;">LÀM LẠI</button>
                 </div>
             </div>
         </div>
@@ -517,33 +533,46 @@ slides.append("""
             <div class="title editable draggable" style="font-size: 40pt;">Lắp ráp quy trình học chủ động</div>
             <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Sắp xếp các mảnh ghép thuật toán học tập chủ động với AI theo đúng trình tự:</div>
         </div>
-        <div class="abs-element dashboard-card chat-box" style="top: 260px; left: 5%; width: 90%; height: 480px; text-align: left; position: absolute; padding: 15px 25px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="abs-element dashboard-card chat-box" style="top: 220px; left: 5%; width: 90%; height: 530px; text-align: left; position: absolute; padding: 20px 25px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
             <div class="body-text editable draggable" style="font-size: 16pt; width: 100%;">
                 <!-- 6 mảnh ghép kéo thả có hình ảnh -->
                 <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 15px; flex-wrap: wrap;">
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 155px; height: 155px; cursor: grab; z-index: 10; box-sizing: border-box;">
                         <img src="assets/6.28-V4-01-neu-dieu-chua-hieu.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
                     </div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 155px; height: 155px; cursor: grab; z-index: 10; box-sizing: border-box;">
                         <img src="assets/6.28-V4-02-nho-ai-giai-thich.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
                     </div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 155px; height: 155px; cursor: grab; z-index: 10; box-sizing: border-box;">
                         <img src="assets/6.28-V4-03-tu-lam.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
                     </div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 155px; height: 155px; cursor: grab; z-index: 10; box-sizing: border-box;">
                         <img src="assets/6.28-V4-04-nho-ai-gop-y.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
                     </div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 155px; height: 155px; cursor: grab; z-index: 10; box-sizing: border-box;">
                         <img src="assets/6.28-V4-05-bo-qua-tu-lam.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
                     </div>
-                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 145px; height: 145px; cursor: grab; z-index: 10; box-sizing: border-box;">
+                    <div class="alg-block draggable" style="background: rgba(122, 0, 255, 0.1); border: 2px solid var(--primary-purple); padding: 4px; border-radius: 8px; display: flex; align-items: center; justify-content: center; width: 155px; height: 155px; cursor: grab; z-index: 10; box-sizing: border-box;">
                         <img src="assets/6.28-V4-06-chep-nguyen-bai-ai.png" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; pointer-events: none;" draggable="false">
                     </div>
                 </div>
-                <!-- Sơ đồ quy trình 4 bước ở dưới -->
-                <div style="display: flex; flex-direction: column; align-items: center; margin-top: 5px;">
-                    <div style="color: #00ffcc; font-size: 16pt; font-weight: bold; margin-bottom: 6px; text-align: center;">SƠ ĐỒ QUY TRÌNH 4 BƯỚC HỌC CHỦ ĐỘNG VỚI AI</div>
-                    <img src="assets/6.28-V3-07-quy-trinh-bon-buoc.png" style="width: 620px; height: auto; object-fit: contain; border: 2px solid #00ffcc; border-radius: 10px; background: rgba(0, 255, 204, 0.05); padding: 4px;" draggable="false">
+                <!-- Sơ đồ quy trình 4 ô drop-zone hình vuông ở dưới -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 10px; width: 100%;">
+                    <div class="drop-zone" style="width: 165px; height: 165px; border: 2px dashed #00ffcc; border-radius: 8px; padding: 5px; background: rgba(0, 255, 204, 0.05); display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; position: relative;">
+                        <span style="color: #00ffcc; font-size: 13pt; font-weight: bold; position: absolute; top: 5px; z-index: 1;">Bước 1</span>
+                    </div>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; display: flex; align-items: center;"></i>
+                    <div class="drop-zone" style="width: 165px; height: 165px; border: 2px dashed #00ffcc; border-radius: 8px; padding: 5px; background: rgba(0, 255, 204, 0.05); display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; position: relative;">
+                        <span style="color: #00ffcc; font-size: 13pt; font-weight: bold; position: absolute; top: 5px; z-index: 1;">Bước 2</span>
+                    </div>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; display: flex; align-items: center;"></i>
+                    <div class="drop-zone" style="width: 165px; height: 165px; border: 2px dashed #00ffcc; border-radius: 8px; padding: 5px; background: rgba(0, 255, 204, 0.05); display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; position: relative;">
+                        <span style="color: #00ffcc; font-size: 13pt; font-weight: bold; position: absolute; top: 5px; z-index: 1;">Bước 3</span>
+                    </div>
+                    <i class="fas fa-arrow-right" style="color: #00ffcc; font-size: 20pt; display: flex; align-items: center;"></i>
+                    <div class="drop-zone" style="width: 165px; height: 165px; border: 2px dashed #00ffcc; border-radius: 8px; padding: 5px; background: rgba(0, 255, 204, 0.05); display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; position: relative;">
+                        <span style="color: #00ffcc; font-size: 13pt; font-weight: bold; position: absolute; top: 5px; z-index: 1;">Bước 4</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -685,7 +714,7 @@ slides.append("""
 slides.append("""
         <div class="center-layout abs-element" style="width: 100%; text-align: center;">
             <div class="subtitle editable draggable" style="color: var(--primary-purple); font-size: 26pt; margin-bottom: 10px;">Giai đoạn 7</div>
-            <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Nhật kí chuyên gia</div>
+            <div class="title editable draggable" style="font-size: 32pt; margin-bottom: 30px;">Nhật ký chuyên gia</div>
             <div class="body-text editable draggable" style="font-size: 24pt; max-width: 80%; margin: 0 auto;">Tổng kết kết quả sau khi thử nghiệm quy trình và ghi lại những điều đã học được.</div>
         </div>
 """)
@@ -693,12 +722,12 @@ slides.append("""
 # SLIDE 35
 slides.append("""
         <div class="top-center-layout abs-element" style="top: 5%; width: 100%;">
-            <div class="title editable draggable" style="font-size: 44pt;">Nhật kí chuyên gia</div>
-            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Hoàn thành Nhật kí chuyên gia sau khi kết thúc các nhiệm vụ.</div>
+            <div class="title editable draggable" style="font-size: 44pt;">Nhật ký chuyên gia</div>
+            <div class="subtitle editable draggable" style="font-size: 24pt; margin-top: 10px; color: #00ffcc;">Hoàn thành Nhật ký chuyên gia sau khi kết thúc các nhiệm vụ.</div>
         </div>
         <div class="abs-element dashboard-card chat-box" style="top: 230px; left: 10%; width: 80%; height: 450px; text-align: left; position: absolute; padding: 30px 40px; box-sizing: border-box;">
             <div class="body-text editable draggable" style="font-size: 22pt; line-height: 1.4; width: 100%;">
-                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 25px; font-size: 24pt;">Nhật kí chuyên gia</p>
+                <p style="color: #ffeb3b; font-weight: bold; margin-bottom: 25px; font-size: 24pt;">Nhật ký chuyên gia</p>
                 <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: column; gap: 20px; width: 100%;">
                     <li style="display: flex; align-items: center; width: 100%;">
                         <span style="font-weight: bold; white-space: nowrap; font-size: 20pt; width: 480px; flex-shrink: 0;">• Điều em học được hôm nay:</span>
@@ -827,8 +856,8 @@ slides.append("""
                 <button id="btn-finish" class="interactive-btn" style="font-size: 20pt; padding: 12px 36px; background: #ffeb3b; color: #000; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 0 15px rgba(255, 235, 59, 0.5); display: flex; align-items: center; justify-content: center; text-align: center;">HOÀN THÀNH</button>
             </div>
         </div>
-        <div class="abs-element" style="bottom: 40px; right: 40px; transform: rotate(-15deg); border: 4px solid #ff3333; color: #ff3333; font-size: 16pt; font-weight: bold; padding: 8px 12px; border-radius: 8px; text-align: center; background: rgba(255, 255, 255, 0.05); z-index: 5; font-family: 'Inter', sans-serif;">
-            <div>VIỆN NGHIÊN CỨU</div>
+        <div class="abs-element" style="bottom: 40px; right: 40px; transform: rotate(-15deg); border: 4px solid #ff3333; color: #ff3333; font-size: 16pt; font-weight: bold; padding: 8px 12px; border-radius: 8px; text-align: center; background: rgba(255, 255, 255, 0.95); z-index: 5; font-family: 'Inter', sans-serif;">
+            <div>VIỆN CÔNG NGHỆ</div>
             <div style="font-size: 13pt; border-top: 2px solid #ff3333; margin-top: 4px; padding-top: 4px;">NOVASTARS</div>
         </div>
 """)

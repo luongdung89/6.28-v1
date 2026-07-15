@@ -38,7 +38,7 @@
     - Phiếu sửa mã lệnh AI (bảng chuyển câu lệnh làm hộ thành câu lệnh giúp học).
     - Phiếu sơ đồ quy trình học chủ động.
     - Phiếu tình huống thử nghiệm quy trình (đề bài viết văn "Kể về người bạn thân").
-    - Phiếu Nhật kí chuyên gia.
+    - Phiếu Nhật ký chuyên gia.
     - Bản cam kết hành động.
 - **Học sinh:**
   - Giấy nháp, bút viết.
@@ -128,17 +128,17 @@
 ### 3. Hoạt động 3: Luyện tập: "Thử nghiệm quy trình học chủ động vào bài văn Kể về người bạn thân" (Thời gian: 10 phút)
 - **a) Mục tiêu:**
   - Giúp học sinh áp dụng quy trình 4 bước học chủ động cùng AI vào giải quyết một nhiệm vụ học tập cụ thể.
-  - Tạo điều kiện để học sinh tự đánh giá nhận thức và hành động của bản thân thông qua Nhật kí chuyên gia.
+  - Tạo điều kiện để học sinh tự đánh giá nhận thức và hành động của bản thân thông qua Nhật ký chuyên gia.
 - **b) Nội dung:**
   - **Nhiệm vụ 1: Thử nghiệm quy trình:** Học sinh làm việc cá nhân trong 7 phút, hoàn thành Phiếu tình huống thử nghiệm quy trình bằng cách viết nội dung cụ thể cho từng bước trong quy trình 4 bước áp dụng cho đề bài viết văn: "Kể về người bạn thân".
-  - **Nhiệm vụ 2: Hoàn thành Nhật kí chuyên gia:** Học sinh tự viết Phiếu Nhật kí chuyên gia cá nhân trong 3 phút để ghi lại: Điều học được, Thay đổi cách dùng AI, Điều còn băn khoăn.
+  - **Nhiệm vụ 2: Hoàn thành Nhật ký chuyên gia:** Học sinh tự viết Phiếu Nhật ký chuyên gia cá nhân trong 3 phút để ghi lại: Điều học được, Thay đổi cách dùng AI, Điều còn băn khoăn.
 - **c) Sản phẩm:**
   - *Phiếu tình huống thử nghiệm quy trình cá nhân (4 bước):*
     + **Bước 1 (Nêu điều chưa hiểu):** Em chưa biết cách viết phần mở bài sao cho lôi cuốn, sinh động.
     + **Bước 2 (Câu hỏi gửi AI):** "Gợi ý cho em 3 cách mở bài gián tiếp khác nhau cho bài văn kể về người bạn thân của em học lớp 6."
     + **Bước 3 (Tự thực hiện):** Dựa trên các gợi ý mở bài của AI, tự chọn ý tưởng phù hợp và tự viết phần mở bài cùng toàn bộ thân bài, kết bài bằng chính lời văn của bản thân.
     + **Bước 4 (Nhờ AI góp ý):** Gửi đoạn văn tự viết cho AI kèm câu lệnh: "Đây là bài văn do em tự viết, hãy chỉ ra các lỗi lặp từ, lỗi chính tả và gợi ý giúp em cách sửa để bài viết hay hơn."
-  - *Phiếu Nhật kí chuyên gia:* Hoàn thành đầy đủ 3 nội dung cá nhân (Điều học được, thay đổi cách dùng AI, điều còn băn khoăn).
+  - *Phiếu Nhật ký chuyên gia:* Hoàn thành đầy đủ 3 nội dung cá nhân (Điều học được, thay đổi cách dùng AI, điều còn băn khoăn).
 - **d) Tổ chức thực hiện:**
 
   * **Giai đoạn 6: Thử nghiệm quy trình**
@@ -147,10 +147,10 @@
     - *Báo cáo, thảo luận:* Giáo viên gọi 2-3 học sinh đọc to các bước trong phiếu thực nghiệm của mình. Cả lớp cùng giáo viên phân tích xem các câu trả lời đã thể hiện đúng tinh thần "chủ động" chưa.
     - *Kết luận, nhận định:* Giáo viên chia sẻ ví dụ kết quả mẫu để học sinh tham khảo và tự hoàn thiện phiếu của mình.
 
-  * **Giai đoạn 7: Nhật kí chuyên gia**
-    - *Chuyển giao nhiệm vụ:* Giáo viên phát Phiếu Nhật kí chuyên gia và nêu yêu cầu học sinh dành 3 phút tự suy ngẫm, điền đánh giá cá nhân.
-    - *Thực hiện nhiệm vụ:* Học sinh tự nhìn nhận lại các hoạt động từ đầu tiết học và hoàn thành các mục câu hỏi trong phiếu Nhật kí chuyên gia.
-    - *Kết luận, nhận định:* Giáo viên thu ngẫu nhiên một số phiếu nhật kí để đánh giá mức độ tiếp thu bài của học sinh ngay tại lớp.
+  * **Giai đoạn 7: Nhật ký chuyên gia**
+    - *Chuyển giao nhiệm vụ:* Giáo viên phát Phiếu Nhật ký chuyên gia và nêu yêu cầu học sinh dành 3 phút tự suy ngẫm, điền đánh giá cá nhân.
+    - *Thực hiện nhiệm vụ:* Học sinh tự nhìn nhận lại các hoạt động từ đầu tiết học và hoàn thành các mục câu hỏi trong phiếu Nhật ký chuyên gia.
+    - *Kết luận, nhận định:* Giáo viên thu ngẫu nhiên một số phiếu nhật ký để đánh giá mức độ tiếp thu bài của học sinh ngay tại lớp.
 
 ---
 

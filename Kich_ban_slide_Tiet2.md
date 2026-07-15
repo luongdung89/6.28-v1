@@ -515,7 +515,7 @@
 ### Slide 44: [VD01] Template khen thưởng và vinh danh
 * **a. Cơ cấu nội dung:**
   * Tiêu đề (36 - 44pt): `CHỨNG NHẬN HOÀN THÀNH NHIỆM VỤ`
-  * Phụ đề (28 - 32pt): `Chúc mừng các nhóm Chuyên gia Công nghệ đã hoàn thành xuất sắc việc xây dựng và hoàn thiện Hồ sơ Tranh biện. Sự chủ động, tinh thần hợp tác và những lập luận sắc bén của các em hôm nay đã giải quyết thành công sự cố hệ thống.`
+  * Phụ đề (28 - 32pt): `Chúc mừng các nhóm Chuyên gia Công nghệ đã hoàn thành xuất sắc việc xây dựng và hoàn thiện Hồ sơ Tranh biện.`
   * Nội dung trung tâm (32-36pt, font giải thưởng trang trọng): Ô trống nhập tên nhóm: `[Nhập tên nhóm Chuyên gia xuất sắc]`
 * **b. Hình ảnh (Prompt AI):** Không
 * **c. Hiển thị:** Slide hiển thị dưới dạng một tấm Giấy chứng nhận/Bằng khen trang trọng toàn màn hình. Tiêu đề đặt căn giữa phía trên cùng. Ô trống nhập tên nhóm nằm ở chính giữa tâm slide. Nút "HOÀN THÀNH" nằm bên dưới ô nhập tên, căn giữa. Hình ảnh con dấu tròn chứng nhận của Viện nghiên cứu công nghệ Novastars nằm cố định ở góc dưới bên phải slide.

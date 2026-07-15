@@ -11,7 +11,7 @@ $cards = @(
     @{ Path = "assets/6.28-V4-02-nho-ai-giai-thich.png"; Base64Text = "Tmjhu50gQUkgZ2nhuqNpIHRow61jaA==" },
     @{ Path = "assets/6.28-V4-03-tu-lam.png"; Base64Text = "VOG7sSBsw6Bt" },
     @{ Path = "assets/6.28-V4-04-nho-ai-gop-y.png"; Base64Text = "Tmjhu50gQUkgZ8OzcCDDvQ==" },
-    @{ Path = "assets/6.28-V4-05-bo-qua-tu-lam.png"; Base64Text = "QuG7jyBxdWEgYsaw4bubYyB04buxIGzDoG0=" },
+    @{ Path = "assets/6.28-V4-05-bo-qua-tu-lam.png"; Base64Text = "S2jDtG5nIHThu7EgbMOgbQ==" },
     @{ Path = "assets/6.28-V4-06-chep-nguyen-bai-ai.png"; Base64Text = "Q2jDqXAgbmd1ecOqbiBiw6BpIEFJ" }
 )
 
@@ -37,26 +37,26 @@ foreach ($card in $cards) {
     # Draw original image
     $g.DrawImage($bmp, 0, 0, $W, $H)
     
-    # Define rectangular container dimensions at the bottom
-    # Width is 78% of image width, height is 11% of image height
-    $rectW = [float]($W * 0.78)
-    $rectH = [float]($H * 0.11)
+    # Define larger rectangular container dimensions at the bottom
+    # Width is increased to 90% of image width, height is increased to 18% of image height
+    $rectW = [float]($W * 0.90)
+    $rectH = [float]($H * 0.18)
     $rectX = [float](($W - $rectW) / 2)
-    $rectY = [float]($H - $rectH - ($H * 0.05)) # 5% margin from bottom
+    $rectY = [float]($H - $rectH - ($H * 0.03)) # 3% margin from bottom
     
     $rect = [System.Drawing.RectangleF]::new($rectX, $rectY, $rectW, $rectH)
     
     # Draw solid white background
     $g.FillRectangle([System.Drawing.Brushes]::White, $rect)
     
-    # Draw thick black border
-    $penThickness = [float]($W * 0.008) # ~8px for 1024x1024
+    # Draw thick black border (12px thickness for 1024x1024)
+    $penThickness = [float]($W * 0.012) # ~12px for 1024x1024
     if ($penThickness -lt 2) { $penThickness = 2 }
     $pen = [System.Drawing.Pen]::new([System.Drawing.Color]::Black, $penThickness)
     $g.DrawRectangle($pen, $rectX, $rectY, $rectW, $rectH)
     
-    # Define text font and alignment
-    $fontSize = [float]($W * 0.035) # ~36pt for 1024x1024
+    # Define larger text font (increased from 0.052 to 0.068) and alignment
+    $fontSize = [float]($W * 0.068) # ~70pt for 1024x1024, extremely large and bold
     $font = [System.Drawing.Font]::new("Arial", $fontSize, [System.Drawing.FontStyle]::Bold)
     
     $sf = [System.Drawing.StringFormat]::new()
@@ -80,5 +80,5 @@ foreach ($card in $cards) {
     
     # Overwrite the original file
     Move-Item -Path $tempPath -Destination $filePath -Force
-    Write-Host "Success: Label '$decodedText' drawn on $($card.Path)"
+    Write-Host "Success: Larger label '$decodedText' drawn on $($card.Path)"
 }

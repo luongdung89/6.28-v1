@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v32';
+    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v34';
     let slideData = [];
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
@@ -267,6 +267,161 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // Slide 16 Check Answers
+        if (slide.id === 16) {
+            const btnCheck = slideContentEl.querySelector('#btn-check-answers');
+            const btnReset = slideContentEl.querySelector('#btn-reset-game');
+            
+            if (btnCheck && btnReset) {
+                btnCheck.addEventListener('click', () => {
+                    const supportZone = slideContentEl.querySelector('#zone-support');
+                    const avoidZone = slideContentEl.querySelector('#zone-avoid');
+                    const cardsPool = slideContentEl.querySelector('.cards-pool');
+                    
+                    if (!supportZone || !avoidZone) return;
+                    
+                    const supportCards = Array.from(supportZone.querySelectorAll('.alg-block'));
+                    const avoidCards = Array.from(avoidZone.querySelectorAll('.alg-block'));
+                    const poolCards = Array.from(cardsPool.querySelectorAll('.alg-block'));
+                    
+                    if (supportCards.length + avoidCards.length < 7) {
+                        alert("Vui lòng phân loại tất cả các thẻ trước khi kiểm tra!");
+                        return;
+                    }
+                    
+                    let correctCount = 0;
+                    
+                    // Check support zone cards
+                    supportCards.forEach(card => {
+                        const img = card.querySelector('img');
+                        const src = img ? img.getAttribute('src') : '';
+                        const isCorrect = src.includes('09') || src.includes('11') || src.includes('12') || src.includes('14') || src.includes('15');
+                        if (isCorrect) {
+                            card.style.borderColor = '#00ffcc';
+                            correctCount++;
+                        } else {
+                            card.style.borderColor = '#ff3333';
+                        }
+                    });
+                    
+                    // Check avoid zone cards
+                    avoidCards.forEach(card => {
+                        const img = card.querySelector('img');
+                        const src = img ? img.getAttribute('src') : '';
+                        const isCorrect = src.includes('10') || src.includes('13');
+                        if (isCorrect) {
+                            card.style.borderColor = '#00ffcc';
+                            correctCount++;
+                        } else {
+                            card.style.borderColor = '#ff3333';
+                        }
+                    });
+                    
+                    if (correctCount === 7) {
+                        alert("Chúc mừng! Bạn đã phân loại hoàn toàn chính xác!");
+                        if (window.confetti) {
+                            window.confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+                        }
+                    } else {
+                        alert(`Có ${7 - correctCount} thẻ chưa đúng vị trí. Hãy thử lại nhé!`);
+                    }
+                    
+                    btnReset.style.display = 'inline-block';
+                });
+                
+                btnReset.addEventListener('click', () => {
+                    const cardsPool = slideContentEl.querySelector('.cards-pool');
+                    const supportZone = slideContentEl.querySelector('#zone-support');
+                    const avoidZone = slideContentEl.querySelector('#zone-avoid');
+                    
+                    if (!cardsPool || !supportZone || !avoidZone) return;
+                    
+                    // Move all cards back to pool
+                    const cards = Array.from(slideContentEl.querySelectorAll('.alg-block'));
+                    cards.forEach(card => {
+                        cardsPool.appendChild(card);
+                        card.style.borderColor = '#1e2a44';
+                    });
+                    
+                    btnReset.style.display = 'none';
+                });
+            }
+        }
+
+        // Slide 27 Check Answers
+        if (slide.id === 27) {
+            const btnCheck = slideContentEl.querySelector('#slide27-btn-check');
+            const btnReset = slideContentEl.querySelector('#slide27-btn-reset');
+            
+            if (btnCheck && btnReset) {
+                btnCheck.addEventListener('click', () => {
+                    const dropZones = Array.from(slideContentEl.querySelectorAll('.drop-zone'));
+                    const cardsPool = slideContentEl.querySelector('#slide27-cards-pool');
+                    
+                    if (dropZones.length < 4 || !cardsPool) return;
+                    
+                    // Check if all 4 drop zones have a card
+                    const filledZones = dropZones.filter(zone => zone.querySelector('.alg-block'));
+                    if (filledZones.length < 4) {
+                        alert("Vui lòng lắp ráp đầy đủ cả 4 bước trước khi kiểm tra!");
+                        return;
+                    }
+                    
+                    let correctCount = 0;
+                    const expectedSrcParts = ['V4-01', 'V4-02', 'V4-03', 'V4-04'];
+                    
+                    dropZones.forEach((zone, idx) => {
+                        const card = zone.querySelector('.alg-block');
+                        if (!card) return;
+                        
+                        const img = card.querySelector('img');
+                        const src = img ? img.getAttribute('src') : '';
+                        const isCorrect = src.includes(expectedSrcParts[idx]);
+                        
+                        card.classList.remove('correct', 'incorrect');
+                        if (isCorrect) {
+                            card.classList.add('correct');
+                            correctCount++;
+                        } else {
+                            card.classList.add('incorrect');
+                        }
+                    });
+                    
+                    if (correctCount === 4) {
+                        alert("Chúc mừng! Bạn đã lắp ráp quy trình hoàn toàn chính xác!");
+                        if (window.confetti) {
+                            window.confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+                        }
+                    } else {
+                        alert(`Có ${4 - correctCount} bước chưa đúng vị trí hoặc quy trình chưa đúng. Hãy thử lại nhé!`);
+                    }
+                    
+                    btnReset.style.display = 'inline-block';
+                });
+                
+                btnReset.addEventListener('click', () => {
+                    const cardsPool = slideContentEl.querySelector('#slide27-cards-pool');
+                    const dropZones = Array.from(slideContentEl.querySelectorAll('.drop-zone'));
+                    
+                    if (!cardsPool) return;
+                    
+                    // Move all cards from drop zones back to pool
+                    const cards = Array.from(slideContentEl.querySelectorAll('.alg-block'));
+                    cards.forEach(card => {
+                        cardsPool.appendChild(card);
+                        card.classList.remove('correct', 'incorrect');
+                        card.style.position = 'relative';
+                        card.style.left = '';
+                        card.style.top = '';
+                        card.style.transform = '';
+                        card.style.margin = '';
+                    });
+                    
+                    btnReset.style.display = 'none';
+                });
+            }
+        }
+
         // Finish & Confetti (Slide 40, Tiet 2 finish, Tiet 3 finish)
         const btnFinish = slideContentEl.querySelector('#btn-finish, #tiet2-btn-finish, #tiet3-btn-finish');
         const teamNameInput = slideContentEl.querySelector('#team-name-input, #tiet2-team-name-input, #tiet3-team-name-input');
@@ -514,6 +669,116 @@ document.addEventListener('DOMContentLoaded', () => {
     function dragEnd(e) {
         if (!draggedElement) return;
 
+        // Slide 16 grid placement and snapping logic
+        const slideId = slideContentEl.getAttribute('data-slide-id');
+        if (slideId === "16") {
+            const supportZone = document.getElementById('zone-support');
+            const avoidZone = document.getElementById('zone-avoid');
+            const cardsPool = document.querySelector('.cards-pool');
+            
+            if (supportZone && avoidZone && cardsPool) {
+                const x = e.clientX;
+                const y = e.clientY;
+                
+                const supportRect = supportZone.getBoundingClientRect();
+                const avoidRect = avoidZone.getBoundingClientRect();
+                const poolRect = cardsPool.getBoundingClientRect();
+                
+                let targetContainer = null;
+                if (x >= supportRect.left && x <= supportRect.right &&
+                    y >= supportRect.top && y <= supportRect.bottom) {
+                    targetContainer = supportZone;
+                } else if (x >= avoidRect.left && x <= avoidRect.right &&
+                           y >= avoidRect.top && y <= avoidRect.bottom) {
+                    targetContainer = avoidZone;
+                } else if (x >= poolRect.left && x <= poolRect.right &&
+                           y >= poolRect.top && y <= poolRect.bottom) {
+                    targetContainer = cardsPool;
+                }
+                
+                if (targetContainer) {
+                    targetContainer.appendChild(draggedElement);
+                    draggedElement.style.position = 'relative';
+                    draggedElement.style.left = '';
+                    draggedElement.style.top = '';
+                    draggedElement.style.transform = '';
+                    draggedElement.style.margin = '';
+                } else {
+                    cardsPool.appendChild(draggedElement);
+                    draggedElement.style.position = 'relative';
+                    draggedElement.style.left = '';
+                    draggedElement.style.top = '';
+                    draggedElement.style.transform = '';
+                    draggedElement.style.margin = '';
+                }
+            }
+        }
+
+        // Slide 27 grid placement and snapping logic
+        if (slideId === "27") {
+            const cardsPool = slideContentEl.querySelector('#slide27-cards-pool');
+            const dropZones = Array.from(slideContentEl.querySelectorAll('.drop-zone'));
+            
+            if (cardsPool && dropZones.length > 0) {
+                const x = e.clientX;
+                const y = e.clientY;
+                
+                let targetZone = null;
+                for (const zone of dropZones) {
+                    const rect = zone.getBoundingClientRect();
+                    if (x >= rect.left && x <= rect.right &&
+                        y >= rect.top && y <= rect.bottom) {
+                        targetZone = zone;
+                        break;
+                    }
+                }
+                
+                const poolRect = cardsPool.getBoundingClientRect();
+                const overPool = x >= poolRect.left && x <= poolRect.right &&
+                                 y >= poolRect.top && y <= poolRect.bottom;
+                
+                if (targetZone) {
+                    // Check if there is already a card in this zone
+                    const existingCard = targetZone.querySelector('.alg-block');
+                    if (existingCard && existingCard !== draggedElement) {
+                        // Move existing card back to pool
+                        cardsPool.appendChild(existingCard);
+                        existingCard.style.position = 'relative';
+                        existingCard.style.left = '';
+                        existingCard.style.top = '';
+                        existingCard.style.transform = '';
+                        existingCard.style.margin = '';
+                        existingCard.classList.remove('correct', 'incorrect');
+                    }
+                    
+                    targetZone.appendChild(draggedElement);
+                    draggedElement.style.position = 'relative';
+                    draggedElement.style.left = '';
+                    draggedElement.style.top = '';
+                    draggedElement.style.transform = '';
+                    draggedElement.style.margin = '';
+                    draggedElement.classList.remove('correct', 'incorrect');
+                } else if (overPool) {
+                    cardsPool.appendChild(draggedElement);
+                    draggedElement.style.position = 'relative';
+                    draggedElement.style.left = '';
+                    draggedElement.style.top = '';
+                    draggedElement.style.transform = '';
+                    draggedElement.style.margin = '';
+                    draggedElement.classList.remove('correct', 'incorrect');
+                } else {
+                    // If dropped elsewhere, return it to the cards pool
+                    cardsPool.appendChild(draggedElement);
+                    draggedElement.style.position = 'relative';
+                    draggedElement.style.left = '';
+                    draggedElement.style.top = '';
+                    draggedElement.style.transform = '';
+                    draggedElement.style.margin = '';
+                    draggedElement.classList.remove('correct', 'incorrect');
+                }
+            }
+        }
+
         // Snapping logic for specific drop zones
         const dropZones = document.querySelectorAll('.snap-center');
         
@@ -648,7 +913,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "GĐ 4: Phân tích thông tin", start: 17, end: 22 },
                 { title: "GĐ 5: Đóng gói thuật toán", start: 23, end: 27 },
                 { title: "GĐ 6: Thử nghiệm quy trình", start: 28, end: 32 },
-                { title: "GĐ 7: Nhật kí chuyên gia", start: 33, end: 34 },
+                { title: "GĐ 7: Nhật ký chuyên gia", start: 33, end: 34 },
                 { title: "GĐ 8: VẬN HÀNH HỆ THỐNG", start: 35, end: 39 }
             ];
         } else if (currentRange.tiet === 2) {

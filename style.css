@@ -614,19 +614,33 @@ select {
 
 /* Fallback/Correction for Slide 27 */
 #slide-content[data-slide-id="27"] .subtitle {
-    font-size: 24pt !important;
+    font-size: 20pt !important;
 }
 #slide-content[data-slide-id="27"] .chat-box {
-    top: 260px !important;
-    left: 10% !important;
-    width: 80% !important;
-    height: 420px !important;
+    top: 175px !important;
+    left: 5% !important;
+    width: 90% !important;
+    height: 575px !important;
     box-sizing: border-box !important;
     padding: 20px 25px !important;
     position: absolute !important;
 }
 #slide-content[data-slide-id="27"] .drop-zone {
     min-height: 160px !important;
+}
+#slide-content[data-slide-id="27"] .drop-zone .alg-block {
+    width: 140px !important;
+    height: 140px !important;
+    background: rgba(122, 0, 255, 0.05) !important;
+    border: 2px solid var(--primary-purple) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#slide-content[data-slide-id="27"] .drop-zone .alg-block.correct {
+    border-color: #00ffcc !important;
+}
+#slide-content[data-slide-id="27"] .drop-zone .alg-block.incorrect {
+    border-color: #ff3333 !important;
 }
 
 /* Fallback/Correction for Slide 40 */
@@ -678,11 +692,13 @@ select {
 }
 #slide-content[data-slide-id="16"] .alg-block {
     font-size: 15pt !important;
-    padding: 8px 16px !important;
+    padding: 0 !important;
+    position: relative !important;
 }
 #slide-content[data-slide-id="16"] .drop-zone {
-    min-height: 160px !important;
-    padding: 15px !important;
+    min-height: 260px !important;
+    height: 260px !important;
+    padding: 10px !important;
 }
 #slide-content[data-slide-id="16"] .drop-zone span {
     font-size: 15pt !important;

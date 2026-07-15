@@ -333,4 +333,4 @@
 
 ## 6. KHEN THƯỞNG & VINH DANH
 * **Lời khen ngợi/chúc mừng:**
-  * *"Chúc mừng các nhóm Chuyên gia Công nghệ đã hoàn thành xuất sắc việc xây dựng và hoàn thiện Hồ sơ Tranh biện. Sự chủ động, tinh thần hợp tác và những lập luận sắc bén của các em hôm nay đã giải quyết thành công sự cố hệ thống."*
+  * *"Chúc mừng các nhóm Chuyên gia Công nghệ đã hoàn thành xuất sắc việc xây dựng và hoàn thiện Hồ sơ Tranh biện."*

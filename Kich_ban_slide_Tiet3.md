@@ -103,7 +103,7 @@
   * Tiêu đề (32pt): “CHUẨN BỊ”
   * Nội dung (24pt):
     * **Dụng cụ:** Hồ sơ tranh biện đã hoàn thiện ở Tiết 2.
-    * **Hình thức tổ chức:** 4 Đội.
+    * **Hình thức tổ chức:** 4 Đội (Đội 1 và 3 thuộc phe A, Đội 2 và 4 thuộc phe B).
 * **b. Hình ảnh (Prompt AI):** Không
 * **c. Hiển thị:** Tiêu đề nằm ở góc trên cùng, căn giữa màn hình. Bố cục màn hình chia làm 2 thẻ lớn chiếm không gian cân xứng. Thẻ “Dụng cụ” bên trái hiển thị dụng cụ dạng List. Thẻ “Hình thức tổ chức” bên phải hiển thị hình thức hoạt động của lớp.
 * **d. Tương tác & Animation:** Không
@@ -191,6 +191,37 @@
 * **c. Hiển thị:** Tiêu đề & phụ đề căn giữa phía trên slide. Khối cấu trúc phiên đặt ở trung tâm, căn lề trái dưới dạng khung hộp thoại thông tin lớn. Đồng hồ số (Monospace) hiện ở bên dưới. Thiết kế 3 nút icon điều khiển bên dưới: BẮT ĐẦU, TẠM DỪNG, LÀM LẠI.
 * **d. Tương tác & Animation:** Trạng thái mặc định: Hiển thị đầy đủ các thành phần. Click 'BẮT ĐẦU': Đồng hồ chạy đếm ngược (18:00), phát âm thanh tích tắc. Hết giờ (00:00): Toàn bộ màn hình chớp nháy đỏ cảnh báo mạnh 3 lần, phát âm thanh chuông báo động reo lớn.
 
+#### Slide 16: [TH01] Thứ tự tranh biện
+* **a. Cơ cấu nội dung:**
+  * Tiêu đề (32pt): “THỨ TỰ TRANH BIỆN”
+  * Phụ đề (20pt): “Các đội chuẩn bị vị trí và sẵn sàng vào trận”
+  * Nội dung:
+    * **Trận 1:** Đội 1 Phe A vs Đội 2 Phe B.
+    * **Trận 2:** Đội 3 Phe A vs Đội 4 Phe B.
+* **b. Hình ảnh (Prompt AI):** Không
+* **c. Hiển thị:** Tiêu đề & phụ đề căn giữa phía trên. Bên dưới là 2 thẻ hiển thị thông tin Trận 1 và Trận 2 cân đối.
+* **d. Tương tác & Animation:** Không
+
+#### Slide 16b: [TH01] Trận tranh biện 1
+* **a. Cơ cấu nội dung:**
+  * Tiêu đề (32pt): “TRẬN TRANH BIỆN 1”
+  * Phụ đề (18pt): “Chủ đề: Nên dùng AI trước hay sau khi làm bài để học tốt nhất?”
+  * Nội dung chính: Trận tranh biện chính thức giữa **Đội 1 Phe A** và **Đội 2 Phe B**.
+  * Thời gian: 10 phút.
+* **b. Hình ảnh (Prompt AI):** Không
+* **c. Hiển thị:** Tiêu đề & phụ đề căn giữa phía trên. Khối thông tin trận tranh biện đặt ở trung tâm. Đồng hồ đếm ngược Monospace nằm bên dưới kèm 3 nút điều khiển: BẮT ĐẦU, TẠM DỪNG, LÀM LẠI.
+* **d. Tương tác & Animation:** Bấm nút BẮT ĐẦU kích hoạt đồng hồ đếm ngược 10:00.
+
+#### Slide 16c: [TH01] Trận tranh biện 2
+* **a. Cơ cấu nội dung:**
+  * Tiêu đề (32pt): “TRẬN TRANH BIỆN 2”
+  * Phụ đề (18pt): “Chủ đề: Nên dùng AI trước hay sau khi làm bài để học tốt nhất?”
+  * Nội dung chính: Trận tranh biện chính thức giữa **Đội 3 Phe A** và **Đội 4 Phe B**.
+  * Thời gian: 10 phút.
+* **b. Hình ảnh (Prompt AI):** Không
+* **c. Hiển thị:** Tiêu đề & phụ đề căn giữa phía trên. Khối thông tin trận tranh biện đặt ở trung tâm. Đồng hồ đếm ngược Monospace nằm bên dưới kèm 3 nút điều khiển: BẮT ĐẦU, TẠM DỪNG, LÀM LẠI.
+* **d. Tương tác & Animation:** Bấm nút BẮT ĐẦU kích hoạt đồng hồ đếm ngược 10:00.
+
 ---
 
 ### GIAI ĐOẠN 4: HỘI ĐỒNG CHUYÊN GIA KẾT LUẬN
@@ -208,8 +239,8 @@
 * **a. Cơ cấu nội dung:**
   * Tiêu đề (32pt): “CHUẨN BỊ”
   * Nội dung (24pt):
-    * **Dụng cụ:** Giấy, bút viết.
-    * **Hình thức tổ chức:** 4 Đội.
+    * **Dụng cụ:** Giấy nháp, bút viết.
+    * **Hình thức tổ chức:** 4 Đội (Đội 1 và 3 thuộc phe A, Đội 2 và 4 thuộc phe B).
 * **b. Hình ảnh (Prompt AI):** Không
 * **c. Hiển thị:** Tiêu đề nằm ở góc trên cùng, căn giữa màn hình. Bố cục màn hình chia làm 2 thẻ lớn chiếm không gian cân xứng. Thẻ “Dụng cụ” bên trái hiển thị dụng cụ dạng List. Thẻ “Hình thức tổ chức” bên phải hiển thị hình thức hoạt động của lớp.
 * **d. Tương tác & Animation:** Không
@@ -279,7 +310,7 @@
   * Tiêu đề (32pt): “NHẬT KÝ CHUYÊN GIA”
   * Phụ đề (26pt): “Tự suy ngẫm sau phiên tranh biện”
   * Nội dung (20-24pt):
-    * Sau buổi tranh biện hôm nay, em hãy hoàn thành nhật ký:
+    * Hoàn thành nhật ký của em vào sổ tay:
       1. Điều em đồng tình nhất sau buổi tranh biện hôm nay là:
          ...........................................................................................................
       2. Một lập luận của đội bạn giúp em có góc nhìn mới là:
@@ -332,5 +363,5 @@
 * **Hình ảnh (Prompt AI):** Không
 * **Hiển thị:**
   * *Giao diện tổng thể:* Thiết kế và hiển thị toàn bộ slide dưới giao diện trực quan của một tấm Giấy chứng nhận hoặc Bằng khen trang trọng phủ toàn màn hình.
-  * *Vị trí chữ:* Tiêu đề đặt căn giữa ở phía trên cùng. Ô trống dùng để nhập tên nhóm đặt nằm ở chính giữa tâm slide. Nút “HOÀN THÀNH” nằm bên dưới ô nhập tên, căn giữa. Hình ảnh dấu chứng nhận của Viện nghiên cứu công nghệ Novastars nằm cố định ở góc dưới bên phải slide.
+  * *Vị trí chữ:* Tiêu đề đặt căn giữa ở phía trên cùng. Ô trống dùng để nhập tên nhóm đặt nằm ở chính giữa tâm slide. Nút “HOÀN THÀNH” nằm bên dưới ô nhập tên, căn giữa. Hình ảnh dấu chứng nhận của Viện công nghệ Novastars nằm cố định ở góc dưới bên phải slide.
 * **Tương tác & Animation:** Giáo viên click chuột trực tiếp vào ô trống để điền tên nhóm được khen thưởng lên giấy chứng nhận. Khi giáo viên nhấn phím Enter trên bàn phím hoặc click chuột vào nút "HOÀN THÀNH" ➔ Sẽ ngay lập tức kích hoạt hiệu ứng pháo hoa rơi rực rỡ đầy màn hình (Confetti) đồng thời hệ thống tự động phát ra âm thanh tiếng vỗ tay vang dội kéo dài để chúc mừng.
