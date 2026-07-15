@@ -668,11 +668,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "MỞ ĐẦU BÀI HỌC", start: 83, end: 86 },
                 { title: "GĐ 1: NHẬN LUẬT TRANH BIỆN", start: 87, end: 89 },
                 { title: "GĐ 2: DIỄN TẬP", start: 90, end: 94 },
-                { title: "GĐ 3: TRANH BIỆN & CHẤT VẤN", start: 95, end: 100 },
-                { title: "GĐ 4: HỘI ĐỒNG KẾT LUẬN", start: 101, end: 106 },
-                { title: "GĐ 5: NHẬT KÝ CHUYÊN GIA", start: 107, end: 108 },
-                { title: "GĐ 6: CAM KẾT CHUYÊN GIA", start: 109, end: 110 },
-                { title: "KHEN THƯỞNG VINH DANH", start: 111, end: 111 }
+                { title: "GĐ 3: TRANH BIỆN & CHẤT VẤN", start: 95, end: 101 },
+                { title: "GĐ 4: HỘI ĐỒNG KẾT LUẬN", start: 102, end: 107 },
+                { title: "GĐ 5: NHẬT KÝ CHUYÊN GIA", start: 108, end: 109 },
+                { title: "GĐ 6: CAM KẾT CHUYÊN GIA", start: 110, end: 111 },
+                { title: "KHEN THƯỞNG VINH DANH", start: 112, end: 112 }
             ];
         }
 
