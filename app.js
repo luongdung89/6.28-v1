@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v28';
+    const LOCAL_STORAGE_KEY = 'ai_lesson_slides_data_38_v32';
     let slideData = [];
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
